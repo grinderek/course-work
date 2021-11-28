@@ -1,0 +1,3 @@
+/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/course_test.dir/main.cpp.o CMakeFiles/course_test.dir/User.cpp.o CMakeFiles/course_test.dir/Service.cpp.o CMakeFiles/course_test.dir/CRUD.cpp.o -o course_test  -lsqlite3 

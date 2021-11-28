@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/danila/CLionProjects/course_test/CRUD.cpp
+CRUD.h
+/home/danila/CLionProjects/course_test/CRUD.h
+
+/home/danila/CLionProjects/course_test/CRUD.h
+iostream
+-
+string
+-
+Service.h
+/home/danila/CLionProjects/course_test/Service.h
+
+/home/danila/CLionProjects/course_test/Service.h
+string
+-
+iostream
+-
+climits
+-
+cmath
+-
+sqlite3.h
+/home/danila/CLionProjects/course_test/sqlite3.h
+
