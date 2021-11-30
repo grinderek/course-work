@@ -4,10 +4,12 @@
 CMakeFiles/course_test.dir/CRUD.cpp.o: \
  ../CRUD.cpp \
  ../CRUD.h \
- ../Service.h
+ ../Service.h \
+ ../User.h
 CMakeFiles/course_test.dir/Service.cpp.o: \
  ../Service.cpp \
- ../Service.h
+ ../Service.h \
+ ../User.h
 CMakeFiles/course_test.dir/User.cpp.o: \
  ../User.cpp \
  ../User.h

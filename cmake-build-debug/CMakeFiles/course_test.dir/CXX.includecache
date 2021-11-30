@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/danila/CLionProjects/course_test/CRUD.cpp
-CRUD.h
-/home/danila/CLionProjects/course_test/CRUD.h
-
 /home/danila/CLionProjects/course_test/CRUD.h
 iostream
 -
@@ -17,6 +13,8 @@ string
 -
 Service.h
 /home/danila/CLionProjects/course_test/Service.h
+User.h
+/home/danila/CLionProjects/course_test/User.h
 
 /home/danila/CLionProjects/course_test/Service.h
 string
@@ -27,6 +25,28 @@ climits
 -
 cmath
 -
+map
+-
+User.h
+/home/danila/CLionProjects/course_test/User.h
 sqlite3.h
 /home/danila/CLionProjects/course_test/sqlite3.h
+
+/home/danila/CLionProjects/course_test/User.h
+string
+-
+
+/home/danila/CLionProjects/course_test/main.cpp
+iostream
+-
+User.h
+/home/danila/CLionProjects/course_test/User.h
+Service.h
+/home/danila/CLionProjects/course_test/Service.h
+sqlite3.h
+/home/danila/CLionProjects/course_test/sqlite3.h
+CRUD.h
+/home/danila/CLionProjects/course_test/CRUD.h
+cstdlib
+-
 

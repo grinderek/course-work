@@ -8,7 +8,7 @@
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    createTable();
+    createUsersTable("USERS");
 
     User user;
 
@@ -24,14 +24,18 @@ int main() {
                     cout << "До свидания!" << endl;
                     return 0;
                 case 1:
-                    add_user();
+                    user = login();
                     break;
                 case 2:
-                    //login(user);
+                    add_user();
                     break;
                 default:
                     cout << "There is not such option" << endl;
             }
+        }
+        else {
+            cout << "Happy testing!" << endl;
+            return 0;
         }
     }
 

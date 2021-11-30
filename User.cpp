@@ -18,3 +18,15 @@ string User::getName() {
     return this->name;
 }
 
+void User::setName(string s) {
+    this->name = s;
+}
+
+int User::getRole() {
+    return this->role;
+}
+
+void User::setRole(int rl) {
+    this->role = rl;
+}
+

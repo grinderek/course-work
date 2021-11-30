@@ -10,8 +10,6 @@ using namespace std;
 class User {
 private:
     string name;
-    string login;
-    string password;
     int role;
 
 public:
@@ -19,6 +17,10 @@ public:
     User(const string& name, const int& role);
 
     string getName();
+    void setName(string s);
+
+    int getRole();
+    void setRole(int rl);
 };
 
 

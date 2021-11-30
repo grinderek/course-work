@@ -7,9 +7,10 @@
 #include <iostream>
 #include <string>
 #include "Service.h"
+#include "User.h"
 using namespace std;
 
 void add_user();
-void login();
+User login();
 
 #endif //COURSE_TEST_CRUD_H
