@@ -2,19 +2,22 @@
 #include "User.h"
 #include "Service.h"
 #include "sqlite3.h"
+#include "tests_service.h"
+#include "tables_service.h"
 #include "CRUD.h"
 #include <cstdlib>
 
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    createUsersTable("USERS");
+    createUsersTable();
+    createTestsTable();
 
     User user;
 
     while (true) {
         if (user.getName() == "...") {
-            cout << "Здравствуйте! Введите номер вашего действия" << endl;
+            cout << "Введите номер вашего действия" << endl;
             cout << "1 - Войти в систему" << endl;
             cout << "2 - Зарегистрироваться" << endl;
             cout << "0 - Выйти" << endl;
@@ -30,12 +33,34 @@ int main() {
                     add_user();
                     break;
                 default:
-                    cout << "There is not such option" << endl;
+                    cout << "Что-то пошло не так" << endl;
             }
         }
         else {
-            cout << "Happy testing!" << endl;
-            return 0;
+            if (user.getRole() == 1) {
+
+            }
+            else {
+                cout << "Здравствуйте, " << user.getName() << endl;
+                cout << "1 - Тесты" << endl;
+                cout << "2 - Группы" << endl;
+                cout << "0 - Выход" << endl;
+                int op_men = getInt(0, 2);
+
+                switch (op_men) {
+                    case 0:
+                        return 0;
+                        break;
+                    case 1:
+                        tests_menu(user);
+                        break;
+                    case 2:
+                        //users_menu();
+                        break;
+                    default:
+                        cout << "Что-то пошло не так" << endl;
+                }
+            }
         }
     }
 

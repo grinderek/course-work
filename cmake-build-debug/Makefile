@@ -153,6 +153,30 @@ CRUD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/CRUD.cpp.s
 .PHONY : CRUD.cpp.s
 
+Question_Many_Variants.o: Question_Many_Variants.cpp.o
+.PHONY : Question_Many_Variants.o
+
+# target to build an object file
+Question_Many_Variants.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o
+.PHONY : Question_Many_Variants.cpp.o
+
+Question_Many_Variants.i: Question_Many_Variants.cpp.i
+.PHONY : Question_Many_Variants.i
+
+# target to preprocess a source file
+Question_Many_Variants.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question_Many_Variants.cpp.i
+.PHONY : Question_Many_Variants.cpp.i
+
+Question_Many_Variants.s: Question_Many_Variants.cpp.s
+.PHONY : Question_Many_Variants.s
+
+# target to generate assembly for a file
+Question_Many_Variants.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s
+.PHONY : Question_Many_Variants.cpp.s
+
 Service.o: Service.cpp.o
 .PHONY : Service.o
 
@@ -225,6 +249,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tables_service.o: tables_service.cpp.o
+.PHONY : tables_service.o
+
+# target to build an object file
+tables_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tables_service.cpp.o
+.PHONY : tables_service.cpp.o
+
+tables_service.i: tables_service.cpp.i
+.PHONY : tables_service.i
+
+# target to preprocess a source file
+tables_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tables_service.cpp.i
+.PHONY : tables_service.cpp.i
+
+tables_service.s: tables_service.cpp.s
+.PHONY : tables_service.s
+
+# target to generate assembly for a file
+tables_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tables_service.cpp.s
+.PHONY : tables_service.cpp.s
+
+tests_service.o: tests_service.cpp.o
+.PHONY : tests_service.o
+
+# target to build an object file
+tests_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tests_service.cpp.o
+.PHONY : tests_service.cpp.o
+
+tests_service.i: tests_service.cpp.i
+.PHONY : tests_service.i
+
+# target to preprocess a source file
+tests_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tests_service.cpp.i
+.PHONY : tests_service.cpp.i
+
+tests_service.s: tests_service.cpp.s
+.PHONY : tests_service.s
+
+# target to generate assembly for a file
+tests_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tests_service.cpp.s
+.PHONY : tests_service.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -237,6 +309,9 @@ help:
 	@echo "... CRUD.o"
 	@echo "... CRUD.i"
 	@echo "... CRUD.s"
+	@echo "... Question_Many_Variants.o"
+	@echo "... Question_Many_Variants.i"
+	@echo "... Question_Many_Variants.s"
 	@echo "... Service.o"
 	@echo "... Service.i"
 	@echo "... Service.s"
@@ -246,6 +321,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tables_service.o"
+	@echo "... tables_service.i"
+	@echo "... tables_service.s"
+	@echo "... tests_service.o"
+	@echo "... tests_service.i"
+	@echo "... tests_service.s"
 .PHONY : help
 
 

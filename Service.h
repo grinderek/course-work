@@ -9,6 +9,7 @@
 #include <climits>
 #include <cmath>
 #include <map>
+#include "tables_service.h"
 #include "User.h"
 #include "sqlite3.h"
 
@@ -16,7 +17,8 @@ using namespace std;
 
 int getInt(int begin, int end);
 string getString();
-void createUsersTable(const string& s);
+string getStrInt();
+void createUsersTable();
 void insertUserTable(const string& full_name, const string& login, const string& password, int role );
 User authenticate(const string& login, const string& password);
 string quotesql(const string& s);;

@@ -5,16 +5,37 @@ CMakeFiles/course_test.dir/CRUD.cpp.o: \
  ../CRUD.cpp \
  ../CRUD.h \
  ../Service.h \
- ../User.h
+ ../User.h \
+ ../tables_service.h
+CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o: \
+ ../Question_Many_Variants.cpp \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../User.h \
+ ../tables_service.h
 CMakeFiles/course_test.dir/Service.cpp.o: \
  ../Service.cpp \
  ../Service.h \
- ../User.h
+ ../User.h \
+ ../tables_service.h
 CMakeFiles/course_test.dir/User.cpp.o: \
  ../User.cpp \
  ../User.h
 CMakeFiles/course_test.dir/main.cpp.o: \
  ../CRUD.h \
+ ../Question_Many_Variants.h \
  ../Service.h \
  ../User.h \
- ../main.cpp
+ ../main.cpp \
+ ../tables_service.h \
+ ../tests_service.h
+CMakeFiles/course_test.dir/tables_service.cpp.o: \
+ ../tables_service.cpp \
+ ../tables_service.h
+CMakeFiles/course_test.dir/tests_service.cpp.o: \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../User.h \
+ ../tables_service.h \
+ ../tests_service.cpp \
+ ../tests_service.h

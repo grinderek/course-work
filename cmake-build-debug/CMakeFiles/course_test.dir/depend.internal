@@ -6,15 +6,36 @@ CMakeFiles/course_test.dir/CRUD.cpp.o
  /home/danila/CLionProjects/course_test/CRUD.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/User.h
+ /home/danila/CLionProjects/course_test/tables_service.h
+CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o
+ /home/danila/CLionProjects/course_test/Question_Many_Variants.cpp
+ /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Service.h
+ /home/danila/CLionProjects/course_test/User.h
+ /home/danila/CLionProjects/course_test/tables_service.h
 CMakeFiles/course_test.dir/Service.cpp.o
  /home/danila/CLionProjects/course_test/Service.cpp
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/User.h
+ /home/danila/CLionProjects/course_test/tables_service.h
 CMakeFiles/course_test.dir/User.cpp.o
  /home/danila/CLionProjects/course_test/User.cpp
  /home/danila/CLionProjects/course_test/User.h
 CMakeFiles/course_test.dir/main.cpp.o
  /home/danila/CLionProjects/course_test/CRUD.h
+ /home/danila/CLionProjects/course_test/Question_Many_Variants.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/User.h
  /home/danila/CLionProjects/course_test/main.cpp
+ /home/danila/CLionProjects/course_test/tables_service.h
+ /home/danila/CLionProjects/course_test/tests_service.h
+CMakeFiles/course_test.dir/tables_service.cpp.o
+ /home/danila/CLionProjects/course_test/tables_service.cpp
+ /home/danila/CLionProjects/course_test/tables_service.h
+CMakeFiles/course_test.dir/tests_service.cpp.o
+ /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Service.h
+ /home/danila/CLionProjects/course_test/User.h
+ /home/danila/CLionProjects/course_test/tables_service.h
+ /home/danila/CLionProjects/course_test/tests_service.cpp
+ /home/danila/CLionProjects/course_test/tests_service.h

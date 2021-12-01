@@ -30,3 +30,11 @@ void User::setRole(int rl) {
     this->role = rl;
 }
 
+int User::getID() const {
+    return this->id;
+}
+
+void User::setID(int ident) {
+    this->id = ident;
+}
+

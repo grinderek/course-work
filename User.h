@@ -9,6 +9,7 @@ using namespace std;
 
 class User {
 private:
+    int id;
     string name;
     int role;
 
@@ -21,6 +22,9 @@ public:
 
     int getRole();
     void setRole(int rl);
+
+    int getID() const;
+    void setID(int id);
 };
 
 
