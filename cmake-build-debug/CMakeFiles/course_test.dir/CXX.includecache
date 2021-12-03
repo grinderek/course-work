@@ -6,31 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/danila/CLionProjects/course_test/Service.cpp
-Service.h
-/home/danila/CLionProjects/course_test/Service.h
-
-/home/danila/CLionProjects/course_test/Service.h
-string
--
-iostream
--
-climits
--
-cmath
--
-map
--
+/home/danila/CLionProjects/course_test/tables_service.cpp
 tables_service.h
 /home/danila/CLionProjects/course_test/tables_service.h
-User.h
-/home/danila/CLionProjects/course_test/User.h
-sqlite3.h
-/home/danila/CLionProjects/course_test/sqlite3.h
-
-/home/danila/CLionProjects/course_test/User.h
-string
--
 
 /home/danila/CLionProjects/course_test/tables_service.h
 iostream

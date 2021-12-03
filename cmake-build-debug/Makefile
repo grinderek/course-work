@@ -201,6 +201,30 @@ Service.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Service.cpp.s
 .PHONY : Service.cpp.s
 
+SqlGateway.o: SqlGateway.cpp.o
+.PHONY : SqlGateway.o
+
+# target to build an object file
+SqlGateway.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/SqlGateway.cpp.o
+.PHONY : SqlGateway.cpp.o
+
+SqlGateway.i: SqlGateway.cpp.i
+.PHONY : SqlGateway.i
+
+# target to preprocess a source file
+SqlGateway.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/SqlGateway.cpp.i
+.PHONY : SqlGateway.cpp.i
+
+SqlGateway.s: SqlGateway.cpp.s
+.PHONY : SqlGateway.s
+
+# target to generate assembly for a file
+SqlGateway.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/SqlGateway.cpp.s
+.PHONY : SqlGateway.cpp.s
+
 User.o: User.cpp.o
 .PHONY : User.o
 
@@ -248,6 +272,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+questions_service.o: questions_service.cpp.o
+.PHONY : questions_service.o
+
+# target to build an object file
+questions_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.o
+.PHONY : questions_service.cpp.o
+
+questions_service.i: questions_service.cpp.i
+.PHONY : questions_service.i
+
+# target to preprocess a source file
+questions_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.i
+.PHONY : questions_service.cpp.i
+
+questions_service.s: questions_service.cpp.s
+.PHONY : questions_service.s
+
+# target to generate assembly for a file
+questions_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.s
+.PHONY : questions_service.cpp.s
 
 tables_service.o: tables_service.cpp.o
 .PHONY : tables_service.o
@@ -315,12 +363,18 @@ help:
 	@echo "... Service.o"
 	@echo "... Service.i"
 	@echo "... Service.s"
+	@echo "... SqlGateway.o"
+	@echo "... SqlGateway.i"
+	@echo "... SqlGateway.s"
 	@echo "... User.o"
 	@echo "... User.i"
 	@echo "... User.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... questions_service.o"
+	@echo "... questions_service.i"
+	@echo "... questions_service.s"
 	@echo "... tables_service.o"
 	@echo "... tables_service.i"
 	@echo "... tables_service.s"

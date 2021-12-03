@@ -23,7 +23,7 @@ void tests_menu(const User& user) {
 }
 
 void createTestsTable() {
-    createTable("CREATE TABLE IF NOT EXISTS TESTS ("
+    SQLOperation("CREATE TABLE IF NOT EXISTS TESTS ("
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
                 "NAME_OF_TEST TEXT NOT NULL, "
                 "NUMBER_OF_QUESTIONS INTEGER NOT NULL, "
@@ -62,7 +62,7 @@ void add_test(const User& user) {
 
     int id = add_test_to_table(topic, count, user.getID());
     cout << id << endl;
-    //add_questions_to_table(questions, id);
+    add_questions_to_table(questions, id);
 }
 
 int add_test_to_table(const string& topic, int count, int user_id) {

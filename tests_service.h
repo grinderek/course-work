@@ -12,6 +12,7 @@
 #include "sqlite3.h"
 #include "Service.h"
 #include "tables_service.h"
+#include "questions_service.h"
 
 using namespace std;
 

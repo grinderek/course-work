@@ -12,6 +12,9 @@ int main() {
 
     createUsersTable();
     createTestsTable();
+    createQuestionsTable();
+    createAnswersTable();
+    createCorrectAnswerTable();
 
     User user;
 

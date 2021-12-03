@@ -11,8 +11,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/danila/CLionProjects/course_test/CRUD.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/CRUD.cpp.o"
   "/home/danila/CLionProjects/course_test/Question_Many_Variants.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o"
   "/home/danila/CLionProjects/course_test/Service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Service.cpp.o"
+  "/home/danila/CLionProjects/course_test/SqlGateway.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/SqlGateway.cpp.o"
   "/home/danila/CLionProjects/course_test/User.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/User.cpp.o"
   "/home/danila/CLionProjects/course_test/main.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/main.cpp.o"
+  "/home/danila/CLionProjects/course_test/questions_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/questions_service.cpp.o"
   "/home/danila/CLionProjects/course_test/tables_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/tables_service.cpp.o"
   "/home/danila/CLionProjects/course_test/tests_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/tests_service.cpp.o"
   )

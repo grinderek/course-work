@@ -10,5 +10,8 @@
 
 using namespace std;
 
-void createTable(const string& sql);
+int SQLOperation(const string& sql);
+void createQuestionsTable();
+void createAnswersTable();
+void createCorrectAnswerTable();
 #endif //COURSE_TEST_TABLES_SERVICE_H

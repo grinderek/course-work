@@ -30,7 +30,7 @@ string quotesql( const string& s ) {
 }
 
 void createUsersTable() {
-    createTable("CREATE TABLE IF NOT EXISTS USERS ("
+    SQLOperation("CREATE TABLE IF NOT EXISTS USERS ("
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
                 "FULL_NAME TEXT NOT NULL, "
                 "LOGIN TEXT NOT NULL, "

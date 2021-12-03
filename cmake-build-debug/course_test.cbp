@@ -100,6 +100,12 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/Service.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/SqlGateway.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/SqlGateway.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/User.cpp">
 			<Option target="course_test"/>
 		</Unit>
@@ -110,6 +116,12 @@
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/main.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/questions_service.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/questions_service.h">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/tables_service.cpp">
