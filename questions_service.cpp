@@ -166,6 +166,62 @@ void showQuestions(vector<Question_Many_Variants> questions) {
     }
 }
 
+void changeAnswers(Question_Many_Variants question) {
+    int j = 1;
+    auto answers = question.getAnswers();
+    map <int, int> ids;
+    map <int, int> rev_ids;
+    for (const auto& answer : answers) {
+        ids[answer.first] = j;
+        rev_ids[j - 1] = answer.first;
+        cout << j++ << " - " << answer.second << endl;
+    }
+
+    cout << "Правильный ответ - " << ids[question.getCorrectAnswer()] << endl;
+
+    while (true) {
+        cout << "Введите номер ответа, который хотите изменить(0 для выхода)" << endl;
+        int id = getInt(0, j - 1);
+
+        if (id == 0) {
+            return;
+        } else {
+            id--;
+            cout << answers[rev_ids[id]] << endl;
+            cout << "Что вы хотите изменить?" << endl;
+            cout << "1 - Текст ответа" << endl;
+            cout << "0 - Выход" << endl;
+            int op_menu = getInt(0, 1);
+
+            switch (op_menu) {
+                case 0:
+                    continue;
+                case 1: {
+                    cout << "Введите новый ответ" << endl;
+                    string text = getString();
+                    cout << "Вы уверены, что хотите сохраните изменения?" << endl;
+                    cout << "1 - Да" << endl;
+                    cout << "2 - Нет" << endl;
+                    int x = getInt(1, 2);
+                    if (x == 1) {
+                        string sql = "PRAGMA foreign_keys = ON;\n"
+                                     "UPDATE ANSWERS SET TEXT_OF_ANSWER = " + quotesql(text) + " WHERE ID = " +
+                                     to_string(rev_ids[id]) + ";\nPRAGMA foreign_keys = OFF;";
+                        SQLOperation(sql);
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+                    break;
+                default:
+                    cout << "Что-то пошло не так" << endl;
+            }
+        }
+    }
+}
+
+
 void changeQuestions(vector<Question_Many_Variants> questions) {
     showQuestions(questions);
 
@@ -204,7 +260,12 @@ void changeQuestions(vector<Question_Many_Variants> questions) {
                         continue;
                     }
                 }
-                break;
+                    break;
+                case 2:
+                    changeAnswers(questions[id]);
+                    break;
+                default:
+                    cout << "Что-то пошло не так" << endl;
             }
         }
     }
