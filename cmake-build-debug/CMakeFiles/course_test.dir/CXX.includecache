@@ -38,24 +38,22 @@ User.h
 sqlite3.h
 /home/danila/CLionProjects/course_test/sqlite3.h
 
-/home/danila/CLionProjects/course_test/User.h
-string
--
+/home/danila/CLionProjects/course_test/Test.cpp
+Test.h
+/home/danila/CLionProjects/course_test/Test.h
 
-/home/danila/CLionProjects/course_test/questions_service.cpp
-questions_service.h
-/home/danila/CLionProjects/course_test/questions_service.h
-
-/home/danila/CLionProjects/course_test/questions_service.h
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
-string
--
+/home/danila/CLionProjects/course_test/Test.h
 iostream
+-
+string
 -
 vector
 -
-sqlite3.h
+Question_Many_Variants.h
+/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+
+/home/danila/CLionProjects/course_test/User.h
+string
 -
 
 /home/danila/CLionProjects/course_test/tables_service.h
