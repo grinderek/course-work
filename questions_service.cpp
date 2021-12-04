@@ -159,7 +159,9 @@ int getCorrectAnswer(int question_id) {
 }
 
 void showQuestions(vector<Question_Many_Variants> questions) {
+    int i = 1;
     for (auto question : questions) {
+        cout << "Вопрос №" << i++ << endl;
         cout << question << endl;
     }
 }
@@ -168,48 +170,42 @@ void changeQuestions(vector<Question_Many_Variants> questions) {
     showQuestions(questions);
 
     while (true) {
-        cout << "Введите ID вопроса, который хотите изменить(0 для выхода)" << endl;
-        int id = getInt(0, INT_MAX);
+        cout << "Введите номер вопроса, который хотите изменить(0 для выхода)" << endl;
+        int id = getInt(0, questions.size());
 
         if (id == 0) {
             return;
         } else {
-            if (find_if(questions.begin(), questions.end(), [id](Question_Many_Variants x) {
-                return x.getID() == id;
-            }) != questions.end()) {
-                cout << questions[id] << endl;
-                cout << "Что вы хотите изменить?" << endl;
-                cout << "1 - Текст вопроса" << endl;
-                cout << "2 - Ответы" << endl;
-                cout << "0 - Выход" << endl;
-                int op_menu = getInt(0, 2);
+            id--;
+            cout << questions[id] << endl;
+            cout << "Что вы хотите изменить?" << endl;
+            cout << "1 - Текст вопроса" << endl;
+            cout << "2 - Ответы" << endl;
+            cout << "0 - Выход" << endl;
+            int op_menu = getInt(0, 2);
 
-                switch (op_menu) {
-                    case 0:
-                        continue;
-                    case 1: {
-                        cout << "Введите новый вопрсо" << endl;
-                        string text = getString();
-                        cout << "Вы уверены, что хотите сохраните изменения?" << endl;
-                        cout << "1 - Да" << endl;
-                        cout << "2 - Нет" << endl;
-                        int x = getInt(1, 2);
-                        if (x == 1) {
-                            string sql = "PRAGMA foreign_keys = ON;\n"
-                                         "UPDATE TESTS SET NAME_OF_TEST = " + quotesql(text) + " WHERE test_id = " +
-                                         to_string(id) + ";\nPRAGMA foreign_keys = OFF;";
-                            SQLOperation(sql);
-                            break;
-                        } else {
-                            continue;
-                        }
-                    }
+            switch (op_menu) {
+                case 0:
+                    continue;
+                case 1: {
+                    cout << "Введите новый вопрос" << endl;
+                    string text = getString();
+                    cout << "Вы уверены, что хотите сохраните изменения?" << endl;
+                    cout << "1 - Да" << endl;
+                    cout << "2 - Нет" << endl;
+                    int x = getInt(1, 2);
+                    if (x == 1) {
+                        string sql = "PRAGMA foreign_keys = ON;\n"
+                                     "UPDATE QUESTIONS SET TEXT_OF_QUESTION = " + quotesql(text) + " WHERE ID = " +
+                                     to_string(questions[id].getID()) + ";\nPRAGMA foreign_keys = OFF;";
+                        SQLOperation(sql);
                         break;
+                    } else {
+                        continue;
+                    }
                 }
-            } else {
-                cout << "Теста с таким ID не существует" << endl;
+                break;
             }
         }
     }
-
 }

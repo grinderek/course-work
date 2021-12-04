@@ -11,17 +11,7 @@ ostream &operator<<(ostream &out, const Test &test) {
     int i = 1;
     for (auto question : test.questions) {
         out << "Вопрос №" << i++ << ":\n";
-        out << question.getQuestion() << endl;
-        auto answers = question.getAnswers();
-
-        int j = 1;
-        map <int, int> ids;
-        for (const auto& answer : answers) {
-            ids[answer.first] = j;
-            out << j++ << " - " << answer.second << endl;
-        }
-
-        out << "Правильный ответ - " << ids[question.getCorrectAnswer()] << "\n\n";
+        out << question << endl;
     }
 
     return out;

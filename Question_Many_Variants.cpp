@@ -20,6 +20,7 @@ Question_Many_Variants::Question_Many_Variants(string question, int number_of_an
 }
 
 Question_Many_Variants::Question_Many_Variants(const Question_Many_Variants &question) {
+    this->id = question.id;
     this->question_text = question.question_text;
     this->number_of_answers = question.number_of_answers;
     this->answers = question.answers;
@@ -44,6 +45,7 @@ map<int, string> Question_Many_Variants::getAnswers() {
 
 Question_Many_Variants& Question_Many_Variants::operator= (const Question_Many_Variants& question) {
     if (&question != this) {
+        this->id = question.id;
         this->question_text = question.question_text;
         this->number_of_answers = question.number_of_answers;
         this->answers = question.answers;
@@ -55,10 +57,17 @@ Question_Many_Variants& Question_Many_Variants::operator= (const Question_Many_V
 
 ostream& operator<< (ostream &out, const Question_Many_Variants &question)
 {
-    out << "Question: " << question.question_text << endl;
-    for (auto answer : question.answers) {
-        out << "Answer " << answer.first << ": " << answer.second << endl;
+    out << question.question_text << endl;
+    auto answers = question.answers;
+
+    int j = 1;
+    map <int, int> ids;
+    for (const auto& answer : answers) {
+        ids[answer.first] = j;
+        out << j++ << " - " << answer.second << endl;
     }
+
+    out << "Правильный ответ - " << ids[question.correct_answer] << "\n\n";
     return out;
 }
 

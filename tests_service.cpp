@@ -235,7 +235,7 @@ void change_test(int user_id) {
                     }
                         break;
                     case 2:
-                        //changeQuestions(tests[id].getQuestions());
+                        changeQuestions((*it).getQuestions());
                         break;
                 }
             } else {
