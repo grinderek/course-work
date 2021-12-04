@@ -17,6 +17,12 @@ void tests_menu(const User& user) {
         case 1:
             add_test(user);
             break;
+        case 2:
+            show_tests(user.getID());
+            break;
+        case 3:
+            change_test(user.getID());
+            break;
         case 4:
             delete_test(user.getID());
             break;
@@ -180,6 +186,59 @@ void delete_test(int user_id) {
                 }
             }
             else {
+                cout << "Теста с таким ID не существует" << endl;
+            }
+        }
+    }
+}
+
+void change_test(int user_id) {
+    auto tests = show_tests(user_id);
+
+    while (true) {
+        cout << "Введите ID теста, который хотите измените(0 для выхода)" << endl;
+        int id = getInt(0, INT_MAX);
+
+        if (id == 0) {
+            return;
+        } else {
+            auto it = find_if(tests.begin(), tests.end(), [id](Test x) {
+                return x.getID() == id;
+            });
+            if (it != tests.end()) {
+                cout << *it;
+                cout << "Что вы хотите изменить?" << endl;
+                cout << "1 - Тему теста" << endl;
+                cout << "2 - Вопросы" << endl;
+                cout << "0 - Выход" << endl;
+                int op_menu = getInt(0, 2);
+
+                switch (op_menu) {
+                    case 0:
+                        continue;
+                    case 1: {
+                        cout << "Введите новую тему" << endl;
+                        string topic = getString();
+                        cout << "Вы уверены, что хотите сохраните изменения?" << endl;
+                        cout << "1 - Да" << endl;
+                        cout << "2 - Нет" << endl;
+                        int x = getInt(1, 2);
+                        if (x == 1) {
+                            string sql = "PRAGMA foreign_keys = ON;\n"
+                                         "UPDATE TESTS SET NAME_OF_TEST = " + quotesql(topic) + " WHERE ID = " +
+                                    to_string(id) + ";\nPRAGMA foreign_keys = OFF;";
+                            SQLOperation(sql);
+                            break;
+                        } else {
+                            continue;
+                        }
+                    }
+                        break;
+                    case 2:
+                        //changeQuestions(tests[id].getQuestions());
+                        break;
+                }
+            } else {
                 cout << "Теста с таким ID не существует" << endl;
             }
         }

@@ -59,10 +59,14 @@ string
 -
 iostream
 -
+algorithm
+-
 vector
 -
 sqlite3.h
 -
+Test.h
+/home/danila/CLionProjects/course_test/Test.h
 
 /home/danila/CLionProjects/course_test/tables_service.h
 iostream

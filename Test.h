@@ -22,6 +22,7 @@ public:
     int getID();
     void setName(string topic);
     void setQuestions(vector<Question_Many_Variants> list_of_questions);
+    vector<Question_Many_Variants> getQuestions();
 
     friend ostream& operator<< (ostream &out, const Test &test);
 };

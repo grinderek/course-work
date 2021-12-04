@@ -44,6 +44,7 @@ CMakeFiles/course_test.dir/main.cpp.o: \
 CMakeFiles/course_test.dir/questions_service.cpp.o: \
  ../Question_Many_Variants.h \
  ../Service.h \
+ ../Test.h \
  ../User.h \
  ../questions_service.cpp \
  ../questions_service.h \

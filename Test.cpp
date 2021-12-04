@@ -42,3 +42,7 @@ void Test::setName(string topic) {
 void Test::setQuestions(vector<Question_Many_Variants> list_of_questions) {
     this->questions = list_of_questions;
 }
+
+vector <Question_Many_Variants> Test::getQuestions() {
+    return this->questions;
+}
