@@ -8,6 +8,7 @@
 #include <iostream>
 #include <climits>
 #include <vector>
+#include <algorithm>
 #include "Question_Many_Variants.h"
 #include "sqlite3.h"
 #include "Service.h"

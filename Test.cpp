@@ -5,6 +5,7 @@
 #include "Test.h"
 
 ostream &operator<<(ostream &out, const Test &test) {
+    out << "ID - " << test.id << endl;
     out << "Тема теста - " << test.name << endl;
     out << "Вопросы теста: " << endl;
     int i = 1;

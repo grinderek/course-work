@@ -141,14 +141,47 @@ vector<Test> get_tests(int user_id) {
     }
 }
 
-void show_tests(int user_id) {
+vector<Test> show_tests(int user_id) {
     vector<Test> tests = get_tests(user_id);
 
     for (auto test : tests) {
         cout << test;
     }
+
+    return tests;
 }
 
 void delete_test(int user_id) {
-    show_tests(user_id);
+    auto tests = show_tests(user_id);
+
+    while (true) {
+        cout << "Введите ID теста, который хотите удалить(0 для выхода)" << endl;
+        int id = getInt(0, INT_MAX);
+
+        if (id == 0) {
+            return;
+        } else {
+            if (find_if(tests.begin(), tests.end(), [id](Test x){
+                return x.getID() == id;
+            }) != tests.end()) {
+                cout << "Вы уверены, что хотите удалить этот тест?" << endl;
+                cout << "1 - Да" << endl;
+                cout << "2 - Нет" << endl;
+                int x = getInt(1, 2);
+                if (x == 1) {
+                    string sql = "PRAGMA foreign_keys = ON;\n"
+                                 "DELETE FROM TESTS WHERE ID = " + to_string(id)
+                                 + ";\nPRAGMA foreign_keys = OFF;";
+
+                    SQLOperation(sql);
+                    break;
+                } else {
+                    continue;
+                }
+            }
+            else {
+                cout << "Теста с таким ID не существует" << endl;
+            }
+        }
+    }
 }

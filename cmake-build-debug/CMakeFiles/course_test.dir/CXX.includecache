@@ -38,10 +38,6 @@ User.h
 sqlite3.h
 /home/danila/CLionProjects/course_test/sqlite3.h
 
-/home/danila/CLionProjects/course_test/Test.cpp
-Test.h
-/home/danila/CLionProjects/course_test/Test.h
-
 /home/danila/CLionProjects/course_test/Test.h
 iostream
 -
@@ -56,6 +52,18 @@ Question_Many_Variants.h
 string
 -
 
+/home/danila/CLionProjects/course_test/questions_service.h
+Question_Many_Variants.h
+/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+string
+-
+iostream
+-
+vector
+-
+sqlite3.h
+-
+
 /home/danila/CLionProjects/course_test/tables_service.h
 iostream
 -
@@ -63,4 +71,32 @@ string
 -
 sqlite3.h
 -
+
+/home/danila/CLionProjects/course_test/tests_service.cpp
+tests_service.h
+/home/danila/CLionProjects/course_test/tests_service.h
+
+/home/danila/CLionProjects/course_test/tests_service.h
+string
+-
+iostream
+-
+climits
+-
+vector
+-
+algorithm
+-
+Question_Many_Variants.h
+/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+sqlite3.h
+/home/danila/CLionProjects/course_test/sqlite3.h
+Service.h
+/home/danila/CLionProjects/course_test/Service.h
+tables_service.h
+/home/danila/CLionProjects/course_test/tables_service.h
+questions_service.h
+/home/danila/CLionProjects/course_test/questions_service.h
+Test.h
+/home/danila/CLionProjects/course_test/Test.h
 

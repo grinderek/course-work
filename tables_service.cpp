@@ -16,7 +16,7 @@ int SQLOperation(const string& sql) {
         exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &messageError);
 
         if (exit != SQLITE_OK) {
-            cerr << sql << endl;
+            cerr << messageError << endl;
             sqlite3_free(messageError);
         }
         //else
