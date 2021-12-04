@@ -106,6 +106,12 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/SqlGateway.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Test.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Test.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/User.cpp">
 			<Option target="course_test"/>
 		</Unit>

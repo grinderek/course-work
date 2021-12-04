@@ -17,15 +17,17 @@ using namespace std;
 class User;
 class Question_Many_Variants {
 private:
+    int id;
     string question_text;
     int number_of_answers;
-    vector <string> answers;
     int correct_answer;
+
+    map <int, string> answers;
 
 public:
     Question_Many_Variants();
 
-    Question_Many_Variants(string question, int number_of_answers, vector<string> answers, int correct_answer);
+    Question_Many_Variants(string question, int number_of_answers, map<int, string> answers, int correct_answer);
 
     Question_Many_Variants(const Question_Many_Variants &question);
 
@@ -33,6 +35,11 @@ public:
 
     string getQuestion();
     int getCorrectAnswer();
+    int getID();
+    void setQuestionText(string text);
+    void setAnswers(map <int, string> ans);
+    void setCorrectAnswer(int ide);
+    void setID(int ide);
 
 
     Question_Many_Variants& operator= (const Question_Many_Variants& question);
@@ -41,7 +48,7 @@ public:
     friend ostream& operator<< (ostream &out, const Question_Many_Variants &question);
     friend istream& operator>> (istream &in, Question_Many_Variants &question);
 
-    vector<string> getAnswers();
+    map<int, string> getAnswers();
 };
 
 ostream& operator<< (ostream &out, const Question_Many_Variants &question);

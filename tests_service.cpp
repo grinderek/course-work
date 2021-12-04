@@ -17,6 +17,9 @@ void tests_menu(const User& user) {
         case 1:
             add_test(user);
             break;
+        case 4:
+            delete_test(user.getID());
+            break;
         default:
             cout << "Что-то не так" << endl;
     }
@@ -95,4 +98,57 @@ int add_test_to_table(const string& topic, int count, int user_id) {
     {
         cerr << e.what();
     }
+
+    return -1;
+}
+
+vector<Test> get_tests(int user_id) {
+    string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);
+    sqlite3 *DB;
+
+    try
+    {
+        int exit = 0;
+        exit = sqlite3_open("test.db", &DB);
+        cout << exit << " " << sql << endl;
+        char* messageError;
+        vector<Test> tests;
+        sqlite3_stmt *stmt;
+        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
+
+        if (exit != SQLITE_OK) {
+            cerr << "Error Authenticate" << endl;
+        }
+        else {
+            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
+                Test test;
+                test.setID(sqlite3_column_int(stmt, 0));
+                test.setName(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
+                vector<Question_Many_Variants> questions = getQuestions(test.getID());
+                test.setQuestions(questions);
+                tests.push_back(test);
+            }
+        }
+        sqlite3_finalize(stmt);
+        sqlite3_close(DB);
+
+        return tests;
+    }
+    catch (const exception & e)
+    {
+        cerr << e.what();
+        return {};
+    }
+}
+
+void show_tests(int user_id) {
+    vector<Test> tests = get_tests(user_id);
+
+    for (auto test : tests) {
+        cout << test;
+    }
+}
+
+void delete_test(int user_id) {
+    show_tests(user_id);
 }
