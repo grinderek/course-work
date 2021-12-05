@@ -29,15 +29,6 @@ string quotesql( const string& s ) {
     return string("'") + s + string("'");
 }
 
-void createUsersTable() {
-    SQLOperation("CREATE TABLE IF NOT EXISTS USERS ("
-                "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-                "FULL_NAME TEXT NOT NULL, "
-                "LOGIN TEXT NOT NULL UNIQUE, "
-                "PASSWORD TEXT NOT NULL, "
-                "ROLE INTEGER NOT NULL );");
-}
-
 User authenticate(const string& login, const string& password) {
     sqlite3* DB;
 

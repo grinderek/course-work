@@ -34,6 +34,21 @@ int SQLOperation(const string& sql) {
     return -1;
 }
 
+void createUsersTable() {
+    SQLOperation("CREATE TABLE IF NOT EXISTS USERS ("
+                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "FULL_NAME TEXT NOT NULL, "
+                 "LOGIN TEXT NOT NULL UNIQUE, "
+                 "PASSWORD TEXT NOT NULL, "
+                 "ROLE INTEGER NOT NULL,"
+                 "GROUP_ID INTEGER NOT NULL,"
+                 "  CONSTRAINT fk_groups\n"
+                 "    FOREIGN KEY (GROUP_ID)\n"
+                 "    REFERENCES GROUPS (ID)\n"
+                 "    ON DELETE CASCADE"
+                 "    ON UPDATE CASCADE);");
+}
+
 void createQuestionsTable() {
     SQLOperation("CREATE TABLE IF NOT EXISTS QUESTIONS ("
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "

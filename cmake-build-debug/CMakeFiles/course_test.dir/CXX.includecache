@@ -18,6 +18,18 @@ tables_service.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
 
+/home/danila/CLionProjects/course_test/Group.h
+iostream
+-
+string
+-
+vector
+-
+sqlite3.h
+-
+User.h
+/home/danila/CLionProjects/course_test/User.h
+
 /home/danila/CLionProjects/course_test/Service.h
 string
 -
@@ -59,6 +71,8 @@ tables_service.h
 /home/danila/CLionProjects/course_test/tables_service.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
+Group.h
+/home/danila/CLionProjects/course_test/Group.h
 
 /home/danila/CLionProjects/course_test/tables_service.h
 iostream

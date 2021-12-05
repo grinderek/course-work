@@ -9,9 +9,16 @@ User::User() {
     this->role = -1;
 }
 
-User::User(const string& name, const int& role) {
+User::User(const int& id, const string& name, const int& role) {
+    this->id = id;
     this->name = name;
     this->role = role;
+}
+
+User::User(const User &user) {
+    this->id = user.id;
+    this->name = user.name;
+    this->role = user.role;
 }
 
 string User::getName() {

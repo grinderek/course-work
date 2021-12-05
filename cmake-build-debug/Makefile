@@ -153,6 +153,30 @@ CRUD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/CRUD.cpp.s
 .PHONY : CRUD.cpp.s
 
+Group.o: Group.cpp.o
+.PHONY : Group.o
+
+# target to build an object file
+Group.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Group.cpp.o
+.PHONY : Group.cpp.o
+
+Group.i: Group.cpp.i
+.PHONY : Group.i
+
+# target to preprocess a source file
+Group.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Group.cpp.i
+.PHONY : Group.cpp.i
+
+Group.s: Group.cpp.s
+.PHONY : Group.s
+
+# target to generate assembly for a file
+Group.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Group.cpp.s
+.PHONY : Group.cpp.s
+
 Question_Many_Variants.o: Question_Many_Variants.cpp.o
 .PHONY : Question_Many_Variants.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... CRUD.o"
 	@echo "... CRUD.i"
 	@echo "... CRUD.s"
+	@echo "... Group.o"
+	@echo "... Group.i"
+	@echo "... Group.s"
 	@echo "... Question_Many_Variants.o"
 	@echo "... Question_Many_Variants.i"
 	@echo "... Question_Many_Variants.s"

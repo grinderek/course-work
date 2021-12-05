@@ -11,7 +11,7 @@
 #include "User.h"
 using namespace std;
 
-int add_user(int role = 0);
+int add_user(int role = 0, int group_id = -1);
 User login();
 
 #endif //COURSE_TEST_CRUD_H

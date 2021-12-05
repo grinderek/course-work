@@ -18,7 +18,6 @@ using namespace std;
 int getInt(int begin, int end);
 string getString();
 string getStrInt();
-void createUsersTable();
 User authenticate(const string& login, const string& password);
 string quotesql(const string& s);;
 

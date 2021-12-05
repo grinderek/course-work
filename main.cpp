@@ -17,7 +17,6 @@ int main() {
     createAnswersTable();
     createCorrectAnswerTable();
     createGroupTable();
-    createGroups_UsersTable();
 
     User user;
 

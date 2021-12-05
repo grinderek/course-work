@@ -15,7 +15,8 @@ private:
 
 public:
     User();
-    User(const string& name, const int& role);
+    User(const int& id, const string& name, const int& role);
+    User(const User& user);
 
     string getName();
     void setName(string s);

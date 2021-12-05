@@ -3,7 +3,7 @@
 //
 #include "CRUD.h"
 
-int add_user(int role) {
+int add_user(int role, int group_id) {
     string full_name;
     cout << "Введите ФИО" << endl;
     full_name = getString();
@@ -23,11 +23,12 @@ int add_user(int role) {
         role = getInt(1, 2);
     }
 
-    string sql = "INSERT INTO USERS (FULL_NAME, LOGIN, PASSWORD, ROLE) VALUES ("
+    string sql = "INSERT INTO USERS (FULL_NAME, LOGIN, PASSWORD, ROLE, GROUP_ID) VALUES ("
                  + quotesql(full_name) + ","
                  + quotesql(login) + ","
                  + quotesql(password) + ","
-                 + to_string(role) + ");";
+                 + to_string(role) + ","
+                 + to_string(group_id) + ");";
 
     int id = SQLOperation(sql);
     return id;

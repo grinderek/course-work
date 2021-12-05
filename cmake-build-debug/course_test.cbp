@@ -88,6 +88,12 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/CRUD.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Group.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Group.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Question_Many_Variants.cpp">
 			<Option target="course_test"/>
 		</Unit>
