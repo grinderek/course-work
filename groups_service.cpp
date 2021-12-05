@@ -25,7 +25,7 @@ void groups_menu(User user) {
             change_group();
             break;
         case 4:
-            //delete_group();
+            delete_group();
             break;
         default:
             cout << "Что-то не так" << endl;
@@ -235,4 +235,35 @@ void change_group() {
             }
         }
     }
+}
+
+void delete_group() {
+    vector<Group> groups = get_groups();
+
+    while (true) {
+        cout << "Выберите номер группы, которую хотите удалить(0 для выхода)" << endl;
+        for (int i = 0; i < groups.size(); i++) {
+            cout << i + 1 << " - " << groups[i].getNumber() << endl;
+        }
+
+        int group_id = getInt(0, groups.size());
+        if (group_id == 0) {
+            break;
+        } else {
+            group_id--;
+            cout << "Вы уверены, что хотите сохранить изменения?" << endl;
+            cout << "1 - Да" << endl;
+            cout << "2 - Нет" << endl;
+            int op_men = getInt(1, 2);
+            if (op_men == 1) {
+                string sql = "PRAGMA foreign_keys = ON;\n"
+                             "DELETE FROM GROUPS WHERE ID = " + to_string(groups[group_id].getID())
+                             + ";\nPRAGMA foreign_keys = OFF;";
+
+                SQLOperation(sql);
+                return;
+            }
+        }
+    }
+
 }

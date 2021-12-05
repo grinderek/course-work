@@ -19,4 +19,5 @@ void groups_menu(User user);
 void add_group();
 void show_group();
 void change_group();
+void delete_group();
 #endif //COURSE_TEST_GROUPS_SERVICE_H
