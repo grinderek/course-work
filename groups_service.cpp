@@ -178,10 +178,6 @@ void change_group() {
         } else {
             group_id--;
             auto users = get_users(groups[group_id].getID());
-            cout << "Студенты группы " << groups[group_id].getNumber() << endl;
-            for (int i = 0; i < users.size(); i++) {
-                cout << i + 1 << " - " << users[i].getName() << endl;
-            }
             cout << "Что вы хотите изменить?" << endl;
             cout << "1 - Номер группы" << endl;
             cout << "2 - Данные студентов" << endl;
@@ -204,7 +200,38 @@ void change_group() {
                     return;
                 }
             } else {
+                cout << "Студенты группы " << groups[group_id].getNumber() << endl;
+                for (int i = 0; i < users.size(); i++) {
+                    cout << i + 1 << " - " << users[i].getName() << endl;
+                }
+                cout << "Выберите номер студента, которого хотите изменить(0 для выхода)" << endl;
+                int user_id = getInt(0, users.size());
 
+                if (user_id == 0) {
+                    continue;
+                } else {
+                    user_id--;
+                    cout << users[user_id].getName() << endl;
+                    cout << "1 - Изменить ФИО" << endl;
+                    cout << "0 - Выход" << endl;
+                    op_men = getInt(0, 1);
+                    if (op_men == 0) {
+                        continue;
+                    } else {
+                        cout << "Введите новое ФИО" << endl;
+                        string full_name = getString();
+                        cout << "Вы уверены, что хотите сохранить изменения?" << endl;
+                        cout << "1 - Да" << endl;
+                        cout << "2 - Нет" << endl;
+                        op_men = getInt(1, 2);
+                        if (op_men == 1) {
+                            SQLOperation("UPDATE USERS SET FULL_NAME = "
+                                         + quotesql(full_name) + "WHERE ID = "
+                                         + to_string(users[user_id].getID()) + ";");
+                            return;
+                        }
+                    }
+                }
             }
         }
     }
