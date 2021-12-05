@@ -74,3 +74,26 @@ void createCorrectAnswerTable() {
                          "    ON DELETE CASCADE\n"
                          "    ON UPDATE CASCADE);");
 }
+
+void createGroupTable() {
+    SQLOperation("CREATE TABLE IF NOT EXISTS GROUPS ("
+                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "NUMBER_OF_GROUP TEXT NOT NULL UNIQUE);");
+}
+
+void createGroups_UsersTable() {
+    SQLOperation("CREATE TABLE IF NOT EXISTS GROUPS_USERS ("
+                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "GROUP_ID INTEGER NOT NULL, "
+                 "USER_ID INTEGER NOT NULL, "
+                 "  CONSTRAINT fk_groups\n"
+                 "    FOREIGN KEY (GROUP_ID)\n"
+                 "    REFERENCES GROUPS (ID)\n"
+                 "    ON DELETE CASCADE\n"
+                 "    ON UPDATE CASCADE\n"
+                 "  CONSTRAINT fk_users \n"
+                 "    FOREIGN KEY (USER_ID)\n"
+                 "    REFERENCES USERS (ID)\n"
+                 "    ON DELETE CASCADE\n"
+                 "    ON UPDATE CASCADE);");
+}

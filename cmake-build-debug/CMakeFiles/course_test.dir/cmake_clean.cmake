@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/course_test.dir/SqlGateway.cpp.o"
   "CMakeFiles/course_test.dir/Test.cpp.o"
   "CMakeFiles/course_test.dir/User.cpp.o"
+  "CMakeFiles/course_test.dir/groups_service.cpp.o"
   "CMakeFiles/course_test.dir/main.cpp.o"
   "CMakeFiles/course_test.dir/questions_service.cpp.o"
   "CMakeFiles/course_test.dir/tables_service.cpp.o"

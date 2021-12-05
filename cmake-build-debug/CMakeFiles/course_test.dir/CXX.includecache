@@ -6,17 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
-string
--
+/home/danila/CLionProjects/course_test/CRUD.h
 iostream
 -
-utility
--
-vector
+string
 -
 Service.h
 /home/danila/CLionProjects/course_test/Service.h
+tables_service.h
+/home/danila/CLionProjects/course_test/tables_service.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
 
@@ -38,39 +36,29 @@ User.h
 sqlite3.h
 /home/danila/CLionProjects/course_test/sqlite3.h
 
-/home/danila/CLionProjects/course_test/Test.h
-iostream
--
-string
--
-vector
--
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
-
 /home/danila/CLionProjects/course_test/User.h
 string
 -
 
-/home/danila/CLionProjects/course_test/questions_service.cpp
-questions_service.h
-/home/danila/CLionProjects/course_test/questions_service.h
+/home/danila/CLionProjects/course_test/groups_service.cpp
+groups_service.h
+/home/danila/CLionProjects/course_test/groups_service.h
 
-/home/danila/CLionProjects/course_test/questions_service.h
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
-string
--
+/home/danila/CLionProjects/course_test/groups_service.h
 iostream
 -
-algorithm
+string
 -
 vector
 -
-sqlite3.h
--
-Test.h
-/home/danila/CLionProjects/course_test/Test.h
+CRUD.h
+/home/danila/CLionProjects/course_test/CRUD.h
+Service.h
+/home/danila/CLionProjects/course_test/Service.h
+tables_service.h
+/home/danila/CLionProjects/course_test/tables_service.h
+User.h
+/home/danila/CLionProjects/course_test/User.h
 
 /home/danila/CLionProjects/course_test/tables_service.h
 iostream

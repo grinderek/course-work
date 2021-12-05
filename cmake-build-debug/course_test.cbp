@@ -118,6 +118,9 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/User.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/groups_service.cpp">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/groups_service.h">
 			<Option target="course_test"/>
 		</Unit>

@@ -19,7 +19,6 @@ int getInt(int begin, int end);
 string getString();
 string getStrInt();
 void createUsersTable();
-void insertUserTable(const string& full_name, const string& login, const string& password, int role );
 User authenticate(const string& login, const string& password);
 string quotesql(const string& s);;
 

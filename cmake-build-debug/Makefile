@@ -273,6 +273,30 @@ User.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/User.cpp.s
 .PHONY : User.cpp.s
 
+groups_service.o: groups_service.cpp.o
+.PHONY : groups_service.o
+
+# target to build an object file
+groups_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/groups_service.cpp.o
+.PHONY : groups_service.cpp.o
+
+groups_service.i: groups_service.cpp.i
+.PHONY : groups_service.i
+
+# target to preprocess a source file
+groups_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/groups_service.cpp.i
+.PHONY : groups_service.cpp.i
+
+groups_service.s: groups_service.cpp.s
+.PHONY : groups_service.s
+
+# target to generate assembly for a file
+groups_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/groups_service.cpp.s
+.PHONY : groups_service.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -396,6 +420,9 @@ help:
 	@echo "... User.o"
 	@echo "... User.i"
 	@echo "... User.s"
+	@echo "... groups_service.o"
+	@echo "... groups_service.i"
+	@echo "... groups_service.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

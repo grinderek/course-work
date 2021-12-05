@@ -31,12 +31,20 @@ CMakeFiles/course_test.dir/Test.cpp.o: \
 CMakeFiles/course_test.dir/User.cpp.o: \
  ../User.cpp \
  ../User.h
+CMakeFiles/course_test.dir/groups_service.cpp.o: \
+ ../CRUD.h \
+ ../Service.h \
+ ../User.h \
+ ../groups_service.cpp \
+ ../groups_service.h \
+ ../tables_service.h
 CMakeFiles/course_test.dir/main.cpp.o: \
  ../CRUD.h \
  ../Question_Many_Variants.h \
  ../Service.h \
  ../Test.h \
  ../User.h \
+ ../groups_service.h \
  ../main.cpp \
  ../questions_service.h \
  ../tables_service.h \

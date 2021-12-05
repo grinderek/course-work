@@ -33,40 +33,9 @@ void createUsersTable() {
     SQLOperation("CREATE TABLE IF NOT EXISTS USERS ("
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
                 "FULL_NAME TEXT NOT NULL, "
-                "LOGIN TEXT NOT NULL, "
+                "LOGIN TEXT NOT NULL UNIQUE, "
                 "PASSWORD TEXT NOT NULL, "
                 "ROLE INTEGER NOT NULL );");
-}
-
-void insertUserTable(const string& full_name, const string& login, const string& password, int role) {
-    sqlite3* DB;
-
-    string sql = "INSERT INTO USERS (FULL_NAME, LOGIN, PASSWORD, ROLE) VALUES ("
-                 + quotesql(full_name) + ","
-                 + quotesql(login) + ","
-                 + quotesql(password) + ","
-                 + to_string(role) + ");";
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &messageError);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Create Table" << endl;
-            sqlite3_free(messageError);
-        }
-        else
-            cout << "Table created successfully" << endl;
-        sqlite3_close(DB);
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-    }
 }
 
 User authenticate(const string& login, const string& password) {

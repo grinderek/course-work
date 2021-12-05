@@ -14,4 +14,6 @@ int SQLOperation(const string& sql);
 void createQuestionsTable();
 void createAnswersTable();
 void createCorrectAnswerTable();
+void createGroupTable();
+void createGroups_UsersTable();
 #endif //COURSE_TEST_TABLES_SERVICE_H

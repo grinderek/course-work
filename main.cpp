@@ -4,6 +4,7 @@
 #include "sqlite3.h"
 #include "tests_service.h"
 #include "tables_service.h"
+#include "groups_service.h"
 #include "CRUD.h"
 #include <cstdlib>
 
@@ -15,6 +16,8 @@ int main() {
     createQuestionsTable();
     createAnswersTable();
     createCorrectAnswerTable();
+    createGroupTable();
+    createGroups_UsersTable();
 
     User user;
 
@@ -58,7 +61,7 @@ int main() {
                         tests_menu(user);
                         break;
                     case 2:
-                        //users_menu();
+                        groups_menu(user);
                         break;
                     default:
                         cout << "Что-то пошло не так" << endl;

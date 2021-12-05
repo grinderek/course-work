@@ -7,10 +7,11 @@
 #include <iostream>
 #include <string>
 #include "Service.h"
+#include "tables_service.h"
 #include "User.h"
 using namespace std;
 
-void add_user();
+int add_user(int role = 0);
 User login();
 
 #endif //COURSE_TEST_CRUD_H
