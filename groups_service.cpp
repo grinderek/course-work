@@ -162,3 +162,50 @@ void show_group() {
         }
     }
 }
+
+void change_group() {
+    vector<Group> groups = get_groups();
+
+    while (true) {
+        cout << "Выберите номер группы, которую хотите изменить(0 для выхода)" << endl;
+        for (int i = 0; i < groups.size(); i++) {
+            cout << i + 1 << " - " << groups[i].getNumber() << endl;
+        }
+
+        int group_id = getInt(0, groups.size());
+        if (group_id == 0) {
+            break;
+        } else {
+            group_id--;
+            auto users = get_users(groups[group_id].getID());
+            cout << "Студенты группы " << groups[group_id].getNumber() << endl;
+            for (int i = 0; i < users.size(); i++) {
+                cout << i + 1 << " - " << users[i].getName() << endl;
+            }
+            cout << "Что вы хотите изменить?" << endl;
+            cout << "1 - Номер группы" << endl;
+            cout << "2 - Данные студентов" << endl;
+            cout << "0 - Выход" << endl;
+
+            int op_men = getInt(0, 2);
+            if (op_men == 0) {
+                continue;
+            } else if (op_men == 1) {
+                cout << "Введите новый номер группы" << endl;
+                string number = getString();
+                cout << "Вы уверены, что хотите сохранить изменения?" << endl;
+                cout << "1 - Да" << endl;
+                cout << "2 - Нет" << endl;
+                op_men = getInt(1, 2);
+                if (op_men == 1) {
+                    SQLOperation("UPDATE GROUPS SET NUMBER_OF_GROUP = "
+                                 + quotesql(number) + "WHERE ID = "
+                                 + to_string(groups[group_id].getID()) + ";");
+                    return;
+                }
+            } else {
+
+            }
+        }
+    }
+}
