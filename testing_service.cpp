@@ -4,10 +4,7 @@
 
 #include "testing_service.h"
 
-vector <Test> getTests(User user) {
-    string sql = "SELECT * FROM TESTS t"
-                 " LEFT JOIN GROUP_TESTS g ON t.ID = g.TEST_ID"
-                 " WHERE g.GROUP_ID = " + to_string(user.getGroupID());
+vector <Test> getTests(User user, string sql) {
     sqlite3 *DB;
 
     try
@@ -82,7 +79,10 @@ double testing(vector<Question_Many_Variants> questions) {
 }
 
 void testing_menu(User user) {
-    auto tests = getTests(user);
+    string sql = "SELECT * FROM TESTS t"
+                 " LEFT JOIN GROUP_TESTS g ON t.ID = g.TEST_ID"
+                 " WHERE g.GROUP_ID = " + to_string(user.getGroupID());
+    auto tests = getTests(user, sql);
 
     for (int i = 0; i < tests.size(); i++) {
         cout << "Тест №" << i + 1 << endl;
@@ -110,5 +110,56 @@ void testing_menu(User user) {
                      + to_string(user.getID()) + ", "
                      + to_string(test.getID()) + ");");
         return;
+    }
+}
+
+int getMark(Test test, User user) {
+    sqlite3 *DB;
+    string sql = "SELECT MARK FROM USERS_TESTS WHERE "
+                 "USER_ID = " + to_string(user.getID()) +
+                 " AND TEST_ID = " + to_string(test.getID()) + ";";
+    try
+    {
+        int exit = 0;
+        exit = sqlite3_open("test.db", &DB);
+        cout << exit << " " << sql << endl;
+        char* messageError;
+        int mark;
+        sqlite3_stmt *stmt;
+        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
+
+        if (exit != SQLITE_OK) {
+            cerr << "Error Authenticate" << endl;
+        }
+        else {
+            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
+                mark = sqlite3_column_int(stmt, 0);
+            }
+        }
+        sqlite3_finalize(stmt);
+        sqlite3_close(DB);
+
+        return mark;
+    }
+    catch (const exception & e)
+    {
+        cerr << e.what();
+        return 0;
+    }
+
+    return 0;
+}
+
+void show_results(User user) {
+    string sql = "SELECT * FROM TESTS t"
+                 " LEFT JOIN USERS_TESTS g ON t.ID = g.TEST_ID"
+                 " WHERE g.USER_ID = " + to_string(user.getID());
+
+    auto tests = getTests(user, sql);
+    for (int i = 0; i < tests.size(); i++) {
+        cout << "Тест №" << i + 1 << endl;
+        cout << "Тема теста - " << tests[i].getName() << endl;
+        int mark = getMark(tests[i], user);
+        cout << "Оценка - " << mark << endl;
     }
 }

@@ -60,7 +60,7 @@ int main() {
                         testing_menu(user);
                         break;
                     case 2:
-                        //show_results(user);
+                        show_results(user);
                         break;
                     default:
                         cout << "Что-то пошло не так" << endl;

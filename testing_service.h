@@ -14,4 +14,5 @@
 #include "questions_service.h"
 
 void testing_menu(User user);
+void show_results(User user);
 #endif //COURSE_TEST_TESTING_SERVICE_H
