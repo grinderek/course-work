@@ -19,6 +19,7 @@ User::User(const User &user) {
     this->id = user.id;
     this->name = user.name;
     this->role = user.role;
+    this->group_id = user.group_id;
 }
 
 string User::getName() {
@@ -43,5 +44,13 @@ int User::getID() const {
 
 void User::setID(int ident) {
     this->id = ident;
+}
+
+void User::setGroupID(int ide) {
+    this->group_id = ide;
+}
+
+int User::getGroupID() const {
+    return this->group_id;
 }
 

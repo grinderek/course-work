@@ -12,6 +12,7 @@ private:
     int id;
     string name;
     int role;
+    int group_id;
 
 public:
     User();
@@ -26,6 +27,9 @@ public:
 
     int getID() const;
     void setID(int id);
+
+    void setGroupID(int ide);
+    int getGroupID() const;
 };
 
 

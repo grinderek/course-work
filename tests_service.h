@@ -13,13 +13,13 @@
 #include "sqlite3.h"
 #include "Service.h"
 #include "tables_service.h"
+#include "groups_service.h"
 #include "questions_service.h"
 #include "Test.h"
 
 using namespace std;
 
 void tests_menu(const User& user);
-void createTestsTable();
 vector<Test> show_tests(int user_id);
 vector<Test> get_tests(int user_id);
 void delete_test(int user_id);

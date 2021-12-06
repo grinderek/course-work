@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/course_test.dir/main.cpp.o"
   "CMakeFiles/course_test.dir/questions_service.cpp.o"
   "CMakeFiles/course_test.dir/tables_service.cpp.o"
+  "CMakeFiles/course_test.dir/testing_service.cpp.o"
   "CMakeFiles/course_test.dir/tests_service.cpp.o"
   "course_test"
   "course_test.pdb"

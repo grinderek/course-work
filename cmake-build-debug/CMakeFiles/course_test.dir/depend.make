@@ -38,7 +38,9 @@ CMakeFiles/course_test.dir/User.cpp.o: \
 CMakeFiles/course_test.dir/groups_service.cpp.o: \
  ../CRUD.h \
  ../Group.h \
+ ../Question_Many_Variants.h \
  ../Service.h \
+ ../Test.h \
  ../User.h \
  ../groups_service.cpp \
  ../groups_service.h \
@@ -54,6 +56,7 @@ CMakeFiles/course_test.dir/main.cpp.o: \
  ../main.cpp \
  ../questions_service.h \
  ../tables_service.h \
+ ../testing_service.h \
  ../tests_service.h
 CMakeFiles/course_test.dir/questions_service.cpp.o: \
  ../Question_Many_Variants.h \
@@ -66,11 +69,24 @@ CMakeFiles/course_test.dir/questions_service.cpp.o: \
 CMakeFiles/course_test.dir/tables_service.cpp.o: \
  ../tables_service.cpp \
  ../tables_service.h
-CMakeFiles/course_test.dir/tests_service.cpp.o: \
+CMakeFiles/course_test.dir/testing_service.cpp.o: \
+ ../Group.h \
  ../Question_Many_Variants.h \
  ../Service.h \
  ../Test.h \
  ../User.h \
+ ../questions_service.h \
+ ../tables_service.h \
+ ../testing_service.cpp \
+ ../testing_service.h
+CMakeFiles/course_test.dir/tests_service.cpp.o: \
+ ../CRUD.h \
+ ../Group.h \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../Test.h \
+ ../User.h \
+ ../groups_service.h \
  ../questions_service.h \
  ../tables_service.h \
  ../tests_service.cpp \

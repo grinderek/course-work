@@ -31,18 +31,6 @@ void tests_menu(const User& user) {
     }
 }
 
-void createTestsTable() {
-    SQLOperation("CREATE TABLE IF NOT EXISTS TESTS ("
-                "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-                "NAME_OF_TEST TEXT NOT NULL, "
-                "NUMBER_OF_QUESTIONS INTEGER NOT NULL, "
-                "USER_ID INTEGER, "
-                "  CONSTRAINT fk_users\n"
-                "    FOREIGN KEY (USER_ID)\n"
-                "    REFERENCES USERS (ID)\n"
-                "    ON DELETE CASCADE);");
-}
-
 void add_test(const User& user) {
     cout << "Введите тему теста" << endl;
     string topic = getString();
@@ -57,20 +45,38 @@ void add_test(const User& user) {
         questions.push_back(question);
     }
 
-    cout << "Введите номера групп, для которых хотите открыть тест, по одной в строке(-1 для остановки)" << endl;
-    vector <string> numbers_of_groups;
+    vector <Group> groups = get_groups();
+    vector <Group> groups_of_test;
     while (true) {
-        string s;
-        cin >> s;
-        if (s != "-1") {
-            numbers_of_groups.push_back(s);
-        } else {
+        cout << "Добавить группу к тесту?" << endl;
+        cout << "1 - Да" << endl;
+        cout << "2 - Нет" << endl;
+        int op = getInt(1, 2);
+
+        if (op == 2) {
             break;
+        }
+
+        int i = 1;
+        for (auto group : groups) {
+            cout << i++ << " " << group.getNumber() << endl;
+        }
+
+        cout << "Выберите номер группы, которую хотите добавить к тесту(0 для выхода)" << endl;
+        int group_id = getInt(0, groups.size());
+
+        if (group_id == 0) {
+            continue;
+        } else {
+            group_id--;
+            groups_of_test.push_back(groups[group_id]);
+            groups.erase(groups.begin() + group_id);
         }
     }
 
     int id = add_test_to_table(topic, count, user.getID());
     cout << id << endl;
+    add_groups_to_tests(groups_of_test, id);
     add_questions_to_table(questions, id);
 }
 
@@ -130,6 +136,7 @@ vector<Test> get_tests(int user_id) {
                 Test test;
                 test.setID(sqlite3_column_int(stmt, 0));
                 test.setName(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
+                test.setCountOfQuestions(sqlite3_column_int(stmt, 2));
                 vector<Question_Many_Variants> questions = getQuestions(test.getID());
                 test.setQuestions(questions);
                 tests.push_back(test);

@@ -24,7 +24,7 @@ public:
     void setID(int ide);
     void setNumber(string number);
     string getNumber();
-    int getID();
+    int getID() const;
 };
 
 

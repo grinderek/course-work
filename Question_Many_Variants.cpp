@@ -67,7 +67,7 @@ ostream& operator<< (ostream &out, const Question_Many_Variants &question)
         out << j++ << " - " << answer.second << endl;
     }
 
-    out << "Правильный ответ - " << ids[question.correct_answer] << "\n\n";
+    //out << "Правильный ответ - " << ids[question.correct_answer] << "\n\n";
     return out;
 }
 

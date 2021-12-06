@@ -28,7 +28,7 @@ string Group::getNumber() {
     return this->number_of_group;
 }
 
-int Group::getID() {
+int Group::getID() const {
     return this->id;
 }
 

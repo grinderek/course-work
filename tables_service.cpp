@@ -96,19 +96,49 @@ void createGroupTable() {
                  "NUMBER_OF_GROUP TEXT NOT NULL UNIQUE);");
 }
 
-void createGroups_UsersTable() {
-    SQLOperation("CREATE TABLE IF NOT EXISTS GROUPS_USERS ("
+void createTestsTable() {
+    SQLOperation("CREATE TABLE IF NOT EXISTS TESTS ("
                  "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-                 "GROUP_ID INTEGER NOT NULL, "
-                 "USER_ID INTEGER NOT NULL, "
+                 "NAME_OF_TEST TEXT NOT NULL, "
+                 "NUMBER_OF_QUESTIONS INTEGER NOT NULL, "
+                 "USER_ID INTEGER, "
+                 "  CONSTRAINT fk_users\n"
+                 "    FOREIGN KEY (USER_ID)\n"
+                 "    REFERENCES USERS (ID)\n"
+                 "    ON DELETE CASCADE);");
+}
+
+void createGroupTestsTable() {
+    SQLOperation("CREATE TABLE IF NOT EXISTS GROUP_TESTS ("
+                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "GROUP_ID INTEGER, "
+                 "TEST_ID INTEGER, "
                  "  CONSTRAINT fk_groups\n"
                  "    FOREIGN KEY (GROUP_ID)\n"
                  "    REFERENCES GROUPS (ID)\n"
                  "    ON DELETE CASCADE\n"
                  "    ON UPDATE CASCADE\n"
-                 "  CONSTRAINT fk_users \n"
+                 "  CONSTRAINT fk_tests \n"
+                 "    FOREIGN KEY (TEST_ID)\n"
+                 "    REFERENCES TESTS (ID)\n"
+                 "    ON DELETE CASCADE\n"
+                 "    ON UPDATE CASCADE);");
+}
+
+void createUsersTestsTable() {
+    SQLOperation("CREATE TABLE IF NOT EXISTS USERS_TESTS ("
+                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "MARK INTEGER NOT NULL, "
+                 "USER_ID INTEGER, "
+                 "TEST_ID INTEGER, "
+                 "  CONSTRAINT fk_users\n"
                  "    FOREIGN KEY (USER_ID)\n"
                  "    REFERENCES USERS (ID)\n"
+                 "    ON DELETE CASCADE\n"
+                 "    ON UPDATE CASCADE\n"
+                 "  CONSTRAINT fk_tests \n"
+                 "    FOREIGN KEY (TEST_ID)\n"
+                 "    REFERENCES TESTS (ID)\n"
                  "    ON DELETE CASCADE\n"
                  "    ON UPDATE CASCADE);");
 }

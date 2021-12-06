@@ -125,6 +125,7 @@ vector<User> get_users(int group_id){
                 User user;
                 user.setID(sqlite3_column_int(stmt, 0));
                 user.setName(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
+                user.setGroupID(sqlite3_column_int(stmt, 5));
                 users.push_back(user);
             }
         }
@@ -265,5 +266,12 @@ void delete_group() {
             }
         }
     }
+}
 
+void add_groups_to_tests(vector<Group> groups, int test_id) {
+    for (auto group : groups) {
+        SQLOperation("INSERT INTO GROUP_TESTS (GROUP_ID, TEST_ID) VALUES ("
+                     + to_string(group.getID()) + ", "
+                     + to_string(test_id) + ");");
+    }
 }

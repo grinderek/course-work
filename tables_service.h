@@ -16,4 +16,7 @@ void createQuestionsTable();
 void createAnswersTable();
 void createCorrectAnswerTable();
 void createGroupTable();
+void createTestsTable();
+void createGroupTestsTable();
+void createUsersTestsTable();
 #endif //COURSE_TEST_TABLES_SERVICE_H

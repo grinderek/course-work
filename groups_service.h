@@ -11,13 +11,16 @@
 #include "Service.h"
 #include "tables_service.h"
 #include "User.h"
+#include "Test.h"
 #include "Group.h"
 
 using namespace std;
 
 void groups_menu(User user);
+vector<Group> get_groups();
 void add_group();
 void show_group();
 void change_group();
 void delete_group();
+void add_groups_to_tests(vector<Group> groups, int test_id);
 #endif //COURSE_TEST_GROUPS_SERVICE_H

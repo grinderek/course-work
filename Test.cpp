@@ -36,3 +36,15 @@ void Test::setQuestions(vector<Question_Many_Variants> list_of_questions) {
 vector <Question_Many_Variants> Test::getQuestions() {
     return this->questions;
 }
+
+string Test::getName() {
+    return this->name;
+}
+
+void Test::setCountOfQuestions(int number) {
+    this->number_of_questions = number;
+}
+
+int Test::getCountOfQuestions() {
+    return this->number_of_questions;
+}

@@ -54,6 +54,7 @@ User authenticate(const string& login, const string& password) {
                 user.setID(sqlite3_column_int(stmt, 0));
                 user.setName(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
                 user.setRole(sqlite3_column_int(stmt, 4));
+                user.setGroupID(sqlite3_column_int(stmt, 5));
             }
         }
         sqlite3_finalize(stmt);
