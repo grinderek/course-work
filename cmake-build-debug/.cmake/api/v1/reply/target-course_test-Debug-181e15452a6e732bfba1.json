@@ -71,7 +71,9 @@
 				18,
 				20,
 				21,
-				24
+				24,
+				25,
+				27
 			]
 		}
 	],
@@ -121,7 +123,9 @@
 				18,
 				20,
 				21,
-				24
+				24,
+				25,
+				27
 			]
 		},
 		{
@@ -139,7 +143,9 @@
 				17,
 				19,
 				22,
-				23
+				23,
+				26,
+				28
 			]
 		}
 	],
@@ -282,6 +288,28 @@
 			"compileGroupIndex" : 0,
 			"path" : "testing_service.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Answer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Answer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "JustInt.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "JustInt.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

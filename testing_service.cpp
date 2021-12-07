@@ -59,14 +59,10 @@ double testing(vector<Question_Many_Variants> questions) {
         }*/
 
         int ans = getInt(1, sz);
-        auto it = answers.begin();
-        while (ans - 1 > 0) {
-            it++;
-            ans--;
-        }
+        auto it = answers.begin() + ans - 1;
 
-        ans = it->first;
-        cout << ans << " " << it->second << endl;
+        ans = it->get_id();
+        cout << ans << " " << it->get_text() << " " << correct_answer << endl;
 
         if (ans == correct_answer) {
             right_answer++;
@@ -79,10 +75,11 @@ double testing(vector<Question_Many_Variants> questions) {
 }
 
 void testing_menu(User user) {
+    SqlGateway DB;
     string sql = "SELECT * FROM TESTS t"
                  " LEFT JOIN GROUP_TESTS g ON t.ID = g.TEST_ID"
                  " WHERE g.GROUP_ID = " + to_string(user.getGroupID());
-    auto tests = getTests(user, sql);
+    auto tests = DB.getData<Test>(sql);
 
     for (int i = 0; i < tests.size(); i++) {
         cout << "Тест №" << i + 1 << endl;
@@ -97,11 +94,14 @@ void testing_menu(User user) {
     } else {
         test_id--;
         Test test = tests[test_id];
-        test.setQuestions(getQuestions(test.getID()));
+        string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(test.getID());
+        test.setQuestions(DB.getData<Question_Many_Variants>(sql));
 
         for (auto question : test.getQuestions()) {
-            question.setAnswers(getAnswers(question.getID()));
-            question.setCorrectAnswer(getCorrectAnswer(question.getID()));
+            sql = "SELECT * FROM ANSWERS WHERE QUESTION_ID = " + to_string(question.getID());
+            question.setAnswers(DB.getData<Answer>(sql));
+            sql = "SELECT * FROM CORRECT_ANSWERS WHERE QUESTION_ID = " + to_string(question.getID());
+            question.setCorrectAnswer(DB.getData<JustInt>(sql)[0].getVal());
         }
 
         int result = round(testing(test.getQuestions()) * 10);
@@ -151,15 +151,20 @@ int getMark(Test test, User user) {
 }
 
 void show_results(User user) {
+    SqlGateway DB;
+
     string sql = "SELECT * FROM TESTS t"
                  " LEFT JOIN USERS_TESTS g ON t.ID = g.TEST_ID"
                  " WHERE g.USER_ID = " + to_string(user.getID());
 
-    auto tests = getTests(user, sql);
+    auto tests = DB.getData<Test>(sql);
     for (int i = 0; i < tests.size(); i++) {
         cout << "Тест №" << i + 1 << endl;
         cout << "Тема теста - " << tests[i].getName() << endl;
-        int mark = getMark(tests[i], user);
+        sql = "SELECT MARK FROM USERS_TESTS WHERE "
+              "USER_ID = " + to_string(user.getID()) +
+              " AND TEST_ID = " + to_string(tests[i].getID()) + ";";
+        int mark = DB.getData<JustInt>(sql)[0].getVal();
         cout << "Оценка - " << mark << endl;
     }
 }

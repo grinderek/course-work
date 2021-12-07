@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/danila/CLionProjects/course_test/Answer.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Answer.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/CRUD.cpp">
 			<Option target="course_test"/>
 		</Unit>
@@ -92,6 +98,12 @@
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Group.h">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/JustInt.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/JustInt.h">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Question_Many_Variants.cpp">

@@ -8,9 +8,11 @@
 #include <string>
 #include <vector>
 #include "Question_Many_Variants.h"
+#include "SqlGateway.h"
 
 using namespace std;
 
+class Question_Many_Variants;
 class Test {
 private:
     int id;
@@ -27,6 +29,8 @@ public:
     void setCountOfQuestions(int number);
     int getCountOfQuestions();
     vector<Question_Many_Variants> getQuestions();
+
+    void get_data(sqlite3_stmt *stmt);
 
     friend ostream& operator<< (ostream &out, const Test &test);
 };

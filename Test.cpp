@@ -48,3 +48,13 @@ void Test::setCountOfQuestions(int number) {
 int Test::getCountOfQuestions() {
     return this->number_of_questions;
 }
+
+void Test::get_data(sqlite3_stmt *stmt) {
+    SqlGateway DB;
+    this->id = sqlite3_column_int(stmt, 0);
+    this->name = string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
+    this->number_of_questions = sqlite3_column_int(stmt, 2);
+
+    string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(this->id);
+    this->questions = DB.getData<Question_Many_Variants>(sql);
+}

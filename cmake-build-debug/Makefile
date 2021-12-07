@@ -129,6 +129,30 @@ course_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/build
 .PHONY : course_test/fast
 
+Answer.o: Answer.cpp.o
+.PHONY : Answer.o
+
+# target to build an object file
+Answer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Answer.cpp.o
+.PHONY : Answer.cpp.o
+
+Answer.i: Answer.cpp.i
+.PHONY : Answer.i
+
+# target to preprocess a source file
+Answer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Answer.cpp.i
+.PHONY : Answer.cpp.i
+
+Answer.s: Answer.cpp.s
+.PHONY : Answer.s
+
+# target to generate assembly for a file
+Answer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Answer.cpp.s
+.PHONY : Answer.cpp.s
+
 CRUD.o: CRUD.cpp.o
 .PHONY : CRUD.o
 
@@ -176,6 +200,30 @@ Group.s: Group.cpp.s
 Group.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Group.cpp.s
 .PHONY : Group.cpp.s
+
+JustInt.o: JustInt.cpp.o
+.PHONY : JustInt.o
+
+# target to build an object file
+JustInt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/JustInt.cpp.o
+.PHONY : JustInt.cpp.o
+
+JustInt.i: JustInt.cpp.i
+.PHONY : JustInt.i
+
+# target to preprocess a source file
+JustInt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/JustInt.cpp.i
+.PHONY : JustInt.cpp.i
+
+JustInt.s: JustInt.cpp.s
+.PHONY : JustInt.s
+
+# target to generate assembly for a file
+JustInt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/JustInt.cpp.s
+.PHONY : JustInt.cpp.s
 
 Question_Many_Variants.o: Question_Many_Variants.cpp.o
 .PHONY : Question_Many_Variants.o
@@ -450,12 +498,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... course_test"
+	@echo "... Answer.o"
+	@echo "... Answer.i"
+	@echo "... Answer.s"
 	@echo "... CRUD.o"
 	@echo "... CRUD.i"
 	@echo "... CRUD.s"
 	@echo "... Group.o"
 	@echo "... Group.i"
 	@echo "... Group.s"
+	@echo "... JustInt.o"
+	@echo "... JustInt.i"
+	@echo "... JustInt.s"
 	@echo "... Question_Many_Variants.o"
 	@echo "... Question_Many_Variants.i"
 	@echo "... Question_Many_Variants.s"

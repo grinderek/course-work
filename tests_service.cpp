@@ -114,7 +114,7 @@ int add_test_to_table(const string& topic, int count, int user_id) {
     return -1;
 }
 
-vector<Test> get_tests(int user_id) {
+/*vector<Test> get_tests(int user_id) {
     string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);
     sqlite3 *DB;
 
@@ -152,10 +152,12 @@ vector<Test> get_tests(int user_id) {
         cerr << e.what();
         return {};
     }
-}
+}*/
 
 vector<Test> show_tests(int user_id) {
-    vector<Test> tests = get_tests(user_id);
+    SqlGateway DB;
+    string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);
+    vector<Test> tests = DB.getData<Test>(sql);
 
     for (auto test : tests) {
         cout << test;

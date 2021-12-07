@@ -1,9 +1,8 @@
 #include <iostream>
 #include "User.h"
 #include "Service.h"
-#include "sqlite3.h"
+#include "SqlGateway.h"
 #include "tests_service.h"
-#include "tables_service.h"
 #include "groups_service.h"
 #include "testing_service.h"
 #include "CRUD.h"
@@ -12,14 +11,16 @@
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    createUsersTable();
-    createTestsTable();
-    createQuestionsTable();
-    createAnswersTable();
-    createCorrectAnswerTable();
-    createGroupTable();
-    createGroupTestsTable();
-    createUsersTestsTable();
+    SqlGateway DB;
+
+    DB.createUsersTable();
+    DB.createTestsTable();
+    DB.createQuestionsTable();
+    DB.createAnswersTable();
+    DB.createCorrectAnswerTable();
+    DB.createGroupTable();
+    DB.createGroupTestsTable();
+    DB.createUsersTestsTable();
 
     User user;
     while (true) {

@@ -19,9 +19,9 @@ int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id
 
 int add_answers_to_table(Question_Many_Variants question, int question_id) {
     int num = 0;
-    for (const auto& answer : question.getAnswers()) {
+    for (auto answer : question.getAnswers()) {
         string sql = "INSERT INTO ANSWERS (TEXT_OF_ANSWER, QUESTION_ID) VALUES ("
-                     + quotesql(answer.second) + ","
+                     + quotesql(answer.get_text()) + ","
                      + to_string(question_id) + ");";
 
         int id = SQLOperation(sql);
@@ -46,7 +46,7 @@ int add_correctAnswer_to_table(int answer_id, int question_id) {
     return id;
 }
 
-vector<Question_Many_Variants> getQuestions(int test_id) {
+/*vector<Question_Many_Variants> getQuestions(int test_id) {
     sqlite3 *DB;
 
     string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(test_id);
@@ -86,7 +86,7 @@ vector<Question_Many_Variants> getQuestions(int test_id) {
         cerr << e.what();
         return {};
     }
-}
+}*/
 
 map <int, string> getAnswers(int question_id) {
     sqlite3 *DB;
@@ -171,10 +171,10 @@ void changeAnswers(Question_Many_Variants question) {
     auto answers = question.getAnswers();
     map <int, int> ids;
     map <int, int> rev_ids;
-    for (const auto& answer : answers) {
-        ids[answer.first] = j;
-        rev_ids[j - 1] = answer.first;
-        cout << j++ << " - " << answer.second << endl;
+    for ( auto answer : answers) {
+        ids[answer.get_id()] = j;
+        rev_ids[j - 1] = answer.get_id();
+        cout << j++ << " - " << answer.get_text() << endl;
     }
 
     cout << "Правильный ответ - " << ids[question.getCorrectAnswer()] << endl;
@@ -187,7 +187,7 @@ void changeAnswers(Question_Many_Variants question) {
             return;
         } else {
             id--;
-            cout << answers[rev_ids[id]] << endl;
+            cout << answers[rev_ids[id]].get_text() << endl;
             cout << "Что вы хотите изменить?" << endl;
             cout << "1 - Текст ответа" << endl;
             cout << "0 - Выход" << endl;
