@@ -58,3 +58,19 @@ void Test::get_data(sqlite3_stmt *stmt) {
     string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(this->id);
     this->questions = DB.getData<Question_Many_Variants>(sql);
 }
+
+istream &operator>>(istream &in, Test &test) {
+    cout << "Тема вопроса\n";
+    test.name = getString();
+    cout << "Количество вопросов\n";
+    test.number_of_questions = getInt(1, INT_MAX);
+    cout << "Введите вопросы\n";
+    test.questions.resize(test.number_of_questions);
+    for (int i = 0; i < test.number_of_questions; i++) {
+        cout << "Вопрос №" << i + 1 << ": ";
+        Question_Many_Variants question;
+        cin >> question;
+        test.questions.push_back(question);
+    }
+    return in;
+}

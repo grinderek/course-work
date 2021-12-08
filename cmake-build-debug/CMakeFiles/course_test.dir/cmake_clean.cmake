@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/course_test.dir/Answer.cpp.o"
+  "CMakeFiles/course_test.dir/App.cpp.o"
   "CMakeFiles/course_test.dir/CRUD.cpp.o"
   "CMakeFiles/course_test.dir/Group.cpp.o"
   "CMakeFiles/course_test.dir/JustInt.cpp.o"

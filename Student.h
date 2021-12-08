@@ -12,7 +12,8 @@
 using namespace std;
 
 class Student : public User{
-
+public:
+    Student(const int& id, const string& name, const int& role, const int& group_id);
 };
 
 

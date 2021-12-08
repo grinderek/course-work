@@ -30,6 +30,7 @@ int add_user(int role, int group_id) {
     return id;
 }
 
+
 User login() {
     SqlGateway DB;
 
@@ -47,6 +48,13 @@ User login() {
 
     auto ans = DB.getData<User>(sql);
     if (!ans.empty()) {
+        cout << "Здравствуйте, " << ans[0].getName() << endl;
+        User* user;
+        /*if (ans[0].getRole() == 1) {
+            return new Student(ans[0].getID(), ans[0].getName(), ans[0].getRole(), ans[0].getGroupID());
+        } else {
+            return new Teacher(ans[0].getID(), ans[0].getName(), ans[0].getRole(), ans[0].getGroupID());
+        }*/
         return ans[0];
     } else {
         return {};

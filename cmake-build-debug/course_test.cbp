@@ -88,6 +88,12 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/Answer.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/App.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/App.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/CRUD.cpp">
 			<Option target="course_test"/>
 		</Unit>

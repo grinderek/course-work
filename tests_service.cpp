@@ -82,7 +82,8 @@ void add_test(const User& user) {
                  + to_string(user.getID()) + ");";
     int test_id = DB.SQLOperation(sql);
 
-    for (auto group : groups) {
+    for (auto group : groups_of_test) {
+        cout << group.getID() << " " << test_id  << endl;
         DB.SQLOperation("INSERT INTO GROUP_TESTS (GROUP_ID, TEST_ID) VALUES ("
                      + to_string(group.getID()) + ", "
                      + to_string(test_id) + ");");

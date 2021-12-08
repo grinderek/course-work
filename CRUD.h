@@ -9,6 +9,7 @@
 #include "Service.h"
 #include "User.h"
 #include "SqlGateway.h"
+
 using namespace std;
 
 int add_user(int role = 0, int group_id = -1);

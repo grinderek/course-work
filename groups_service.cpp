@@ -148,8 +148,8 @@ void change_group() {
             break;
         } else {
             group_id--;
-            group_id = groups[group_id].getID();
-            string sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
+            cout << group_id << endl;
+            string sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(groups[group_id].getID());
             auto users = DB.getData<User>(sql);
             cout << "Что вы хотите изменить?" << endl;
             cout << "1 - Номер группы" << endl;

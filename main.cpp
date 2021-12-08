@@ -22,6 +22,7 @@ int main() {
     DB.createGroupTestsTable();
     DB.createUsersTestsTable();
 
+    //User* user = new User;
     User user;
     while (true) {
         if (user.getName() == "...") {
@@ -45,7 +46,6 @@ int main() {
             }
         }
         else {
-            cout << "Здравствуйте, " << user.getName() << endl;
             if (user.getRole() == 1) {
                 cout << "1 - Пройти тест" << endl;
                 cout << "2 - Просмотреть результаты тестов" << endl;

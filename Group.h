@@ -20,6 +20,7 @@ private:
 public:
     Group();
     Group(const Group& group);
+    ~Group(){};
 
     void setID(int ide);
     void setNumber(string number);

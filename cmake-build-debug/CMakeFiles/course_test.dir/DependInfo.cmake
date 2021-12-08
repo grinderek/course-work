@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/danila/CLionProjects/course_test/Answer.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Answer.cpp.o"
+  "/home/danila/CLionProjects/course_test/App.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/App.cpp.o"
   "/home/danila/CLionProjects/course_test/CRUD.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/CRUD.cpp.o"
   "/home/danila/CLionProjects/course_test/Group.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Group.cpp.o"
   "/home/danila/CLionProjects/course_test/JustInt.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/JustInt.cpp.o"

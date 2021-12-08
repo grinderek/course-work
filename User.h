@@ -9,16 +9,16 @@
 using namespace std;
 
 class User {
-private:
+public:
     int id;
     string name;
     int role;
     int group_id;
 
-public:
     User();
-    User(const int& id, const string& name, const int& role);
+    User(const int& id, const string& name, const int& role, const int& group_id);
     User(const User& user);
+    ~User(){};
 
     string getName();
     void setName(string s);

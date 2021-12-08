@@ -74,17 +74,17 @@ ostream& operator<< (ostream &out, const Question_Many_Variants &question)
 
 istream& operator>> (istream &in, Question_Many_Variants &question)
 {
-    cout << "Enter question\n";
+    cout << "Текст вопроса\n";
     question.question_text = getString();
-    cout << "Enter count of answers\n";
+    cout << "Количество ответов\n";
     question.number_of_answers = getInt(1, INT_MAX);
-    cout << "Enter answers\n";
+    cout << "Введите ответы\n";
     question.answers.resize(question.number_of_answers);
     for (int i = 0; i < question.number_of_answers; i++) {
-        cout << "Answer " << i + 1 << ": ";
+        cout << "Ответ №" << i + 1 << ": ";
         question.answers[i].set_text(getString());
     }
-    cout << "Enter number of right answer\n";
+    cout << "Введите номер правильного ответа\n";
     question.correct_answer = getInt(1, question.number_of_answers) - 1;
 
     return in;

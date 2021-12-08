@@ -11,6 +11,9 @@ CMakeFiles/course_test.dir/Answer.cpp.o: \
  ../SqlGateway.h \
  ../Test.h \
  ../User.h
+CMakeFiles/course_test.dir/App.cpp.o: \
+ ../App.cpp \
+ ../App.h
 CMakeFiles/course_test.dir/CRUD.cpp.o: \
  ../Answer.h \
  ../CRUD.cpp \
@@ -85,6 +88,7 @@ CMakeFiles/course_test.dir/Student.cpp.o: \
  ../User.h
 CMakeFiles/course_test.dir/Teacher.cpp.o: \
  ../Answer.h \
+ ../CRUD.h \
  ../Group.h \
  ../JustInt.h \
  ../Question_Many_Variants.h \
@@ -93,7 +97,10 @@ CMakeFiles/course_test.dir/Teacher.cpp.o: \
  ../Teacher.cpp \
  ../Teacher.h \
  ../Test.h \
- ../User.h
+ ../User.h \
+ ../groups_service.h \
+ ../questions_service.h \
+ ../tests_service.h
 CMakeFiles/course_test.dir/Test.cpp.o: \
  ../Answer.h \
  ../Group.h \
