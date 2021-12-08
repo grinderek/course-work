@@ -103,44 +103,6 @@ vector<Group> get_groups() {
     }
 }
 
-vector<User> get_users(int group_id){
-    string sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
-    sqlite3 *DB;
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        vector<User> users;
-        sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
-        }
-        else {
-            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
-                User user;
-                user.setID(sqlite3_column_int(stmt, 0));
-                user.setName(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
-                user.setGroupID(sqlite3_column_int(stmt, 5));
-                users.push_back(user);
-            }
-        }
-        sqlite3_finalize(stmt);
-        sqlite3_close(DB);
-
-        return users;
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-        return {};
-    }
-}
-
 void show_group() {
     SqlGateway DB;
 
@@ -158,7 +120,9 @@ void show_group() {
             break;
         } else {
             op_men--;
-            auto users = get_users(groups[op_men].getID());
+            int group_id = groups[op_men].getID();
+            string sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
+            auto users = DB.getData<User>(sql);
             cout << "Студенты группы " << groups[op_men].getNumber() << endl;
             for (int i = 0; i < users.size(); i++) {
                 cout << i + 1 << " - " << users[i].getName() << endl;
@@ -184,7 +148,9 @@ void change_group() {
             break;
         } else {
             group_id--;
-            auto users = get_users(groups[group_id].getID());
+            group_id = groups[group_id].getID();
+            string sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
+            auto users = DB.getData<User>(sql);
             cout << "Что вы хотите изменить?" << endl;
             cout << "1 - Номер группы" << endl;
             cout << "2 - Данные студентов" << endl;
