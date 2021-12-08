@@ -16,12 +16,7 @@ int add_user(int role, int group_id) {
     cout << "Введите пароль" << endl;
     password = getString();
 
-    if (role == 0) {
-        cout << "Введите роль" << endl;
-        cout << "1 - Студент" << endl;
-        cout << "2 - Преподователь" << endl;
-        role = getInt(1, 2);
-    }
+    role = 2;
 
     string sql = "INSERT INTO USERS (FULL_NAME, LOGIN, PASSWORD, ROLE, GROUP_ID) VALUES ("
                  + quotesql(full_name) + ","
@@ -35,6 +30,8 @@ int add_user(int role, int group_id) {
 }
 
 User login() {
+    SqlGateway DB;
+
     string login;
     cout << "Введите логин" << endl;
     login = getString();
@@ -43,5 +40,14 @@ User login() {
     cout << "Введите пароль" << endl;
     password = getString();
 
-    return authenticate(login, password);
+    string sql = "SELECT * FROM USERS WHERE "
+                 "LOGIN = " + quotesql(login) +
+                 " AND PASSWORD = " + quotesql(password) + ";";
+
+    auto ans = DB.getData<User>(sql);
+    if (!ans.empty()) {
+        return ans[0];
+    } else {
+        return {};
+    }
 }

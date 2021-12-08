@@ -17,8 +17,6 @@ using namespace std;
 
 int getInt(int begin, int end);
 string getString();
-string getStrInt();
-User authenticate(const string& login, const string& password);
 string quotesql(const string& s);;
 
 #endif //COURSE_TEST_SERVICE_H

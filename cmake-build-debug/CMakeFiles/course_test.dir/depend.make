@@ -4,6 +4,7 @@
 CMakeFiles/course_test.dir/Answer.cpp.o: \
  ../Answer.cpp \
  ../Answer.h \
+ ../Group.h \
  ../JustInt.h \
  ../Question_Many_Variants.h \
  ../Service.h \
@@ -12,17 +13,31 @@ CMakeFiles/course_test.dir/Answer.cpp.o: \
  ../User.h \
  ../tables_service.h
 CMakeFiles/course_test.dir/CRUD.cpp.o: \
+ ../Answer.h \
  ../CRUD.cpp \
  ../CRUD.h \
+ ../Group.h \
+ ../JustInt.h \
+ ../Question_Many_Variants.h \
  ../Service.h \
+ ../SqlGateway.h \
+ ../Test.h \
  ../User.h \
  ../tables_service.h
 CMakeFiles/course_test.dir/Group.cpp.o: \
+ ../Answer.h \
  ../Group.cpp \
  ../Group.h \
- ../User.h
+ ../JustInt.h \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Test.h \
+ ../User.h \
+ ../tables_service.h
 CMakeFiles/course_test.dir/JustInt.cpp.o: \
  ../Answer.h \
+ ../Group.h \
  ../JustInt.cpp \
  ../JustInt.h \
  ../Question_Many_Variants.h \
@@ -33,6 +48,7 @@ CMakeFiles/course_test.dir/JustInt.cpp.o: \
  ../tables_service.h
 CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o: \
  ../Answer.h \
+ ../Group.h \
  ../JustInt.h \
  ../Question_Many_Variants.cpp \
  ../Question_Many_Variants.h \
@@ -42,12 +58,19 @@ CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o: \
  ../User.h \
  ../tables_service.h
 CMakeFiles/course_test.dir/Service.cpp.o: \
+ ../Answer.h \
+ ../Group.h \
+ ../JustInt.h \
+ ../Question_Many_Variants.h \
  ../Service.cpp \
  ../Service.h \
+ ../SqlGateway.h \
+ ../Test.h \
  ../User.h \
  ../tables_service.h
 CMakeFiles/course_test.dir/SqlGateway.cpp.o: \
  ../Answer.h \
+ ../Group.h \
  ../JustInt.h \
  ../Question_Many_Variants.h \
  ../Service.h \
@@ -56,8 +79,33 @@ CMakeFiles/course_test.dir/SqlGateway.cpp.o: \
  ../Test.h \
  ../User.h \
  ../tables_service.h
+CMakeFiles/course_test.dir/Student.cpp.o: \
+ ../Answer.h \
+ ../Group.h \
+ ../JustInt.h \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Student.cpp \
+ ../Student.h \
+ ../Test.h \
+ ../User.h \
+ ../tables_service.h
+CMakeFiles/course_test.dir/Teacher.cpp.o: \
+ ../Answer.h \
+ ../Group.h \
+ ../JustInt.h \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Teacher.cpp \
+ ../Teacher.h \
+ ../Test.h \
+ ../User.h \
+ ../tables_service.h
 CMakeFiles/course_test.dir/Test.cpp.o: \
  ../Answer.h \
+ ../Group.h \
  ../JustInt.h \
  ../Question_Many_Variants.h \
  ../Service.h \
@@ -67,8 +115,16 @@ CMakeFiles/course_test.dir/Test.cpp.o: \
  ../User.h \
  ../tables_service.h
 CMakeFiles/course_test.dir/User.cpp.o: \
+ ../Answer.h \
+ ../Group.h \
+ ../JustInt.h \
+ ../Question_Many_Variants.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Test.h \
  ../User.cpp \
- ../User.h
+ ../User.h \
+ ../tables_service.h
 CMakeFiles/course_test.dir/groups_service.cpp.o: \
  ../Answer.h \
  ../CRUD.h \
@@ -100,6 +156,7 @@ CMakeFiles/course_test.dir/main.cpp.o: \
  ../tests_service.h
 CMakeFiles/course_test.dir/questions_service.cpp.o: \
  ../Answer.h \
+ ../Group.h \
  ../JustInt.h \
  ../Question_Many_Variants.h \
  ../Service.h \

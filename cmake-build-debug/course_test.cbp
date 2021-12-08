@@ -124,6 +124,18 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/SqlGateway.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Student.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Student.h">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Teacher.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Teacher.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Test.cpp">
 			<Option target="course_test"/>
 		</Unit>

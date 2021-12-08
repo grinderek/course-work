@@ -184,3 +184,5 @@ template vector<Answer> SqlGateway::getData<Answer>(string sql);
 template vector<Question_Many_Variants> SqlGateway::getData<Question_Many_Variants>(string sql);
 template vector<Test> SqlGateway::getData<Test>(string sql);
 template vector<JustInt> SqlGateway::getData<JustInt>(string sql);
+template vector<Group> SqlGateway::getData<Group>(string sql);
+template vector<User> SqlGateway::getData<User>(string sql);

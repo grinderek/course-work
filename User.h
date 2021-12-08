@@ -5,6 +5,7 @@
 #ifndef COURSE_TEST_USER_H
 #define COURSE_TEST_USER_H
 #include <string>
+#include "SqlGateway.h"
 using namespace std;
 
 class User {
@@ -30,6 +31,8 @@ public:
 
     void setGroupID(int ide);
     int getGroupID() const;
+
+    void get_data(sqlite3_stmt *stmt);
 };
 
 

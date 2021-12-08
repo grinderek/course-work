@@ -25,6 +25,8 @@ public:
     void setNumber(string number);
     string getNumber();
     int getID() const;
+
+    void get_data(sqlite3_stmt *stmt);
 };
 
 

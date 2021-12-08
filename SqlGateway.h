@@ -11,6 +11,8 @@
 #include "Question_Many_Variants.h"
 #include "Test.h"
 #include "JustInt.h"
+#include "Group.h"
+#include "User.h"
 
 using namespace std;
 

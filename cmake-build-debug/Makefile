@@ -297,6 +297,54 @@ SqlGateway.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/SqlGateway.cpp.s
 .PHONY : SqlGateway.cpp.s
 
+Student.o: Student.cpp.o
+.PHONY : Student.o
+
+# target to build an object file
+Student.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Student.cpp.o
+.PHONY : Student.cpp.o
+
+Student.i: Student.cpp.i
+.PHONY : Student.i
+
+# target to preprocess a source file
+Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Student.cpp.i
+.PHONY : Student.cpp.i
+
+Student.s: Student.cpp.s
+.PHONY : Student.s
+
+# target to generate assembly for a file
+Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Student.cpp.s
+.PHONY : Student.cpp.s
+
+Teacher.o: Teacher.cpp.o
+.PHONY : Teacher.o
+
+# target to build an object file
+Teacher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Teacher.cpp.o
+.PHONY : Teacher.cpp.o
+
+Teacher.i: Teacher.cpp.i
+.PHONY : Teacher.i
+
+# target to preprocess a source file
+Teacher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Teacher.cpp.i
+.PHONY : Teacher.cpp.i
+
+Teacher.s: Teacher.cpp.s
+.PHONY : Teacher.s
+
+# target to generate assembly for a file
+Teacher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Teacher.cpp.s
+.PHONY : Teacher.cpp.s
+
 Test.o: Test.cpp.o
 .PHONY : Test.o
 
@@ -519,6 +567,12 @@ help:
 	@echo "... SqlGateway.o"
 	@echo "... SqlGateway.i"
 	@echo "... SqlGateway.s"
+	@echo "... Student.o"
+	@echo "... Student.i"
+	@echo "... Student.s"
+	@echo "... Teacher.o"
+	@echo "... Teacher.i"
+	@echo "... Teacher.s"
 	@echo "... Test.o"
 	@echo "... Test.i"
 	@echo "... Test.s"

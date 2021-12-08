@@ -32,3 +32,8 @@ int Group::getID() const {
     return this->id;
 }
 
+void Group::get_data(sqlite3_stmt *stmt) {
+    this->id = sqlite3_column_int(stmt, 0);
+    this->number_of_group = string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
+}
+

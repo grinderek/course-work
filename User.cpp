@@ -54,3 +54,10 @@ int User::getGroupID() const {
     return this->group_id;
 }
 
+void User::get_data(sqlite3_stmt *stmt) {
+    this->id = sqlite3_column_int(stmt, 0);
+    this->name = string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
+    this->role = sqlite3_column_int(stmt, 4);
+    this->group_id = sqlite3_column_int(stmt, 5);
+}
+

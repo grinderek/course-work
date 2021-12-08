@@ -142,7 +142,10 @@ vector<User> get_users(int group_id){
 }
 
 void show_group() {
-    vector<Group> groups = get_groups();
+    SqlGateway DB;
+
+    string sql = "SELECT * FROM GROUPS";
+    vector<Group> groups = DB.getData<Group>(sql);
 
     while (true) {
         cout << "Выберите номер группы, которую хотите просмотреть(0 для выхода)" << endl;
@@ -165,7 +168,10 @@ void show_group() {
 }
 
 void change_group() {
-    vector<Group> groups = get_groups();
+    SqlGateway DB;
+
+    string sql = "SELECT * FROM GROUPS";
+    vector<Group> groups = DB.getData<Group>(sql);
 
     while (true) {
         cout << "Выберите номер группы, которую хотите изменить(0 для выхода)" << endl;
@@ -239,7 +245,10 @@ void change_group() {
 }
 
 void delete_group() {
-    vector<Group> groups = get_groups();
+    SqlGateway DB;
+
+    string sql = "SELECT * FROM GROUPS";
+    vector<Group> groups = DB.getData<Group>(sql);
 
     while (true) {
         cout << "Выберите номер группы, которую хотите удалить(0 для выхода)" << endl;
