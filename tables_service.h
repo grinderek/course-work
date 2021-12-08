@@ -10,5 +10,4 @@
 
 using namespace std;
 
-int SQLOperation(const string& sql);
 #endif //COURSE_TEST_TABLES_SERVICE_H

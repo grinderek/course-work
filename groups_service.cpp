@@ -33,13 +33,13 @@ void groups_menu(User user) {
 }
 
 void add_group() {
-
+    SqlGateway DB;
     int group_id = 0;
     while (group_id == 0) {
         cout << "Введите номер группы(0 для выхода)" << endl;
         string number = getString();
         if (number == "0") return;
-        group_id = SQLOperation("INSERT INTO GROUPS (NUMBER_OF_GROUP) VALUES ("
+        group_id = DB.SQLOperation("INSERT INTO GROUPS (NUMBER_OF_GROUP) VALUES ("
                                     + quotesql(number) + ");");
     }
 
@@ -54,7 +54,7 @@ void add_group() {
                     string sql = "PRAGMA foreign_keys = ON;\n"
                                  "UPDATE USERS SET GROUP_ID = " + to_string(group_id) + " WHERE ID = " +
                                  to_string(user_id) + ";\nPRAGMA foreign_keys = OFF;";
-                    SQLOperation(sql);
+                    DB.SQLOperation(sql);
                 }
             }
                 break;
@@ -201,7 +201,7 @@ void change_group() {
                 cout << "2 - Нет" << endl;
                 op_men = getInt(1, 2);
                 if (op_men == 1) {
-                    SQLOperation("UPDATE GROUPS SET NUMBER_OF_GROUP = "
+                    DB.SQLOperation("UPDATE GROUPS SET NUMBER_OF_GROUP = "
                                  + quotesql(number) + "WHERE ID = "
                                  + to_string(groups[group_id].getID()) + ";");
                     return;
@@ -232,7 +232,7 @@ void change_group() {
                         cout << "2 - Нет" << endl;
                         op_men = getInt(1, 2);
                         if (op_men == 1) {
-                            SQLOperation("UPDATE USERS SET FULL_NAME = "
+                            DB.SQLOperation("UPDATE USERS SET FULL_NAME = "
                                          + quotesql(full_name) + "WHERE ID = "
                                          + to_string(users[user_id].getID()) + ";");
                             return;
@@ -270,17 +270,9 @@ void delete_group() {
                              "DELETE FROM GROUPS WHERE ID = " + to_string(groups[group_id].getID())
                              + ";\nPRAGMA foreign_keys = OFF;";
 
-                SQLOperation(sql);
+                DB.SQLOperation(sql);
                 return;
             }
         }
-    }
-}
-
-void add_groups_to_tests(vector<Group> groups, int test_id) {
-    for (auto group : groups) {
-        SQLOperation("INSERT INTO GROUP_TESTS (GROUP_ID, TEST_ID) VALUES ("
-                     + to_string(group.getID()) + ", "
-                     + to_string(test_id) + ");");
     }
 }

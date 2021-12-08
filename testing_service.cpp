@@ -105,7 +105,7 @@ void testing_menu(User user) {
         }
 
         int result = round(testing(test.getQuestions()) * 10);
-        SQLOperation("INSERT INTO USERS_TESTS (MARK, USER_ID, TEST_ID) VALUES ("
+        DB.SQLOperation("INSERT INTO USERS_TESTS (MARK, USER_ID, TEST_ID) VALUES ("
                      + to_string(result) + ", "
                      + to_string(user.getID()) + ", "
                      + to_string(test.getID()) + ");");

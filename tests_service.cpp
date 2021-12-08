@@ -74,85 +74,21 @@ void add_test(const User& user) {
         }
     }
 
-    int id = add_test_to_table(topic, count, user.getID());
-    cout << id << endl;
-    add_groups_to_tests(groups_of_test, id);
-    add_questions_to_table(questions, id);
-}
-
-int add_test_to_table(const string& topic, int count, int user_id) {
-    sqlite3 *DB;
+    SqlGateway DB;
 
     string sql = "INSERT INTO TESTS (NAME_OF_TEST, NUMBER_OF_QUESTIONS, USER_ID) VALUES ("
                  + quotesql(topic) + ","
                  + to_string(count) + ","
-                 + to_string(user_id) + ");";
+                 + to_string(user.getID()) + ");";
+    int test_id = DB.SQLOperation(sql);
 
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &messageError);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Create Table" << endl;
-            sqlite3_free(messageError);
-        }
-        else
-            cout << "Table created successfully" << endl;
-        int id = sqlite3_last_insert_rowid(DB);
-        sqlite3_close(DB);
-        return id;
+    for (auto group : groups) {
+        DB.SQLOperation("INSERT INTO GROUP_TESTS (GROUP_ID, TEST_ID) VALUES ("
+                     + to_string(group.getID()) + ", "
+                     + to_string(test_id) + ");");
     }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-    }
-
-    return -1;
+    add_questions_to_table(questions, test_id);
 }
-
-/*vector<Test> get_tests(int user_id) {
-    string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);
-    sqlite3 *DB;
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        vector<Test> tests;
-        sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
-        }
-        else {
-            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
-                Test test;
-                test.setID(sqlite3_column_int(stmt, 0));
-                test.setName(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
-                test.setCountOfQuestions(sqlite3_column_int(stmt, 2));
-                vector<Question_Many_Variants> questions = getQuestions(test.getID());
-                test.setQuestions(questions);
-                tests.push_back(test);
-            }
-        }
-        sqlite3_finalize(stmt);
-        sqlite3_close(DB);
-
-        return tests;
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-        return {};
-    }
-}*/
 
 vector<Test> show_tests(int user_id) {
     SqlGateway DB;
@@ -167,6 +103,7 @@ vector<Test> show_tests(int user_id) {
 }
 
 void delete_test(int user_id) {
+    SqlGateway DB;
     auto tests = show_tests(user_id);
 
     while (true) {
@@ -188,7 +125,7 @@ void delete_test(int user_id) {
                                  "DELETE FROM TESTS WHERE ID = " + to_string(id)
                                  + ";\nPRAGMA foreign_keys = OFF;";
 
-                    SQLOperation(sql);
+                    DB.SQLOperation(sql);
                     break;
                 } else {
                     continue;
@@ -202,6 +139,7 @@ void delete_test(int user_id) {
 }
 
 void change_test(int user_id) {
+    SqlGateway DB;
     auto tests = show_tests(user_id);
 
     while (true) {
@@ -236,7 +174,7 @@ void change_test(int user_id) {
                             string sql = "PRAGMA foreign_keys = ON;\n"
                                          "UPDATE TESTS SET NAME_OF_TEST = " + quotesql(topic) + " WHERE ID = " +
                                     to_string(id) + ";\nPRAGMA foreign_keys = OFF;";
-                            SQLOperation(sql);
+                            DB.SQLOperation(sql);
                             break;
                         } else {
                             continue;

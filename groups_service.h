@@ -22,5 +22,4 @@ void add_group();
 void show_group();
 void change_group();
 void delete_group();
-void add_groups_to_tests(vector<Group> groups, int test_id);
 #endif //COURSE_TEST_GROUPS_SERVICE_H

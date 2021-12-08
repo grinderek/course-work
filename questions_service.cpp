@@ -5,26 +5,26 @@
 #include "questions_service.h"
 
 int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id) {
+    SqlGateway DB;
     for (auto question : questions) {
-        sqlite3 *DB;
-
         string sql = "INSERT INTO QUESTIONS (TEXT_OF_QUESTION, TEST_ID) VALUES ("
                      + quotesql(question.getQuestion()) + ","
                      + to_string(test_id) + ");";
 
-        int id = SQLOperation(sql);
+        int id = DB.SQLOperation(sql);
         add_answers_to_table(question, id);
     }
 }
 
 int add_answers_to_table(Question_Many_Variants question, int question_id) {
+    SqlGateway DB;
     int num = 0;
     for (auto answer : question.getAnswers()) {
         string sql = "INSERT INTO ANSWERS (TEXT_OF_ANSWER, QUESTION_ID) VALUES ("
                      + quotesql(answer.get_text()) + ","
                      + to_string(question_id) + ");";
 
-        int id = SQLOperation(sql);
+        int id = DB.SQLOperation(sql);
 
         if (num == question.getCorrectAnswer()) {
             add_correctAnswer_to_table(id, question_id);
@@ -37,58 +37,17 @@ int add_answers_to_table(Question_Many_Variants question, int question_id) {
 }
 
 int add_correctAnswer_to_table(int answer_id, int question_id) {
+    SqlGateway DB;
     string sql = "INSERT INTO CORRECT_ANSWERS (ANSWER_ID, QUESTION_ID) VALUES ("
                  + to_string(answer_id) + ","
                  + to_string(question_id) + ");";
 
-    int id = SQLOperation(sql);
+    int id = DB.SQLOperation(sql);
 
     return id;
 }
 
-/*vector<Question_Many_Variants> getQuestions(int test_id) {
-    sqlite3 *DB;
-
-    string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(test_id);
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        vector<Question_Many_Variants> questions;
-        sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
-        }
-        else {
-            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
-                Question_Many_Variants question;
-                question.setID(sqlite3_column_int(stmt, 0));
-                question.setQuestionText(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
-                map <int, string> answers = getAnswers(question.getID());
-                question.setAnswers(answers);
-                int id_answer = getCorrectAnswer(question.getID());
-                question.setCorrectAnswer(id_answer);
-                questions.push_back(question);
-            }
-        }
-        sqlite3_finalize(stmt);
-        sqlite3_close(DB);
-
-        return questions;
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-        return {};
-    }
-}*/
-
-map <int, string> getAnswers(int question_id) {
+/*map <int, string> getAnswers(int question_id) {
     sqlite3 *DB;
 
     string sql = "SELECT * FROM ANSWERS WHERE QUESTION_ID = " + to_string(question_id);
@@ -121,7 +80,7 @@ map <int, string> getAnswers(int question_id) {
         cerr << e.what();
         return {};
     }
-}
+}*/
 
 int getCorrectAnswer(int question_id) {
     sqlite3 *DB;
@@ -167,8 +126,10 @@ void showQuestions(vector<Question_Many_Variants> questions) {
 }
 
 void changeAnswers(Question_Many_Variants question) {
+    SqlGateway DB;
+    string sql = "SELECT * FROM ANSWERS WHERE QUESTION_ID = " + to_string(question.getID());
     int j = 1;
-    auto answers = question.getAnswers();
+    auto answers = DB.getData<Answer>(sql);
     map <int, int> ids;
     map <int, int> rev_ids;
     for ( auto answer : answers) {
@@ -207,7 +168,7 @@ void changeAnswers(Question_Many_Variants question) {
                         string sql = "PRAGMA foreign_keys = ON;\n"
                                      "UPDATE ANSWERS SET TEXT_OF_ANSWER = " + quotesql(text) + " WHERE ID = " +
                                      to_string(rev_ids[id]) + ";\nPRAGMA foreign_keys = OFF;";
-                        SQLOperation(sql);
+                        DB.SQLOperation(sql);
                         break;
                     } else {
                         continue;
@@ -223,6 +184,7 @@ void changeAnswers(Question_Many_Variants question) {
 
 
 void changeQuestions(vector<Question_Many_Variants> questions) {
+    SqlGateway DB;
     showQuestions(questions);
 
     while (true) {
@@ -254,7 +216,7 @@ void changeQuestions(vector<Question_Many_Variants> questions) {
                         string sql = "PRAGMA foreign_keys = ON;\n"
                                      "UPDATE QUESTIONS SET TEXT_OF_QUESTION = " + quotesql(text) + " WHERE ID = " +
                                      to_string(questions[id].getID()) + ";\nPRAGMA foreign_keys = OFF;";
-                        SQLOperation(sql);
+                        DB.SQLOperation(sql);
                         break;
                     } else {
                         continue;

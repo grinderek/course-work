@@ -4,6 +4,7 @@
 #include "CRUD.h"
 
 int add_user(int role, int group_id) {
+    SqlGateway DB;
     string full_name;
     cout << "Введите ФИО" << endl;
     full_name = getString();
@@ -25,7 +26,7 @@ int add_user(int role, int group_id) {
                  + to_string(role) + ","
                  + to_string(group_id) + ");";
 
-    int id = SQLOperation(sql);
+    int id = DB.SQLOperation(sql);
     return id;
 }
 

@@ -79,6 +79,7 @@ istream& operator>> (istream &in, Question_Many_Variants &question)
     cout << "Enter count of answers\n";
     question.number_of_answers = getInt(1, INT_MAX);
     cout << "Enter answers\n";
+    question.answers.resize(question.number_of_answers);
     for (int i = 0; i < question.number_of_answers; i++) {
         cout << "Answer " << i + 1 << ": ";
         question.answers[i].set_text(getString());
