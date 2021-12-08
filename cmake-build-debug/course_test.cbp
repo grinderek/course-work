@@ -163,12 +163,6 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/questions_service.h">
 			<Option target="course_test"/>
 		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/tables_service.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/tables_service.h">
-			<Option target="course_test"/>
-		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/testing_service.cpp">
 			<Option target="course_test"/>
 		</Unit>

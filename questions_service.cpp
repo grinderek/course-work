@@ -4,16 +4,15 @@
 
 #include "questions_service.h"
 
-int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id) {
+int add_correctAnswer_to_table(int answer_id, int question_id) {
     SqlGateway DB;
-    for (auto question : questions) {
-        string sql = "INSERT INTO QUESTIONS (TEXT_OF_QUESTION, TEST_ID) VALUES ("
-                     + quotesql(question.getQuestion()) + ","
-                     + to_string(test_id) + ");";
+    string sql = "INSERT INTO CORRECT_ANSWERS (ANSWER_ID, QUESTION_ID) VALUES ("
+                 + to_string(answer_id) + ","
+                 + to_string(question_id) + ");";
 
-        int id = DB.SQLOperation(sql);
-        add_answers_to_table(question, id);
-    }
+    int id = DB.SQLOperation(sql);
+
+    return id;
 }
 
 int add_answers_to_table(Question_Many_Variants question, int question_id) {
@@ -36,84 +35,15 @@ int add_answers_to_table(Question_Many_Variants question, int question_id) {
     }
 }
 
-int add_correctAnswer_to_table(int answer_id, int question_id) {
+int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id) {
     SqlGateway DB;
-    string sql = "INSERT INTO CORRECT_ANSWERS (ANSWER_ID, QUESTION_ID) VALUES ("
-                 + to_string(answer_id) + ","
-                 + to_string(question_id) + ");";
+    for (auto question : questions) {
+        string sql = "INSERT INTO QUESTIONS (TEXT_OF_QUESTION, TEST_ID) VALUES ("
+                     + quotesql(question.getQuestion()) + ","
+                     + to_string(test_id) + ");";
 
-    int id = DB.SQLOperation(sql);
-
-    return id;
-}
-
-/*map <int, string> getAnswers(int question_id) {
-    sqlite3 *DB;
-
-    string sql = "SELECT * FROM ANSWERS WHERE QUESTION_ID = " + to_string(question_id);
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        map <int, string> answers;
-        sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
-        }
-        else {
-            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
-                answers[sqlite3_column_int(stmt, 0)] = string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
-            }
-        }
-        sqlite3_finalize(stmt);
-        sqlite3_close(DB);
-
-        return answers;
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-        return {};
-    }
-}*/
-
-int getCorrectAnswer(int question_id) {
-    sqlite3 *DB;
-
-    string sql = "SELECT * FROM CORRECT_ANSWERS WHERE QUESTION_ID = " + to_string(question_id);
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        int correct_answer = 0;
-        sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
-        }
-        else {
-            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
-                correct_answer = sqlite3_column_int(stmt, 1);
-            }
-        }
-        sqlite3_finalize(stmt);
-        sqlite3_close(DB);
-
-        return correct_answer;
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-        return {};
+        int id = DB.SQLOperation(sql);
+        add_answers_to_table(question, id);
     }
 }
 

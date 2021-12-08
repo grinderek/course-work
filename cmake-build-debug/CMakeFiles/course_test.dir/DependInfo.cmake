@@ -22,7 +22,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/danila/CLionProjects/course_test/groups_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/groups_service.cpp.o"
   "/home/danila/CLionProjects/course_test/main.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/main.cpp.o"
   "/home/danila/CLionProjects/course_test/questions_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/questions_service.cpp.o"
-  "/home/danila/CLionProjects/course_test/tables_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/tables_service.cpp.o"
   "/home/danila/CLionProjects/course_test/testing_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/testing_service.cpp.o"
   "/home/danila/CLionProjects/course_test/tests_service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/tests_service.cpp.o"
   )

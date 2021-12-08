@@ -144,22 +144,9 @@ CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/CLionProjects/course_test/Question_Many_Variants.cpp -o CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s
 
-CMakeFiles/course_test.dir/tables_service.cpp.o: CMakeFiles/course_test.dir/flags.make
-CMakeFiles/course_test.dir/tables_service.cpp.o: ../tables_service.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/course_test.dir/tables_service.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/tables_service.cpp.o -c /home/danila/CLionProjects/course_test/tables_service.cpp
-
-CMakeFiles/course_test.dir/tables_service.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/course_test.dir/tables_service.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danila/CLionProjects/course_test/tables_service.cpp > CMakeFiles/course_test.dir/tables_service.cpp.i
-
-CMakeFiles/course_test.dir/tables_service.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/course_test.dir/tables_service.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/CLionProjects/course_test/tables_service.cpp -o CMakeFiles/course_test.dir/tables_service.cpp.s
-
 CMakeFiles/course_test.dir/questions_service.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/questions_service.cpp.o: ../questions_service.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/course_test.dir/questions_service.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/course_test.dir/questions_service.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/questions_service.cpp.o -c /home/danila/CLionProjects/course_test/questions_service.cpp
 
 CMakeFiles/course_test.dir/questions_service.cpp.i: cmake_force
@@ -172,7 +159,7 @@ CMakeFiles/course_test.dir/questions_service.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/SqlGateway.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/SqlGateway.cpp.o: ../SqlGateway.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/course_test.dir/SqlGateway.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/course_test.dir/SqlGateway.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/SqlGateway.cpp.o -c /home/danila/CLionProjects/course_test/SqlGateway.cpp
 
 CMakeFiles/course_test.dir/SqlGateway.cpp.i: cmake_force
@@ -185,7 +172,7 @@ CMakeFiles/course_test.dir/SqlGateway.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/Test.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/Test.cpp.o: ../Test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/course_test.dir/Test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/course_test.dir/Test.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Test.cpp.o -c /home/danila/CLionProjects/course_test/Test.cpp
 
 CMakeFiles/course_test.dir/Test.cpp.i: cmake_force
@@ -198,7 +185,7 @@ CMakeFiles/course_test.dir/Test.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/groups_service.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/groups_service.cpp.o: ../groups_service.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/course_test.dir/groups_service.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/course_test.dir/groups_service.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/groups_service.cpp.o -c /home/danila/CLionProjects/course_test/groups_service.cpp
 
 CMakeFiles/course_test.dir/groups_service.cpp.i: cmake_force
@@ -211,7 +198,7 @@ CMakeFiles/course_test.dir/groups_service.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/Group.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/Group.cpp.o: ../Group.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/course_test.dir/Group.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/course_test.dir/Group.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Group.cpp.o -c /home/danila/CLionProjects/course_test/Group.cpp
 
 CMakeFiles/course_test.dir/Group.cpp.i: cmake_force
@@ -224,7 +211,7 @@ CMakeFiles/course_test.dir/Group.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/testing_service.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/testing_service.cpp.o: ../testing_service.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/course_test.dir/testing_service.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/course_test.dir/testing_service.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/testing_service.cpp.o -c /home/danila/CLionProjects/course_test/testing_service.cpp
 
 CMakeFiles/course_test.dir/testing_service.cpp.i: cmake_force
@@ -237,7 +224,7 @@ CMakeFiles/course_test.dir/testing_service.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/Answer.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/Answer.cpp.o: ../Answer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/course_test.dir/Answer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/course_test.dir/Answer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Answer.cpp.o -c /home/danila/CLionProjects/course_test/Answer.cpp
 
 CMakeFiles/course_test.dir/Answer.cpp.i: cmake_force
@@ -250,7 +237,7 @@ CMakeFiles/course_test.dir/Answer.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/JustInt.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/JustInt.cpp.o: ../JustInt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/course_test.dir/JustInt.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/course_test.dir/JustInt.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/JustInt.cpp.o -c /home/danila/CLionProjects/course_test/JustInt.cpp
 
 CMakeFiles/course_test.dir/JustInt.cpp.i: cmake_force
@@ -263,7 +250,7 @@ CMakeFiles/course_test.dir/JustInt.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/Student.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/Student.cpp.o: ../Student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/course_test.dir/Student.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/course_test.dir/Student.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Student.cpp.o -c /home/danila/CLionProjects/course_test/Student.cpp
 
 CMakeFiles/course_test.dir/Student.cpp.i: cmake_force
@@ -276,7 +263,7 @@ CMakeFiles/course_test.dir/Student.cpp.s: cmake_force
 
 CMakeFiles/course_test.dir/Teacher.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/Teacher.cpp.o: ../Teacher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/course_test.dir/Teacher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/course_test.dir/Teacher.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Teacher.cpp.o -c /home/danila/CLionProjects/course_test/Teacher.cpp
 
 CMakeFiles/course_test.dir/Teacher.cpp.i: cmake_force
@@ -295,7 +282,6 @@ course_test_OBJECTS = \
 "CMakeFiles/course_test.dir/CRUD.cpp.o" \
 "CMakeFiles/course_test.dir/tests_service.cpp.o" \
 "CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o" \
-"CMakeFiles/course_test.dir/tables_service.cpp.o" \
 "CMakeFiles/course_test.dir/questions_service.cpp.o" \
 "CMakeFiles/course_test.dir/SqlGateway.cpp.o" \
 "CMakeFiles/course_test.dir/Test.cpp.o" \
@@ -316,7 +302,6 @@ course_test: CMakeFiles/course_test.dir/Service.cpp.o
 course_test: CMakeFiles/course_test.dir/CRUD.cpp.o
 course_test: CMakeFiles/course_test.dir/tests_service.cpp.o
 course_test: CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o
-course_test: CMakeFiles/course_test.dir/tables_service.cpp.o
 course_test: CMakeFiles/course_test.dir/questions_service.cpp.o
 course_test: CMakeFiles/course_test.dir/SqlGateway.cpp.o
 course_test: CMakeFiles/course_test.dir/Test.cpp.o
@@ -329,7 +314,7 @@ course_test: CMakeFiles/course_test.dir/Student.cpp.o
 course_test: CMakeFiles/course_test.dir/Teacher.cpp.o
 course_test: CMakeFiles/course_test.dir/build.make
 course_test: CMakeFiles/course_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable course_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable course_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/course_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

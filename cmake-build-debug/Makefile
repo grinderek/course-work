@@ -465,30 +465,6 @@ questions_service.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.s
 .PHONY : questions_service.cpp.s
 
-tables_service.o: tables_service.cpp.o
-.PHONY : tables_service.o
-
-# target to build an object file
-tables_service.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tables_service.cpp.o
-.PHONY : tables_service.cpp.o
-
-tables_service.i: tables_service.cpp.i
-.PHONY : tables_service.i
-
-# target to preprocess a source file
-tables_service.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tables_service.cpp.i
-.PHONY : tables_service.cpp.i
-
-tables_service.s: tables_service.cpp.s
-.PHONY : tables_service.s
-
-# target to generate assembly for a file
-tables_service.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tables_service.cpp.s
-.PHONY : tables_service.cpp.s
-
 testing_service.o: testing_service.cpp.o
 .PHONY : testing_service.o
 
@@ -588,9 +564,6 @@ help:
 	@echo "... questions_service.o"
 	@echo "... questions_service.i"
 	@echo "... questions_service.s"
-	@echo "... tables_service.o"
-	@echo "... tables_service.i"
-	@echo "... tables_service.s"
 	@echo "... testing_service.o"
 	@echo "... testing_service.i"
 	@echo "... testing_service.s"

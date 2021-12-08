@@ -15,10 +15,5 @@
 using namespace std;
 
 int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id);
-int add_answers_to_table(Question_Many_Variants question, int question_id);
-int add_correctAnswer_to_table(int answer_id, int question_id);
-vector<Question_Many_Variants> getQuestions(int test_id);
-map <int, string> getAnswers(int question_id);
-int getCorrectAnswer(int question_id);
 void changeQuestions(vector<Question_Many_Variants> questions);
 #endif //COURSE_TEST_QUESTIONS_SERVICE_H
