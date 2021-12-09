@@ -7,6 +7,7 @@
 #include "testing_service.h"
 #include "CRUD.h"
 #include <cstdlib>
+#include "Guest.h"
 
 int main() {
     setlocale(LC_ALL, "Russian");
@@ -22,72 +23,10 @@ int main() {
     DB.createGroupTestsTable();
     DB.createUsersTestsTable();
 
-    //User* user = new User;
-    User user;
+    vector<unique_ptr<User>> user;
+    user.emplace_back(new Guest);
     while (true) {
-        if (user.getName() == "...") {
-            cout << "Введите номер вашего действия" << endl;
-            cout << "1 - Войти в систему" << endl;
-            cout << "2 - Зарегистрироваться" << endl;
-            cout << "0 - Выйти" << endl;
-            int op_men = getInt(0, 2);
-            switch (op_men) {
-                case 0:
-                    cout << "До свидания!" << endl;
-                    return 0;
-                case 1:
-                    user = login();
-                    break;
-                case 2:
-                    add_user();
-                    break;
-                default:
-                    cout << "Что-то пошло не так" << endl;
-            }
-        }
-        else {
-            if (user.getRole() == 1) {
-                cout << "1 - Пройти тест" << endl;
-                cout << "2 - Просмотреть результаты тестов" << endl;
-                cout << "0 - Выход" << endl;
-
-                int op_men = getInt(0, 2);
-
-                switch (op_men) {
-                    case 0:
-                        return 0;
-                        break;
-                    case 1:
-                        testing_menu(user);
-                        break;
-                    case 2:
-                        show_results(user);
-                        break;
-                    default:
-                        cout << "Что-то пошло не так" << endl;
-                }
-            }
-            else {
-                cout << "1 - Тесты" << endl;
-                cout << "2 - Группы" << endl;
-                cout << "0 - Выход" << endl;
-                int op_men = getInt(0, 2);
-
-                switch (op_men) {
-                    case 0:
-                        return 0;
-                        break;
-                    case 1:
-                        tests_menu(user);
-                        break;
-                    case 2:
-                        groups_menu(user);
-                        break;
-                    default:
-                        cout << "Что-то пошло не так" << endl;
-                }
-            }
-        }
+        user = user[0]->menu();
     }
 
     return 0;

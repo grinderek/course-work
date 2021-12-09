@@ -5,20 +5,22 @@
 #ifndef COURSE_TEST_USER_H
 #define COURSE_TEST_USER_H
 #include <string>
+#include <memory>
 #include "SqlGateway.h"
 using namespace std;
 
 class User {
-public:
+private:
     int id;
     string name;
     int role;
     int group_id;
 
+public:
     User();
     User(const int& id, const string& name, const int& role, const int& group_id);
     User(const User& user);
-    ~User(){};
+    ~User();
 
     string getName();
     void setName(string s);
@@ -33,6 +35,8 @@ public:
     int getGroupID() const;
 
     void get_data(sqlite3_stmt *stmt);
+
+    virtual vector<unique_ptr<User>> menu();
 };
 
 

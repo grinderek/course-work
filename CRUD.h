@@ -6,13 +6,19 @@
 #define COURSE_TEST_CRUD_H
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <memory>
 #include "Service.h"
 #include "User.h"
 #include "SqlGateway.h"
+#include "Student.h"
+#include "Teacher.h"
+#include "Guest.h"
 
 using namespace std;
 
+class User;
 int add_user(int role = 0, int group_id = -1);
-User login();
+vector<unique_ptr<User>> login();
 
 #endif //COURSE_TEST_CRUD_H

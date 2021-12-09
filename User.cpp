@@ -5,6 +5,7 @@
 #include "User.h"
 
 User::User() {
+    this->id = -1;
     this->name = "...";
     this->role = -1;
 }
@@ -61,4 +62,10 @@ void User::get_data(sqlite3_stmt *stmt) {
     this->role = sqlite3_column_int(stmt, 4);
     this->group_id = sqlite3_column_int(stmt, 5);
 }
+
+vector<unique_ptr<User>> User::menu() {
+
+}
+
+User::~User() = default;
 

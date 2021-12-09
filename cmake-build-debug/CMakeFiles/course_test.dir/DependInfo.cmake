@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/danila/CLionProjects/course_test/App.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/App.cpp.o"
   "/home/danila/CLionProjects/course_test/CRUD.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/CRUD.cpp.o"
   "/home/danila/CLionProjects/course_test/Group.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Group.cpp.o"
+  "/home/danila/CLionProjects/course_test/Guest.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Guest.cpp.o"
   "/home/danila/CLionProjects/course_test/JustInt.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/JustInt.cpp.o"
   "/home/danila/CLionProjects/course_test/Question_Many_Variants.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o"
   "/home/danila/CLionProjects/course_test/Service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Service.cpp.o"

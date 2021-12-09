@@ -15,31 +15,15 @@ private:
     int id;
     string text;
 public:
-    int get_id() {
-        return this->id;
-    }
+    int get_id();
 
-    string get_text() {
-        return this->text;
-    }
+    string get_text();
 
-    void set_text(string ans) {
-        this->text = ans;
-    }
+    void set_text(string ans);
 
-    void get_data(sqlite3_stmt *stmt) {
-        this->id = sqlite3_column_int(stmt, 0);
-        this->text = string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
-    };
+    void get_data(sqlite3_stmt *stmt);
 
-    Answer& operator= (const Answer& answer) {
-        if (&answer != this) {
-            this->id = answer.id;
-            this->text = answer.text;
-        }
-
-        return *this;
-    }
+    Answer& operator= (const Answer& answer);
 };
 
 

@@ -13,6 +13,6 @@
 #include "Test.h"
 #include "questions_service.h"
 
-void testing_menu(User user);
-void show_results(User user);
+void testing_menu(int user_id, int group_id);
+void show_results(int user_id);
 #endif //COURSE_TEST_TESTING_SERVICE_H

@@ -38,11 +38,11 @@ int testing(vector<Question_Many_Variants> questions) {
     return round(10.0 * right_answer / all );
 }
 
-void testing_menu(User user) {
+void testing_menu(int user_id, int group_id) {
     SqlGateway DB;
     string sql = "SELECT * FROM TESTS t"
                  " LEFT JOIN GROUP_TESTS g ON t.ID = g.TEST_ID"
-                 " WHERE g.GROUP_ID = " + to_string(user.getGroupID());
+                 " WHERE g.GROUP_ID = " + to_string(group_id);
     auto tests = DB.getData<Test>(sql);
 
     for (int i = 0; i < tests.size(); i++) {
@@ -71,25 +71,25 @@ void testing_menu(User user) {
         int result = testing(test.getQuestions());
         DB.SQLOperation("INSERT INTO USERS_TESTS (MARK, USER_ID, TEST_ID) VALUES ("
                      + to_string(result) + ", "
-                     + to_string(user.getID()) + ", "
+                     + to_string(user_id) + ", "
                      + to_string(test.getID()) + ");");
         return;
     }
 }
 
-void show_results(User user) {
+void show_results(int user_id) {
     SqlGateway DB;
 
     string sql = "SELECT * FROM TESTS t"
                  " LEFT JOIN USERS_TESTS g ON t.ID = g.TEST_ID"
-                 " WHERE g.USER_ID = " + to_string(user.getID());
+                 " WHERE g.USER_ID = " + to_string(user_id);
 
     auto tests = DB.getData<Test>(sql);
     for (int i = 0; i < tests.size(); i++) {
         cout << "Тест №" << i + 1 << endl;
         cout << "Тема теста - " << tests[i].getName() << endl;
         sql = "SELECT MARK FROM USERS_TESTS WHERE "
-              "USER_ID = " + to_string(user.getID()) +
+              "USER_ID = " + to_string(user_id) +
               " AND TEST_ID = " + to_string(tests[i].getID()) + ";";
         int mark = DB.getData<JustInt>(sql)[0].getVal();
         cout << "Оценка - " << mark << endl;

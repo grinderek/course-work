@@ -225,6 +225,30 @@ Group.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Group.cpp.s
 .PHONY : Group.cpp.s
 
+Guest.o: Guest.cpp.o
+.PHONY : Guest.o
+
+# target to build an object file
+Guest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Guest.cpp.o
+.PHONY : Guest.cpp.o
+
+Guest.i: Guest.cpp.i
+.PHONY : Guest.i
+
+# target to preprocess a source file
+Guest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Guest.cpp.i
+.PHONY : Guest.cpp.i
+
+Guest.s: Guest.cpp.s
+.PHONY : Guest.s
+
+# target to generate assembly for a file
+Guest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Guest.cpp.s
+.PHONY : Guest.cpp.s
+
 JustInt.o: JustInt.cpp.o
 .PHONY : JustInt.o
 
@@ -558,6 +582,9 @@ help:
 	@echo "... Group.o"
 	@echo "... Group.i"
 	@echo "... Group.s"
+	@echo "... Guest.o"
+	@echo "... Guest.i"
+	@echo "... Guest.s"
 	@echo "... JustInt.o"
 	@echo "... JustInt.i"
 	@echo "... JustInt.s"

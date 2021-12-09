@@ -106,6 +106,12 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/Group.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Guest.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Guest.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/JustInt.cpp">
 			<Option target="course_test"/>
 		</Unit>

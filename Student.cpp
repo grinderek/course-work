@@ -4,6 +4,32 @@
 
 #include "Student.h"
 
-Student::Student(const int& id, const string& name, const int& role, const int& group_id) : User(id, name, role, group_id) {
+Student::Student(const int& id, const string& name, const int& role, const int& group_id) : User(id, name, role, group_id) {}
+Student::Student(const Student &student) : User(student){}
 
+vector <unique_ptr<User>> Student::menu() {
+    cout << "1 - Пройти тест" << endl;
+    cout << "2 - Просмотреть результаты тестов" << endl;
+    cout << "0 - Выход" << endl;
+
+    vector <unique_ptr<User>> user;
+    int op_men = getInt(0, 2);
+
+    switch (op_men) {
+        case 0:
+            user.emplace_back(new Guest);
+            return user;
+            break;
+        case 1:
+            testing_menu(this->getID(), this->getGroupID());
+            break;
+        case 2:
+            show_results(this->getID());
+            break;
+        default:
+            cout << "Что-то пошло не так" << endl;
+    }
+
+    user.emplace_back(new Student(this->getID(), this->getName(), this->getRole(), this->getGroupID()));
+    return user;
 }

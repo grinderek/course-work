@@ -3,5 +3,5 @@ project(course_test)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(course_test main.cpp User.cpp User.h Service.h Service.cpp CRUD.h CRUD.cpp groups_service.h tests_service.h tests_service.cpp Question_Many_Variants.cpp Question_Many_Variants.h questions_service.h questions_service.cpp SqlGateway.cpp SqlGateway.h Test.cpp Test.h groups_service.cpp Group.cpp Group.h testing_service.h testing_service.cpp Answer.cpp Answer.h JustInt.cpp JustInt.h Student.cpp Student.h Teacher.cpp Teacher.h App.cpp App.h)
+add_executable(course_test main.cpp User.cpp User.h Service.h Service.cpp CRUD.h CRUD.cpp groups_service.h tests_service.h tests_service.cpp Question_Many_Variants.cpp Question_Many_Variants.h questions_service.h questions_service.cpp SqlGateway.cpp SqlGateway.h Test.cpp Test.h groups_service.cpp Group.cpp Group.h testing_service.h testing_service.cpp Answer.cpp Answer.h JustInt.cpp JustInt.h Student.cpp Student.h Teacher.cpp Teacher.h App.cpp App.h Guest.cpp Guest.h)
 target_link_libraries(course_test -lsqlite3)

@@ -7,13 +7,19 @@
 #include "User.h"
 #include <iostream>
 #include <string>
+#include "Guest.h"
+#include "testing_service.h"
 #include <vector>
 
 using namespace std;
 
-class Student : public User{
+class User;
+class Student : public User {
 public:
     Student(const int& id, const string& name, const int& role, const int& group_id);
+    Student(const Student& student);
+
+    vector<unique_ptr<User>> menu() override;
 };
 
 
