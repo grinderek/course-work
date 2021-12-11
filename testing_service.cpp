@@ -4,38 +4,56 @@
 
 #include "testing_service.h"
 
-int testing(vector<Question_Many_Variants> questions) {
+int testing(vector<Question> questions) {
+
     int current = 0, right_answer = 0, all = questions.size();
     while(!questions.empty()) {
-        cout << questions[current] << endl;
+        cout << questions[current];
         auto answers = questions[current].getAnswers();
         int sz = answers.size();
         int correct_answer = questions[current].getCorrectAnswer();
 
-        /*int x = 0;
+        int x = 0;
+        int pos_next = -1, pos_prev = - 1;
         if (current > 0) {
             x++;
+            pos_prev = sz + x;
+            cout << sz + x << " - " << "Предыдущий вопрос" << endl;
+        }
+        if (current < all - 1) {
+            x++;
+            pos_next = sz + x;
             cout << sz + x << " - " << "Следующий вопрос" << endl;
-            if (current == sz - 1) {
-                x++;
-                cout << sz + x << " - " << "Предыдущий вопрос" << endl;
-            }
-        }*/
+        }
+        cout << sz + x + 1 << " - " << "Прервать прохождение" << endl;
 
-        int ans = getInt(1, sz);
+        int ans = getInt(1, sz + x + 1);
+        if (ans == sz + x + 1) {
+            return -1;
+        }
+        if (ans == pos_next) {
+            current++;
+            continue;
+        }
+        if (ans == pos_prev) {
+            current--;
+            continue;
+        }
+
         auto it = answers.begin() + ans - 1;
 
         ans = it->get_id();
-        cout << ans << " " << it->get_text() << " " << correct_answer << endl;
+        //cout << ans << " " << it->get_text() << " " << correct_answer << endl;
 
         if (ans == correct_answer) {
             right_answer++;
         }
-
         questions.erase(questions.begin());
+        all--;
+        if (current == all) current--;
     }
 
-    return round(10.0 * right_answer / all );
+    return round(10.0 * right_answer / all);
 }
 
 void testing_menu(int user_id, int group_id) {
@@ -59,7 +77,7 @@ void testing_menu(int user_id, int group_id) {
         test_id--;
         Test test = tests[test_id];
         string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(test.getID());
-        test.setQuestions(DB.getData<Question_Many_Variants>(sql));
+        test.setQuestions(DB.getData<Question>(sql));
 
         for (auto question : test.getQuestions()) {
             sql = "SELECT * FROM ANSWERS WHERE QUESTION_ID = " + to_string(question.getID());
@@ -69,11 +87,14 @@ void testing_menu(int user_id, int group_id) {
         }
 
         int result = testing(test.getQuestions());
-        DB.SQLOperation("INSERT INTO USERS_TESTS (MARK, USER_ID, TEST_ID) VALUES ("
-                     + to_string(result) + ", "
-                     + to_string(user_id) + ", "
-                     + to_string(test.getID()) + ");");
-        return;
+        if (result != -1) {
+            cout << "Ваша оценка - " << result << endl;
+            DB.SQLOperation("INSERT INTO USERS_TESTS (MARK, USER_ID, TEST_ID) VALUES ("
+                            + to_string(result) + ", "
+                            + to_string(user_id) + ", "
+                            + to_string(test.getID()) + ");");
+            return;
+        }
     }
 }
 

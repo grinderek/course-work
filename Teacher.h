@@ -20,7 +20,6 @@ class Teacher : public User {
 public:
     Teacher(const int &id, const string &name, const int &role, const int &group_id) : User(id, name, role,
                                                                                             group_id) {};
-
     vector<unique_ptr<User>> menu();
 };
 

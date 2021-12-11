@@ -7,9 +7,8 @@
 vector<unique_ptr<User>> Guest::menu() {
     vector<unique_ptr<User>> user;
     user.emplace_back(new Guest);
-    cout << "Введите номер вашего действия" << endl;
     cout << "1 - Войти в систему" << endl;
-    cout << "2 - Зарегистрироваться(для учителей)" << endl;
+    cout << "2 - Зарегистрироваться(для преподавателей)" << endl;
     cout << "0 - Выйти" << endl;
     int op_men = getInt(0, 2);
     switch (op_men) {

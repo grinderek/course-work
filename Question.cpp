@@ -2,48 +2,23 @@
 // Created by danila on 1.12.21.
 //
 
-#include "Question_Many_Variants.h"
+#include "Question.h"
 
 #include <utility>
 
-Question_Many_Variants::Question_Many_Variants() {
-    this->question_text = "...";
-    this->number_of_answers = 0;
-    this->correct_answer = 0;
-}
-
-Question_Many_Variants::Question_Many_Variants(string question, int number_of_answers, vector<Answer> answers, int correct_answer) {
-    this->question_text = std::move(question);
-    this->number_of_answers = number_of_answers;
-    this->answers = std::move(answers);
-    this->correct_answer = correct_answer;
-}
-
-Question_Many_Variants::Question_Many_Variants(const Question_Many_Variants &question) {
-    this->id = question.id;
-    this->question_text = question.question_text;
-    this->number_of_answers = question.number_of_answers;
-    this->answers = question.answers;
-    this->correct_answer = question.correct_answer;
-}
-
-Question_Many_Variants::~Question_Many_Variants() {
-    this->answers.clear();
-}
-
-string Question_Many_Variants::getQuestion() {
+string Question::getQuestion() {
     return this->question_text;
 }
 
-int Question_Many_Variants::getCorrectAnswer() {
+int Question::getCorrectAnswer() {
     return this->correct_answer;
 }
 
-vector<Answer> Question_Many_Variants::getAnswers() {
+vector<Answer> Question::getAnswers() {
     return this->answers;
 }
 
-Question_Many_Variants& Question_Many_Variants::operator= (const Question_Many_Variants& question) {
+Question& Question::operator= (const Question& question) {
     if (&question != this) {
         this->id = question.id;
         this->question_text = question.question_text;
@@ -55,9 +30,9 @@ Question_Many_Variants& Question_Many_Variants::operator= (const Question_Many_V
     return *this;
 }
 
-ostream& operator<< (ostream &out, const Question_Many_Variants &question)
+ostream& operator<< (ostream &out, const Question &question)
 {
-    out << question.question_text << endl;
+    out << "Вопрос - " << question.question_text << endl;
     auto answers = question.answers;
 
     int j = 1;
@@ -72,7 +47,7 @@ ostream& operator<< (ostream &out, const Question_Many_Variants &question)
 }
 
 
-istream& operator>> (istream &in, Question_Many_Variants &question)
+istream& operator>> (istream &in, Question &question)
 {
     cout << "Текст вопроса\n";
     question.question_text = getString();
@@ -90,27 +65,27 @@ istream& operator>> (istream &in, Question_Many_Variants &question)
     return in;
 }
 
-int Question_Many_Variants::getID() {
+int Question::getID() {
     return this->id;
 }
 
-void Question_Many_Variants::setID(int ide) {
+void Question::setID(int ide) {
     this->id = ide;
 }
 
-void Question_Many_Variants::setQuestionText(string text) {
+void Question::setQuestionText(string text) {
     this->question_text = text;
 }
 
-void Question_Many_Variants::setAnswers(vector<Answer> ans) {
+void Question::setAnswers(vector<Answer> ans) {
     this->answers = ans;
 }
 
-void Question_Many_Variants::setCorrectAnswer(int ide) {
+void Question::setCorrectAnswer(int ide) {
     this->correct_answer = ide;
 }
 
-void Question_Many_Variants::get_data(sqlite3_stmt *stmt) {
+void Question::get_data(sqlite3_stmt *stmt) {
     SqlGateway DB;
 
     this->id = sqlite3_column_int(stmt, 0);

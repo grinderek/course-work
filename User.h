@@ -19,8 +19,6 @@ private:
 public:
     User();
     User(const int& id, const string& name, const int& role, const int& group_id);
-    User(const User& user);
-    ~User();
 
     string getName();
     void setName(string s);
@@ -37,7 +35,10 @@ public:
     void get_data(sqlite3_stmt *stmt);
 
     virtual vector<unique_ptr<User>> menu();
+
+    //friend istream& operator>> (istream &in, User &user);
 };
 
+//istream& operator>> (istream &in, User &user);
 
 #endif //COURSE_TEST_USER_H

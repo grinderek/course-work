@@ -9,19 +9,19 @@ int SqlGateway::SQLOperation(const string &sql) {
     {
         int exit = 0;
         exit = sqlite3_open(this->name, &DB);
-        //cout << exit << " " << sql << endl;
         char* messageError;
         exit = sqlite3_exec(this->DB, sql.c_str(), NULL, 0, &messageError);
 
         if (exit != SQLITE_OK) {
             cerr << messageError << endl;
             sqlite3_free(messageError);
+            return -1;
         }
-        //else
-        //cout << "Table created successfully" << endl;
-        int id = sqlite3_last_insert_rowid(this->DB);
-        sqlite3_close(this->DB);
-        return id;
+        else {
+            int id = sqlite3_last_insert_rowid(this->DB);
+            sqlite3_close(this->DB);
+            return id;
+        }
     }
     catch (const exception & e)
     {
@@ -71,7 +71,7 @@ void SqlGateway::createAnswersTable() {
                  "    ON UPDATE CASCADE);");
 }
 
-void SqlGateway::createCorrectAnswerTable() {
+void SqlGateway::createCorrectAnswersTable() {
     SQLOperation("CREATE TABLE IF NOT EXISTS CORRECT_ANSWERS ("
                  "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
                  "ANSWER_ID INTEGER, "
@@ -88,7 +88,7 @@ void SqlGateway::createCorrectAnswerTable() {
                  "    ON UPDATE CASCADE);");
 }
 
-void SqlGateway::createGroupTable() {
+void SqlGateway::createGroupsTable() {
     SQLOperation("CREATE TABLE IF NOT EXISTS GROUPS ("
                  "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
                  "NUMBER_OF_GROUP TEXT NOT NULL UNIQUE);");
@@ -96,7 +96,7 @@ void SqlGateway::createGroupTable() {
 
 void SqlGateway::createTestsTable() {
     SQLOperation("CREATE TABLE IF NOT EXISTS TESTS ("
-                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "ID I1NTEGER PRIMARY KEY AUTOINCREMENT, "
                  "NAME_OF_TEST TEXT NOT NULL, "
                  "NUMBER_OF_QUESTIONS INTEGER NOT NULL, "
                  "USER_ID INTEGER, "
@@ -150,15 +150,13 @@ vector <T> SqlGateway::getData(string sql) {
     try
     {
         int exit = 0;
-        exit = sqlite3_open(this->name, &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
+        exit = sqlite3_open(this->name, &this->DB);
         vector<T> objs;
         sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
+        exit = sqlite3_prepare_v2(this->DB, sql.c_str(), sql.length(), &stmt, nullptr);
 
         if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
+            cerr << "Error of getting data" << endl;
         }
         else {
             while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
@@ -181,7 +179,7 @@ vector <T> SqlGateway::getData(string sql) {
 }
 
 template vector<Answer> SqlGateway::getData<Answer>(string sql);
-template vector<Question_Many_Variants> SqlGateway::getData<Question_Many_Variants>(string sql);
+template vector<Question> SqlGateway::getData<Question>(string sql);
 template vector<Test> SqlGateway::getData<Test>(string sql);
 template vector<JustInt> SqlGateway::getData<JustInt>(string sql);
 template vector<Group> SqlGateway::getData<Group>(string sql);

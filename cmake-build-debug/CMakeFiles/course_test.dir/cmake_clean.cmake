@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/course_test.dir/Group.cpp.o"
   "CMakeFiles/course_test.dir/Guest.cpp.o"
   "CMakeFiles/course_test.dir/JustInt.cpp.o"
-  "CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o"
+  "CMakeFiles/course_test.dir/Question.cpp.o"
   "CMakeFiles/course_test.dir/Service.cpp.o"
   "CMakeFiles/course_test.dir/SqlGateway.cpp.o"
   "CMakeFiles/course_test.dir/Student.cpp.o"

@@ -273,29 +273,29 @@ JustInt.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/JustInt.cpp.s
 .PHONY : JustInt.cpp.s
 
-Question_Many_Variants.o: Question_Many_Variants.cpp.o
-.PHONY : Question_Many_Variants.o
+Question.o: Question.cpp.o
+.PHONY : Question.o
 
 # target to build an object file
-Question_Many_Variants.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o
-.PHONY : Question_Many_Variants.cpp.o
+Question.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question.cpp.o
+.PHONY : Question.cpp.o
 
-Question_Many_Variants.i: Question_Many_Variants.cpp.i
-.PHONY : Question_Many_Variants.i
+Question.i: Question.cpp.i
+.PHONY : Question.i
 
 # target to preprocess a source file
-Question_Many_Variants.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question_Many_Variants.cpp.i
-.PHONY : Question_Many_Variants.cpp.i
+Question.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question.cpp.i
+.PHONY : Question.cpp.i
 
-Question_Many_Variants.s: Question_Many_Variants.cpp.s
-.PHONY : Question_Many_Variants.s
+Question.s: Question.cpp.s
+.PHONY : Question.s
 
 # target to generate assembly for a file
-Question_Many_Variants.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s
-.PHONY : Question_Many_Variants.cpp.s
+Question.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Question.cpp.s
+.PHONY : Question.cpp.s
 
 Service.o: Service.cpp.o
 .PHONY : Service.o
@@ -588,9 +588,9 @@ help:
 	@echo "... JustInt.o"
 	@echo "... JustInt.i"
 	@echo "... JustInt.s"
-	@echo "... Question_Many_Variants.o"
-	@echo "... Question_Many_Variants.i"
-	@echo "... Question_Many_Variants.s"
+	@echo "... Question.o"
+	@echo "... Question.i"
+	@echo "... Question.s"
 	@echo "... Service.o"
 	@echo "... Service.i"
 	@echo "... Service.s"

@@ -4,11 +4,14 @@
 
 #ifndef COURSE_TEST_APP_H
 #define COURSE_TEST_APP_H
+#include <iostream>
 
+using namespace std;
 
 class App {
 public:
-
+    template<class T>
+            void add();
 };
 
 

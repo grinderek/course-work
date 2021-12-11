@@ -4,9 +4,9 @@
 
 #include "groups_service.h"
 
-void groups_menu(User user) {
+void groups_menu() {
     cout << "1 - Создать группу" << endl;
-    cout << "2 - Просмотреть группу" << endl;
+    cout << "2 - Просмотреть результаты группы" << endl;
     cout << "3 - Редактировать группу" << endl;
     cout << "4 - Удалить группу" << endl;
     cout << "0 - Выход" << endl;
@@ -35,6 +35,8 @@ void groups_menu(User user) {
 void add_group() {
     SqlGateway DB;
     int group_id = 0;
+    //Group group;
+    //cin >> group;
     while (group_id == 0) {
         cout << "Введите номер группы(0 для выхода)" << endl;
         string number = getString();
@@ -66,43 +68,6 @@ void add_group() {
     }
 }
 
-vector<Group> get_groups() {
-    string sql = "SELECT * FROM GROUPS";
-    sqlite3 *DB;
-
-    try
-    {
-        int exit = 0;
-        exit = sqlite3_open("test.db", &DB);
-        cout << exit << " " << sql << endl;
-        char* messageError;
-        vector<Group> groups;
-        sqlite3_stmt *stmt;
-        exit = sqlite3_prepare_v2(DB, sql.c_str(), sql.length(), &stmt, nullptr);
-
-        if (exit != SQLITE_OK) {
-            cerr << "Error Authenticate" << endl;
-        }
-        else {
-            while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
-                Group group;
-                group.setID(sqlite3_column_int(stmt, 0));
-                group.setNumber(string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1))));
-                groups.push_back(group);
-            }
-        }
-        sqlite3_finalize(stmt);
-        sqlite3_close(DB);
-
-        return groups;
-    }
-    catch (const exception & e)
-    {
-        cerr << e.what();
-        return {};
-    }
-}
-
 void show_group() {
     SqlGateway DB;
 
@@ -121,7 +86,10 @@ void show_group() {
         } else {
             op_men--;
             int group_id = groups[op_men].getID();
-            string sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
+            //sql = "SELECT t.name FROM TESTS t"
+              //    "LEFT JOIN GROUP_TESTS gt.TESTS_ID = ";
+
+            sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
             auto users = DB.getData<User>(sql);
             cout << "Студенты группы " << groups[op_men].getNumber() << endl;
             for (int i = 0; i < users.size(); i++) {

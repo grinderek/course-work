@@ -218,12 +218,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Question_Many_Variants.cpp",
+			"path" : "Question.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Question_Many_Variants.h",
+			"path" : "Question.h",
 			"sourceGroupIndex" : 1
 		},
 		{

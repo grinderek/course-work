@@ -15,7 +15,7 @@
 
 using namespace std;
 
-void groups_menu(User user);
+void groups_menu();
 vector<Group> get_groups();
 void add_group();
 void show_group();

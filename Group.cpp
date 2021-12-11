@@ -16,14 +16,6 @@ Group::Group(const Group &group) {
     this->number_of_group = group.number_of_group;
 }
 
-void Group::setID(int ide) {
-    this->id = ide;
-}
-
-void Group::setNumber(string number) {
-    this->number_of_group = number;
-}
-
 string Group::getNumber() {
     return this->number_of_group;
 }
@@ -35,5 +27,12 @@ int Group::getID() const {
 void Group::get_data(sqlite3_stmt *stmt) {
     this->id = sqlite3_column_int(stmt, 0);
     this->number_of_group = string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
+}
+
+istream &operator>>(istream &in, Group &group) {
+    cout << "Введите номер группы" << endl;
+    group.number_of_group = getString();
+
+    return in;
 }
 

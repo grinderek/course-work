@@ -9,7 +9,7 @@
 #include <climits>
 #include <vector>
 #include <algorithm>
-#include "Question_Many_Variants.h"
+#include "Question.h"
 #include "sqlite3.h"
 #include "Service.h"
 #include "groups_service.h"
@@ -18,10 +18,10 @@
 
 using namespace std;
 
-void tests_menu(const User& user);
+void tests_menu(int user_id);
 vector<Test> show_tests(int user_id);
 void delete_test(int user_id);
-void add_test(const User& user);
+void add_test(int user_id);
 void change_test(int user_id);
 
 #endif //COURSE_TEST_TESTS_SERVICE_H

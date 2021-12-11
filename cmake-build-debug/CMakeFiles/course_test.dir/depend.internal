@@ -6,7 +6,7 @@ CMakeFiles/course_test.dir/Answer.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
@@ -21,7 +21,7 @@ CMakeFiles/course_test.dir/CRUD.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.h
@@ -37,7 +37,7 @@ CMakeFiles/course_test.dir/Group.cpp.o
  /home/danila/CLionProjects/course_test/Group.cpp
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
@@ -49,7 +49,7 @@ CMakeFiles/course_test.dir/Guest.cpp.o
  /home/danila/CLionProjects/course_test/Guest.cpp
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.h
@@ -65,17 +65,17 @@ CMakeFiles/course_test.dir/JustInt.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.cpp
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
  /home/danila/CLionProjects/course_test/User.h
-CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o
+CMakeFiles/course_test.dir/Question.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.cpp
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.cpp
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
@@ -84,7 +84,7 @@ CMakeFiles/course_test.dir/Service.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.cpp
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
@@ -94,7 +94,7 @@ CMakeFiles/course_test.dir/SqlGateway.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.cpp
  /home/danila/CLionProjects/course_test/SqlGateway.h
@@ -106,7 +106,7 @@ CMakeFiles/course_test.dir/Student.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.cpp
@@ -124,7 +124,7 @@ CMakeFiles/course_test.dir/Teacher.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.h
@@ -140,7 +140,7 @@ CMakeFiles/course_test.dir/Test.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.cpp
@@ -150,7 +150,7 @@ CMakeFiles/course_test.dir/User.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
@@ -162,7 +162,7 @@ CMakeFiles/course_test.dir/groups_service.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.h
@@ -180,7 +180,7 @@ CMakeFiles/course_test.dir/main.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.h
@@ -196,7 +196,7 @@ CMakeFiles/course_test.dir/questions_service.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
@@ -207,7 +207,7 @@ CMakeFiles/course_test.dir/testing_service.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
@@ -221,7 +221,7 @@ CMakeFiles/course_test.dir/tests_service.cpp.o
  /home/danila/CLionProjects/course_test/Group.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question_Many_Variants.h
+ /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Student.h

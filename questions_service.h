@@ -4,7 +4,7 @@
 
 #ifndef COURSE_TEST_QUESTIONS_SERVICE_H
 #define COURSE_TEST_QUESTIONS_SERVICE_H
-#include "Question_Many_Variants.h"
+#include "Question.h"
 #include <string>
 #include <iostream>
 #include <algorithm>
@@ -14,6 +14,6 @@
 
 using namespace std;
 
-int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id);
-void changeQuestions(vector<Question_Many_Variants> questions);
+int add_questions_to_table(vector<Question> questions, int test_id);
+void changeQuestions(vector<Question> questions);
 #endif //COURSE_TEST_QUESTIONS_SERVICE_H

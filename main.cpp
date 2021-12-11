@@ -18,8 +18,8 @@ int main() {
     DB.createTestsTable();
     DB.createQuestionsTable();
     DB.createAnswersTable();
-    DB.createCorrectAnswerTable();
-    DB.createGroupTable();
+    DB.createCorrectAnswersTable();
+    DB.createGroupsTable();
     DB.createGroupTestsTable();
     DB.createUsersTestsTable();
 

@@ -14,6 +14,14 @@ string
 SqlGateway.h
 /home/danila/CLionProjects/course_test/SqlGateway.h
 
+/home/danila/CLionProjects/course_test/CRUD.cpp
+CRUD.h
+/home/danila/CLionProjects/course_test/CRUD.h
+termios.h
+-
+unistd.h
+-
+
 /home/danila/CLionProjects/course_test/CRUD.h
 iostream
 -
@@ -48,10 +56,6 @@ sqlite3.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
 
-/home/danila/CLionProjects/course_test/Guest.cpp
-Guest.h
-/home/danila/CLionProjects/course_test/Guest.h
-
 /home/danila/CLionProjects/course_test/Guest.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
@@ -64,7 +68,7 @@ SqlGateway.h
 iostream
 -
 
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+/home/danila/CLionProjects/course_test/Question.h
 string
 -
 iostream
@@ -109,8 +113,8 @@ string
 -
 vector
 -
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+Question.h
+/home/danila/CLionProjects/course_test/Question.h
 Test.h
 /home/danila/CLionProjects/course_test/Test.h
 JustInt.h
@@ -159,8 +163,8 @@ string
 -
 vector
 -
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+Question.h
+/home/danila/CLionProjects/course_test/Question.h
 SqlGateway.h
 /home/danila/CLionProjects/course_test/SqlGateway.h
 
@@ -191,8 +195,8 @@ Group.h
 /home/danila/CLionProjects/course_test/Group.h
 
 /home/danila/CLionProjects/course_test/questions_service.h
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+Question.h
+/home/danila/CLionProjects/course_test/Question.h
 string
 -
 iostream
@@ -235,8 +239,8 @@ vector
 -
 algorithm
 -
-Question_Many_Variants.h
-/home/danila/CLionProjects/course_test/Question_Many_Variants.h
+Question.h
+/home/danila/CLionProjects/course_test/Question.h
 sqlite3.h
 /home/danila/CLionProjects/course_test/sqlite3.h
 Service.h

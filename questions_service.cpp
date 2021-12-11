@@ -15,7 +15,7 @@ int add_correctAnswer_to_table(int answer_id, int question_id) {
     return id;
 }
 
-int add_answers_to_table(Question_Many_Variants question, int question_id) {
+int add_answers_to_table(Question question, int question_id) {
     SqlGateway DB;
     int num = 0;
     for (auto answer : question.getAnswers()) {
@@ -35,7 +35,7 @@ int add_answers_to_table(Question_Many_Variants question, int question_id) {
     }
 }
 
-int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id) {
+int add_questions_to_table(vector<Question> questions, int test_id) {
     SqlGateway DB;
     for (auto question : questions) {
         string sql = "INSERT INTO QUESTIONS (TEXT_OF_QUESTION, TEST_ID) VALUES ("
@@ -47,7 +47,7 @@ int add_questions_to_table(vector<Question_Many_Variants> questions, int test_id
     }
 }
 
-void showQuestions(vector<Question_Many_Variants> questions) {
+void showQuestions(vector<Question> questions) {
     int i = 1;
     for (auto question : questions) {
         cout << "Вопрос №" << i++ << endl;
@@ -55,7 +55,7 @@ void showQuestions(vector<Question_Many_Variants> questions) {
     }
 }
 
-void changeAnswers(Question_Many_Variants question) {
+void changeAnswers(Question question) {
     SqlGateway DB;
     string sql = "SELECT * FROM ANSWERS WHERE QUESTION_ID = " + to_string(question.getID());
     int j = 1;
@@ -113,7 +113,7 @@ void changeAnswers(Question_Many_Variants question) {
 }
 
 
-void changeQuestions(vector<Question_Many_Variants> questions) {
+void changeQuestions(vector<Question> questions) {
     SqlGateway DB;
     showQuestions(questions);
 

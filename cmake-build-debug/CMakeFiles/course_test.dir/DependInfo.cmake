@@ -14,7 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/danila/CLionProjects/course_test/Group.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Group.cpp.o"
   "/home/danila/CLionProjects/course_test/Guest.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Guest.cpp.o"
   "/home/danila/CLionProjects/course_test/JustInt.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/JustInt.cpp.o"
-  "/home/danila/CLionProjects/course_test/Question_Many_Variants.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o"
+  "/home/danila/CLionProjects/course_test/Question.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Question.cpp.o"
   "/home/danila/CLionProjects/course_test/Service.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Service.cpp.o"
   "/home/danila/CLionProjects/course_test/SqlGateway.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/SqlGateway.cpp.o"
   "/home/danila/CLionProjects/course_test/Student.cpp" "/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles/course_test.dir/Student.cpp.o"

@@ -17,36 +17,20 @@ ostream &operator<<(ostream &out, const Test &test) {
     return out;
 }
 
-void Test::setID(int ide) {
-    this->id = ide;
-}
-
 int Test::getID() {
     return this->id;
 }
 
-void Test::setName(string topic) {
-    this->name = topic;
-}
-
-void Test::setQuestions(vector<Question_Many_Variants> list_of_questions) {
+void Test::setQuestions(vector<Question> list_of_questions) {
     this->questions = list_of_questions;
 }
 
-vector <Question_Many_Variants> Test::getQuestions() {
+vector <Question> Test::getQuestions() {
     return this->questions;
 }
 
 string Test::getName() {
     return this->name;
-}
-
-void Test::setCountOfQuestions(int number) {
-    this->number_of_questions = number;
-}
-
-int Test::getCountOfQuestions() {
-    return this->number_of_questions;
 }
 
 void Test::get_data(sqlite3_stmt *stmt) {
@@ -56,7 +40,7 @@ void Test::get_data(sqlite3_stmt *stmt) {
     this->number_of_questions = sqlite3_column_int(stmt, 2);
 
     string sql = "SELECT * FROM QUESTIONS WHERE TEST_ID = " + to_string(this->id);
-    this->questions = DB.getData<Question_Many_Variants>(sql);
+    this->questions = DB.getData<Question>(sql);
 }
 
 istream &operator>>(istream &in, Test &test) {
@@ -68,7 +52,7 @@ istream &operator>>(istream &in, Test &test) {
     test.questions.resize(test.number_of_questions);
     for (int i = 0; i < test.number_of_questions; i++) {
         cout << "Вопрос №" << i + 1 << ": ";
-        Question_Many_Variants question;
+        Question question;
         cin >> question;
         test.questions.push_back(question);
     }

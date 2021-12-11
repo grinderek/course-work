@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Question_Many_Variants.h"
+#include "Question.h"
 #include "Test.h"
 #include "JustInt.h"
 #include "Group.h"
@@ -27,8 +27,8 @@ public:
     void createUsersTable();
     void createQuestionsTable();
     void createAnswersTable();
-    void createCorrectAnswerTable();
-    void createGroupTable();
+    void createCorrectAnswersTable();
+    void createGroupsTable();
     void createTestsTable();
     void createGroupTestsTable();
     void createUsersTestsTable();

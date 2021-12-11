@@ -17,12 +17,12 @@ User::User(const int& id, const string& name, const int& role, const int& group_
     this->group_id = group_id;
 }
 
-User::User(const User &user) {
+/*User::User(const User &user) {
     this->id = user.id;
     this->name = user.name;
     this->role = user.role;
     this->group_id = user.group_id;
-}
+}*/
 
 string User::getName() {
     return this->name;
@@ -63,9 +63,11 @@ void User::get_data(sqlite3_stmt *stmt) {
     this->group_id = sqlite3_column_int(stmt, 5);
 }
 
-vector<unique_ptr<User>> User::menu() {
+vector<unique_ptr<User>> User::menu() {}
 
+/*
+istream &operator>>(istream &in, User &user) {
+    return in;
 }
-
-User::~User() = default;
+*/
 

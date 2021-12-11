@@ -131,18 +131,18 @@ CMakeFiles/course_test.dir/tests_service.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/course_test.dir/tests_service.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/CLionProjects/course_test/tests_service.cpp -o CMakeFiles/course_test.dir/tests_service.cpp.s
 
-CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o: CMakeFiles/course_test.dir/flags.make
-CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o: ../Question_Many_Variants.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o -c /home/danila/CLionProjects/course_test/Question_Many_Variants.cpp
+CMakeFiles/course_test.dir/Question.cpp.o: CMakeFiles/course_test.dir/flags.make
+CMakeFiles/course_test.dir/Question.cpp.o: ../Question.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danila/CLionProjects/course_test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/course_test.dir/Question.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/course_test.dir/Question.cpp.o -c /home/danila/CLionProjects/course_test/Question.cpp
 
-CMakeFiles/course_test.dir/Question_Many_Variants.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/course_test.dir/Question_Many_Variants.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danila/CLionProjects/course_test/Question_Many_Variants.cpp > CMakeFiles/course_test.dir/Question_Many_Variants.cpp.i
+CMakeFiles/course_test.dir/Question.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/course_test.dir/Question.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danila/CLionProjects/course_test/Question.cpp > CMakeFiles/course_test.dir/Question.cpp.i
 
-CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/CLionProjects/course_test/Question_Many_Variants.cpp -o CMakeFiles/course_test.dir/Question_Many_Variants.cpp.s
+CMakeFiles/course_test.dir/Question.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/course_test.dir/Question.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/CLionProjects/course_test/Question.cpp -o CMakeFiles/course_test.dir/Question.cpp.s
 
 CMakeFiles/course_test.dir/questions_service.cpp.o: CMakeFiles/course_test.dir/flags.make
 CMakeFiles/course_test.dir/questions_service.cpp.o: ../questions_service.cpp
@@ -307,7 +307,7 @@ course_test_OBJECTS = \
 "CMakeFiles/course_test.dir/Service.cpp.o" \
 "CMakeFiles/course_test.dir/CRUD.cpp.o" \
 "CMakeFiles/course_test.dir/tests_service.cpp.o" \
-"CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o" \
+"CMakeFiles/course_test.dir/Question.cpp.o" \
 "CMakeFiles/course_test.dir/questions_service.cpp.o" \
 "CMakeFiles/course_test.dir/SqlGateway.cpp.o" \
 "CMakeFiles/course_test.dir/Test.cpp.o" \
@@ -329,7 +329,7 @@ course_test: CMakeFiles/course_test.dir/User.cpp.o
 course_test: CMakeFiles/course_test.dir/Service.cpp.o
 course_test: CMakeFiles/course_test.dir/CRUD.cpp.o
 course_test: CMakeFiles/course_test.dir/tests_service.cpp.o
-course_test: CMakeFiles/course_test.dir/Question_Many_Variants.cpp.o
+course_test: CMakeFiles/course_test.dir/Question.cpp.o
 course_test: CMakeFiles/course_test.dir/questions_service.cpp.o
 course_test: CMakeFiles/course_test.dir/SqlGateway.cpp.o
 course_test: CMakeFiles/course_test.dir/Test.cpp.o

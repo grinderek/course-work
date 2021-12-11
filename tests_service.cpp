@@ -4,7 +4,7 @@
 
 #include "tests_service.h"
 
-void tests_menu(const User& user) {
+void tests_menu(int user_id) {
     cout << "1 - Добавить тест" << endl;
     cout << "2 - Показать результаты теста" << endl;
     cout << "3 - Редактировать тест" << endl;
@@ -15,39 +15,41 @@ void tests_menu(const User& user) {
         case 0:
             return;
         case 1:
-            add_test(user);
+            add_test(user_id);
             break;
         case 2:
-            show_tests(user.getID());
+            show_tests(user_id);
             break;
         case 3:
-            change_test(user.getID());
+            change_test(user_id);
             break;
         case 4:
-            delete_test(user.getID());
+            delete_test(user_id);
             break;
         default:
             cout << "Что-то не так" << endl;
     }
 }
 
-void add_test(const User& user) {
+void add_test(int user_id) {
     cout << "Введите тему теста" << endl;
     string topic = getString();
     cout << "Введите кол-во вопросов" << endl;
     int count = getInt(1, INT_MAX);
 
-    vector<Question_Many_Variants> questions;
+    vector<Question> questions;
     for (int i = 1; i <= count; i++) {
         cout << "Вопрос №" << i << endl;
-        Question_Many_Variants question;
+        Question question;
         cin >> question;
         questions.push_back(question);
     }
 
-    vector <Group> groups = get_groups();
+    SqlGateway DB;
+    string sql = "SELECT * FROM GROUPS";
+    vector <Group> groups = DB.getData<Group>(sql);
     vector <Group> groups_of_test;
-    while (true) {
+    while (groups.size()) {
         cout << "Добавить группу к тесту?" << endl;
         cout << "1 - Да" << endl;
         cout << "2 - Нет" << endl;
@@ -74,12 +76,10 @@ void add_test(const User& user) {
         }
     }
 
-    SqlGateway DB;
-
-    string sql = "INSERT INTO TESTS (NAME_OF_TEST, NUMBER_OF_QUESTIONS, USER_ID) VALUES ("
+    sql = "INSERT INTO TESTS (NAME_OF_TEST, NUMBER_OF_QUESTIONS, USER_ID) VALUES ("
                  + quotesql(topic) + ","
                  + to_string(count) + ","
-                 + to_string(user.getID()) + ");";
+                 + to_string(user_id) + ");";
     int test_id = DB.SQLOperation(sql);
 
     for (auto group : groups_of_test) {

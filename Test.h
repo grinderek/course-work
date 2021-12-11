@@ -7,28 +7,23 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Question_Many_Variants.h"
+#include "Question.h"
 #include "SqlGateway.h"
 
 using namespace std;
 
-class Question_Many_Variants;
+class Question;
 class Test {
 private:
     int id;
     string name;
     int number_of_questions;
-    vector<Question_Many_Variants> questions;
+    vector<Question> questions;
 public:
-
-    void setID(int ide);
     int getID();
-    void setName(string topic);
     string getName();
-    void setQuestions(vector<Question_Many_Variants> list_of_questions);
-    void setCountOfQuestions(int number);
-    int getCountOfQuestions();
-    vector<Question_Many_Variants> getQuestions();
+    void setQuestions(vector<Question> list_of_questions);
+    vector<Question> getQuestions();
 
     void get_data(sqlite3_stmt *stmt);
 

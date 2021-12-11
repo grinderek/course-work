@@ -118,10 +118,10 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/JustInt.h">
 			<Option target="course_test"/>
 		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/Question_Many_Variants.cpp">
+		<Unit filename="/home/danila/CLionProjects/course_test/Question.cpp">
 			<Option target="course_test"/>
 		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/Question_Many_Variants.h">
+		<Unit filename="/home/danila/CLionProjects/course_test/Question.h">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Service.cpp">

@@ -20,15 +20,16 @@ private:
 public:
     Group();
     Group(const Group& group);
-    ~Group(){};
 
-    void setID(int ide);
-    void setNumber(string number);
     string getNumber();
     int getID() const;
 
     void get_data(sqlite3_stmt *stmt);
+
+    friend istream& operator>> (istream &in, Group &group);
 };
+
+istream& operator>> (istream &in, Group &group);
 
 
 #endif //COURSE_TEST_GROUP_H
