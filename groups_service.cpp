@@ -86,8 +86,12 @@ void show_group() {
         } else {
             op_men--;
             int group_id = groups[op_men].getID();
-            //sql = "SELECT t.name FROM TESTS t"
-              //    "LEFT JOIN GROUP_TESTS gt.TESTS_ID = ";
+            sql = "SELECT t.name FROM TESTS t"
+                  "LEFT JOIN GROUP_TESTS gt.TESTS_ID = t.ID"
+                  "WHERE gt.GROUP_ID = " + to_string(group_id);
+
+            auto tests = DB.getData<Test>(sql);
+
 
             sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
             auto users = DB.getData<User>(sql);
