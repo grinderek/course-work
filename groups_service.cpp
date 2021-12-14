@@ -83,22 +83,43 @@ void show_group() {
         int op_men = getInt(0, groups.size());
         if (op_men == 0) {
             break;
-        } else {
-            op_men--;
-            int group_id = groups[op_men].getID();
-            sql = "SELECT t.name FROM TESTS t"
-                  "LEFT JOIN GROUP_TESTS gt.TESTS_ID = t.ID"
-                  "WHERE gt.GROUP_ID = " + to_string(group_id);
+        }
 
-            auto tests = DB.getData<Test>(sql);
+        op_men--;
+        int group_number = op_men;
+        int group_id = groups[op_men].getID();
+        sql = "SELECT * FROM TESTS t"
+              " LEFT JOIN GROUP_TESTS gt ON gt.TEST_ID = t.ID"
+              " WHERE gt.GROUP_ID = " + to_string(group_id);
 
+        auto tests = DB.getData<Test>(sql);
+        cout << "Выберите тест для просмотра у выбранной группы(0 для выхода)" << endl;
+        for (int i = 0; i < tests.size(); i++) {
+            cout << i + 1 << " - " << tests[i].getName() << endl;
+        }
 
-            sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
-            auto users = DB.getData<User>(sql);
-            cout << "Студенты группы " << groups[op_men].getNumber() << endl;
-            for (int i = 0; i < users.size(); i++) {
-                cout << i + 1 << " - " << users[i].getName() << endl;
+        op_men = getInt(0, tests.size());
+        if (op_men == 0) {
+            break;
+        }
+
+        op_men--;
+        int test_id = tests[op_men].getID();
+
+        sql = "SELECT * FROM USERS WHERE GROUP_ID = " + to_string(group_id);
+        auto users = DB.getData<User>(sql);
+        cout << "Студенты группы " << groups[group_number].getNumber() << endl;
+        for (int i = 0; i < users.size(); i++) {
+            sql = "SELECT MARK FROM USERS_TESTS WHERE USER_ID = "
+                    + to_string(users[i].getID()) + " AND TEST_ID = "
+                    + to_string(test_id);
+            auto marks = DB.getData<JustInt>(sql);
+            int mark = -1;
+            if (marks.size() != 0) {
+                mark = marks[0].getVal();
             }
+
+            cout << i + 1 << ". " << users[i].getName() << " - " << (mark == -1 ? "Не прошел" : to_string(mark)) << endl;
         }
     }
 }

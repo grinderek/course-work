@@ -6,7 +6,7 @@
 
 int testing(vector<Question> questions) {
 
-    int current = 0, right_answer = 0, all = questions.size();
+    int current = 0, right_answer = 0, all = questions.size(), all_questions = all;
     while(!questions.empty()) {
         cout << questions[current];
         auto answers = questions[current].getAnswers();
@@ -53,7 +53,7 @@ int testing(vector<Question> questions) {
         if (current == all) current--;
     }
 
-    return round(10.0 * right_answer / all);
+    return round(10.0 * right_answer / all_questions);
 }
 
 void testing_menu(int user_id, int group_id) {

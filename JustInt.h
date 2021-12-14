@@ -11,7 +11,7 @@ using namespace std;
 
 class JustInt {
 private:
-    int val;
+    int val = -1;
 public:
     void setVal(int x);
     int getVal();

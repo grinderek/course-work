@@ -19,7 +19,7 @@ vector<unique_ptr<User>> Guest::menu() {
             user = login();
             break;
         case 2:
-            add_user(1);
+            add_user(2);
             break;
         default:
             cout << "Что-то пошло не так" << endl;

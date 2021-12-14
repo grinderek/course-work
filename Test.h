@@ -25,6 +25,8 @@ public:
     void setQuestions(vector<Question> list_of_questions);
     vector<Question> getQuestions();
 
+    void menu(int user_id);
+
     void get_data(sqlite3_stmt *stmt);
 
     friend ostream& operator<< (ostream &out, const Test &test);

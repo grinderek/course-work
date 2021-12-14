@@ -65,23 +65,24 @@ int add_user(int role, int group_id) {
     password = getString();
 
     string secret_password = "No one gonna know";
-    cout << "Введите секретный пароль для регистрации" << endl;
-    if (getString() == secret_password) {
-        string sql = "INSERT INTO USERS (FULL_NAME, LOGIN, PASSWORD, ROLE, GROUP_ID) VALUES ("
-                     + quotesql(full_name) + ","
-                     + quotesql(login) + ","
-                     + quotesql(password) + ","
-                     + to_string(role) + ","
-                     + to_string(group_id) + ");";
+    if (role == 2) {
+        cout << "Введите секретный пароль для регистрации" << endl;
+        if (getString() != secret_password) {
+            cout << "Неверный секретный пароль" << endl;
+            return -1;
+        }
+    }
 
-        cout << "Пользователь успешно зарегестрирован" << endl;
-        int id = DB.SQLOperation(sql);
-        return id;
-    }
-    else {
-        cout << "Неверный секретный пароль" << endl;
-        return -1;
-    }
+    string sql = "INSERT INTO USERS (FULL_NAME, LOGIN, PASSWORD, ROLE, GROUP_ID) VALUES ("
+                 + quotesql(full_name) + ","
+                 + quotesql(login) + ","
+                 + quotesql(password) + ","
+                 + to_string(role) + ","
+                 + to_string(group_id) + ");";
+
+    cout << "Пользователь успешно зарегестрирован" << endl;
+    int id = DB.SQLOperation(sql);
+    return id;
 }
 
 

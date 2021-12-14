@@ -6,7 +6,7 @@
 
 void tests_menu(int user_id) {
     cout << "1 - Добавить тест" << endl;
-    cout << "2 - Показать результаты теста" << endl;
+    cout << "2 - Показать тесты" << endl;
     cout << "3 - Редактировать тест" << endl;
     cout << "4 - Удалить тест" << endl;
     cout << "0 - Вернуться назад" << endl;
@@ -61,7 +61,7 @@ void add_test(int user_id) {
 
         int i = 1;
         for (auto group : groups) {
-            cout << i++ << " " << group.getNumber() << endl;
+            cout << i++ << " - " << group.getNumber() << endl;
         }
 
         cout << "Выберите номер группы, которую хотите добавить к тесту(0 для выхода)" << endl;
