@@ -22,7 +22,7 @@ void GroupInterface::groups_menu() {
             show_group();
             break;
         case 3:
-            change_group();
+            Interface<Group>::change("SELECT * FROM GROUPS");
             break;
         case 4:
             delete_group();
@@ -119,30 +119,6 @@ void GroupInterface::show_group() {
 
             cout << i + 1 << ". " << users[i].getName() << " - " << (mark == -1 ? "Не прошел" : to_string(mark)) << endl;
         }
-    }
-}
-
-void GroupInterface::change_group() {
-    SqlGateway DB;
-
-    string sql = "SELECT * FROM GROUPS";
-    vector<Group> groups = DB.getData<Group>(sql);
-
-    if (groups.empty()) {
-        cout << "Нет доступных объектов для изменения" << endl;
-        return;
-    }
-
-    while (true) {
-        cout << "Выберите номер объекта, который хотите изменить(0 для выхода)" << endl;
-        show_vector<Group>(groups);
-
-        int group_id = getInt(0, groups.size());
-        if (group_id == 0) {
-            break;
-        }
-
-        groups[--group_id].change();
     }
 }
 

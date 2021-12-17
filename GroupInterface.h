@@ -9,6 +9,7 @@
 #include <vector>
 #include "Authorization.h"
 #include "Service.h"
+#include "Interface.h"
 #include "User.h"
 #include "Test.h"
 #include "Group.h"
@@ -20,7 +21,6 @@ public:
     static void groups_menu();
     static void add_group();
     static void show_group();
-    static void change_group();
     static void delete_group();
 };
 

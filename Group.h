@@ -31,6 +31,7 @@ public:
     friend ostream& operator<< (ostream &out, const Group &group);
 };
 
+
 ostream& operator<< (ostream &out, const Group &group);
 istream& operator>> (istream &in, Group &group);
 

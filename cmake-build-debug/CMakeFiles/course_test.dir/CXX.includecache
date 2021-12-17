@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/danila/CLionProjects/course_test/Answer.cpp
-Answer.h
-/home/danila/CLionProjects/course_test/Answer.h
-
 /home/danila/CLionProjects/course_test/Answer.h
 iostream
 -
@@ -44,10 +40,6 @@ Teacher.h
 Guest.h
 /home/danila/CLionProjects/course_test/Guest.h
 
-/home/danila/CLionProjects/course_test/Group.cpp
-Group.h
-/home/danila/CLionProjects/course_test/Group.h
-
 /home/danila/CLionProjects/course_test/Group.h
 iostream
 -
@@ -75,6 +67,8 @@ Authorization.h
 /home/danila/CLionProjects/course_test/Authorization.h
 Service.h
 /home/danila/CLionProjects/course_test/Service.h
+Interface.h
+/home/danila/CLionProjects/course_test/Interface.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
 Test.h
@@ -92,20 +86,14 @@ User.h
 Authorization.h
 /home/danila/CLionProjects/course_test/Authorization.h
 
-/home/danila/CLionProjects/course_test/JustInt.cpp
-JustInt.h
-/home/danila/CLionProjects/course_test/JustInt.h
+/home/danila/CLionProjects/course_test/Interface.h
+SqlGateway.h
+/home/danila/CLionProjects/course_test/SqlGateway.h
 
 /home/danila/CLionProjects/course_test/JustInt.h
 SqlGateway.h
 /home/danila/CLionProjects/course_test/SqlGateway.h
 iostream
--
-
-/home/danila/CLionProjects/course_test/Question.cpp
-Question.h
-/home/danila/CLionProjects/course_test/Question.h
-utility
 -
 
 /home/danila/CLionProjects/course_test/Question.h
@@ -128,10 +116,6 @@ Test.h
 User.h
 /home/danila/CLionProjects/course_test/User.h
 
-/home/danila/CLionProjects/course_test/Service.cpp
-Service.h
-/home/danila/CLionProjects/course_test/Service.h
-
 /home/danila/CLionProjects/course_test/Service.h
 string
 -
@@ -147,10 +131,6 @@ User.h
 /home/danila/CLionProjects/course_test/User.h
 sqlite3.h
 /home/danila/CLionProjects/course_test/sqlite3.h
-
-/home/danila/CLionProjects/course_test/SqlGateway.cpp
-SqlGateway.h
-/home/danila/CLionProjects/course_test/SqlGateway.h
 
 /home/danila/CLionProjects/course_test/SqlGateway.h
 sqlite3.h
@@ -212,10 +192,6 @@ vector
 Service.h
 /home/danila/CLionProjects/course_test/Service.h
 
-/home/danila/CLionProjects/course_test/Test.cpp
-Test.h
-/home/danila/CLionProjects/course_test/Test.h
-
 /home/danila/CLionProjects/course_test/Test.h
 iostream
 -
@@ -251,12 +227,10 @@ Service.h
 /home/danila/CLionProjects/course_test/Service.h
 GroupInterface.h
 /home/danila/CLionProjects/course_test/GroupInterface.h
+Interface.h
+/home/danila/CLionProjects/course_test/Interface.h
 Test.h
 /home/danila/CLionProjects/course_test/Test.h
-
-/home/danila/CLionProjects/course_test/TestingInterface.cpp
-TestingInterface.h
-/home/danila/CLionProjects/course_test/TestingInterface.h
 
 /home/danila/CLionProjects/course_test/TestingInterface.h
 iostream
@@ -273,12 +247,6 @@ User.h
 /home/danila/CLionProjects/course_test/User.h
 Test.h
 /home/danila/CLionProjects/course_test/Test.h
-
-/home/danila/CLionProjects/course_test/User.cpp
-User.h
-/home/danila/CLionProjects/course_test/User.h
-utility
--
 
 /home/danila/CLionProjects/course_test/User.h
 string

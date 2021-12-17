@@ -21,7 +21,7 @@ void TestInterface::tests_menu(int user_id) {
             show_tests(user_id);
             break;
         case 3:
-            change_test(user_id);
+            Interface<Test>::change("SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id));
             break;
         case 4:
             delete_test(user_id);
@@ -178,25 +178,4 @@ void TestInterface::delete_test(int user_id) {
             break;
         }
     }
-}
-
-void TestInterface::change_test(int user_id) {
-    SqlGateway DB;
-    string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);
-    auto tests = DB.getData<Test>(sql);
-
-    if (tests.empty()) {
-        cout << "Нет доступных объектов для изменения" << endl;
-        return;
-    }
-
-    show_vector<Test>(tests);
-    cout << "Введите номер объекта, который хотите изменить(0 для выхода)" << endl;
-    int id = getInt(0, tests.size());
-
-    if (id == 0) {
-        return;
-    }
-
-    tests[--id].change();
 }

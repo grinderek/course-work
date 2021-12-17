@@ -13,6 +13,7 @@
 #include "sqlite3.h"
 #include "Service.h"
 #include "GroupInterface.h"
+#include "Interface.h"
 #include "Test.h"
 
 using namespace std;
@@ -23,7 +24,6 @@ public:
     static vector<Test> show_tests(int user_id);
     static void delete_test(int user_id);
     static void add_test(int user_id);
-    static void change_test(int user_id);
 };
 
 #endif //COURSE_TEST_TESTINTERFACE_H
