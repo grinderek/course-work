@@ -77,14 +77,21 @@ CMakeFiles/course_test.dir/Guest.cpp.o: \
  ../User.h
 CMakeFiles/course_test.dir/Interface.cpp.o: \
  ../Answer.h \
+ ../Authorization.h \
  ../Group.h \
+ ../GroupInterface.h \
+ ../Guest.h \
  ../Interface.cpp \
  ../Interface.h \
  ../JustInt.h \
  ../Question.h \
  ../Service.h \
  ../SqlGateway.h \
+ ../Student.h \
+ ../Teacher.h \
  ../Test.h \
+ ../TestInterface.h \
+ ../TestingInterface.h \
  ../User.h
 CMakeFiles/course_test.dir/JustInt.cpp.o: \
  ../Answer.h \

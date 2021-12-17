@@ -77,14 +77,21 @@ CMakeFiles/course_test.dir/Guest.cpp.o
  /home/danila/CLionProjects/course_test/User.h
 CMakeFiles/course_test.dir/Interface.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
+ /home/danila/CLionProjects/course_test/Authorization.h
  /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
+ /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/Interface.cpp
  /home/danila/CLionProjects/course_test/Interface.h
  /home/danila/CLionProjects/course_test/JustInt.h
  /home/danila/CLionProjects/course_test/Question.h
  /home/danila/CLionProjects/course_test/Service.h
  /home/danila/CLionProjects/course_test/SqlGateway.h
+ /home/danila/CLionProjects/course_test/Student.h
+ /home/danila/CLionProjects/course_test/Teacher.h
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
 CMakeFiles/course_test.dir/JustInt.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h

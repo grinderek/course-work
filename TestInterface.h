@@ -22,7 +22,6 @@ class TestInterface {
 public:
     static void tests_menu(int user_id);
     static vector<Test> show_tests(int user_id);
-    static void delete_test(int user_id);
     static void add_test(int user_id);
 };
 

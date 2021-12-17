@@ -22,10 +22,10 @@ void GroupInterface::groups_menu() {
             show_group();
             break;
         case 3:
-            Interface<Group>::change("SELECT * FROM GROUPS");
+            Interface::change<Group>("SELECT * FROM GROUPS");
             break;
         case 4:
-            delete_group();
+            Interface::del<Group>("SELECT * FROM GROUPS");
             break;
         default:
             cout << "Что-то не так" << endl;
@@ -118,44 +118,6 @@ void GroupInterface::show_group() {
             }
 
             cout << i + 1 << ". " << users[i].getName() << " - " << (mark == -1 ? "Не прошел" : to_string(mark)) << endl;
-        }
-    }
-}
-
-void GroupInterface::delete_group() {
-    SqlGateway DB;
-
-    string sql = "SELECT * FROM GROUPS";
-    vector<Group> groups = DB.getData<Group>(sql);
-
-    if (groups.empty()) {
-        cout << "Нет доступных объектов для удаления" << endl;
-        return;
-    }
-
-    while (true) {
-        cout << "Выберите номер группы, которую хотите удалить(0 для выхода)" << endl;
-        for (int i = 0; i < groups.size(); i++) {
-            cout << i + 1 << " - " << groups[i].getName() << endl;
-        }
-
-        int group_id = getInt(0, groups.size());
-        if (group_id == 0) {
-            break;
-        } else {
-            group_id--;
-            cout << "Вы уверены, что хотите сохранить изменения?" << endl;
-            cout << "1 - Да" << endl;
-            cout << "2 - Нет" << endl;
-            int op_men = getInt(1, 2);
-            if (op_men == 1) {
-                string sql = "PRAGMA foreign_keys = ON;\n"
-                             "DELETE FROM GROUPS WHERE ID = " + to_string(groups[group_id].getID())
-                             + ";\nPRAGMA foreign_keys = OFF;";
-
-                DB.SQLOperation(sql);
-                return;
-            }
         }
     }
 }

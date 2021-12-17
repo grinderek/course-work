@@ -17,10 +17,10 @@ vector<unique_ptr<User>> Teacher::menu() {
             return user;
             break;
         case 1:
-            TestInterface::tests_menu(this->getID());
+            Interface::tests_menu(this->getID());
             break;
         case 2:
-            GroupInterface::groups_menu();
+            Interface::groups_menu();
             break;
         default:
             cout << "Что-то пошло не так" << endl;

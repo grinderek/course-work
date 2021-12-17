@@ -86,9 +86,15 @@ User.h
 Authorization.h
 /home/danila/CLionProjects/course_test/Authorization.h
 
+/home/danila/CLionProjects/course_test/Interface.cpp
+Interface.h
+/home/danila/CLionProjects/course_test/Interface.h
+
 /home/danila/CLionProjects/course_test/Interface.h
 SqlGateway.h
 /home/danila/CLionProjects/course_test/SqlGateway.h
+Authorization.h
+/home/danila/CLionProjects/course_test/Authorization.h
 
 /home/danila/CLionProjects/course_test/JustInt.h
 SqlGateway.h

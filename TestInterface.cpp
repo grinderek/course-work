@@ -21,10 +21,10 @@ void TestInterface::tests_menu(int user_id) {
             show_tests(user_id);
             break;
         case 3:
-            Interface<Test>::change("SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id));
+            Interface::change<Test>("SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id));
             break;
         case 4:
-            delete_test(user_id);
+            Interface::del<Test>("SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id));
             break;
         default:
             cout << "Что-то не так" << endl;
@@ -144,38 +144,4 @@ vector<Test> TestInterface::show_tests(int user_id) {
     }
 
     return tests;
-}
-
-void TestInterface::delete_test(int user_id) {
-    SqlGateway DB;
-    string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);
-    auto tests = DB.getData<Test>(sql);
-
-    if (tests.empty()) {
-        cout << "Нет доступных тестов для удаления" << endl;
-        return;
-    }
-
-    show_vector<Test>(tests);
-    while (true) {
-        cout << "Введите номер теста, который хотите удалить(0 для выхода)" << endl;
-        int id = getInt(0, tests.size());
-
-        if (id == 0) {
-            break;
-        }
-
-        cout << "Вы уверены, что хотите удалить этот тест?" << endl;
-        cout << "1 - Да" << endl;
-        cout << "2 - Нет" << endl;
-        int x = getInt(1, 2);
-        if (x == 1) {
-            sql = "PRAGMA foreign_keys = ON;\n"
-                  "DELETE FROM TESTS WHERE ID = " + to_string(tests[--id].getID());
-                  + ";\nPRAGMA foreign_keys = OFF;";
-
-            DB.SQLOperation(sql);
-            break;
-        }
-    }
 }

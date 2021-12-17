@@ -21,7 +21,6 @@ public:
     static void groups_menu();
     static void add_group();
     static void show_group();
-    static void delete_group();
 };
 
 #endif //COURSE_TEST_GROUPINTERFACE_H
