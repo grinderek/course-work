@@ -15,7 +15,7 @@ using namespace std;
 class Question;
 class Test {
 private:
-    int id;
+    int test_id;
     string name;
     int number_of_questions;
     vector<Question> questions;
@@ -25,9 +25,8 @@ public:
     void setQuestions(vector<Question> list_of_questions);
     vector<Question> getQuestions();
 
-    void menu(int user_id);
-
     void get_data(sqlite3_stmt *stmt);
+    void change();
 
     friend ostream& operator<< (ostream &out, const Test &test);
     friend istream& operator>> (istream &in, Test &test);

@@ -10,8 +10,8 @@
 using namespace std;
 
 class User {
-private:
-    int id;
+protected:
+    int user_id;
     string name;
     int role;
     int group_id;
@@ -23,7 +23,7 @@ public:
     string getName();
     void setName(string s);
 
-    int getRole();
+    int getRole() const;
     void setRole(int rl);
 
     int getID() const;
@@ -32,6 +32,7 @@ public:
     void setGroupID(int ide);
     int getGroupID() const;
 
+    void change();
     void get_data(sqlite3_stmt *stmt);
 
     virtual vector<unique_ptr<User>> menu();

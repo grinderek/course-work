@@ -22,7 +22,7 @@ class Test;
 class Answer;
 class Question {
 private:
-    int id;
+    int question_id;
     string question_text;
     int number_of_answers;
     int correct_answer;
@@ -30,7 +30,7 @@ private:
     vector<Answer> answers;
 
 public:
-    string getQuestion();
+    string getName();
     int getCorrectAnswer();
     int getID();
     void setQuestionText(string text);
@@ -38,6 +38,7 @@ public:
     void setCorrectAnswer(int ide);
     void setID(int ide);
 
+    void change();
     void get_data(sqlite3_stmt *stmt);
 
 

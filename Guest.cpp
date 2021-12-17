@@ -16,10 +16,10 @@ vector<unique_ptr<User>> Guest::menu() {
             cout << "До свидания!" << endl;
             exit(0);
         case 1:
-            user = login();
+            user = Authorization::login();
             break;
         case 2:
-            add_user(2);
+            Authorization::add_user(2);
             break;
         default:
             cout << "Что-то пошло не так" << endl;

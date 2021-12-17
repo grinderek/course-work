@@ -11,14 +11,12 @@ CMakeFiles/course_test.dir/Answer.cpp.o: \
  ../SqlGateway.h \
  ../Test.h \
  ../User.h
-CMakeFiles/course_test.dir/App.cpp.o: \
- ../App.cpp \
- ../App.h
-CMakeFiles/course_test.dir/CRUD.cpp.o: \
+CMakeFiles/course_test.dir/Authorization.cpp.o: \
  ../Answer.h \
- ../CRUD.cpp \
- ../CRUD.h \
+ ../Authorization.cpp \
+ ../Authorization.h \
  ../Group.h \
+ ../GroupInterface.h \
  ../Guest.h \
  ../JustInt.h \
  ../Question.h \
@@ -27,11 +25,9 @@ CMakeFiles/course_test.dir/CRUD.cpp.o: \
  ../Student.h \
  ../Teacher.h \
  ../Test.h \
- ../User.h \
- ../groups_service.h \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.h
+ ../TestInterface.h \
+ ../TestingInterface.h \
+ ../User.h
 CMakeFiles/course_test.dir/Group.cpp.o: \
  ../Answer.h \
  ../Group.cpp \
@@ -42,10 +38,28 @@ CMakeFiles/course_test.dir/Group.cpp.o: \
  ../SqlGateway.h \
  ../Test.h \
  ../User.h
+CMakeFiles/course_test.dir/GroupInterface.cpp.o: \
+ ../Answer.h \
+ ../Authorization.h \
+ ../Group.h \
+ ../GroupInterface.cpp \
+ ../GroupInterface.h \
+ ../Guest.h \
+ ../JustInt.h \
+ ../Question.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Student.h \
+ ../Teacher.h \
+ ../Test.h \
+ ../TestInterface.h \
+ ../TestingInterface.h \
+ ../User.h
 CMakeFiles/course_test.dir/Guest.cpp.o: \
  ../Answer.h \
- ../CRUD.h \
+ ../Authorization.h \
  ../Group.h \
+ ../GroupInterface.h \
  ../Guest.cpp \
  ../Guest.h \
  ../JustInt.h \
@@ -55,11 +69,9 @@ CMakeFiles/course_test.dir/Guest.cpp.o: \
  ../Student.h \
  ../Teacher.h \
  ../Test.h \
- ../User.h \
- ../groups_service.h \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.h
+ ../TestInterface.h \
+ ../TestingInterface.h \
+ ../User.h
 CMakeFiles/course_test.dir/JustInt.cpp.o: \
  ../Answer.h \
  ../Group.h \
@@ -102,8 +114,9 @@ CMakeFiles/course_test.dir/SqlGateway.cpp.o: \
  ../User.h
 CMakeFiles/course_test.dir/Student.cpp.o: \
  ../Answer.h \
- ../CRUD.h \
+ ../Authorization.h \
  ../Group.h \
+ ../GroupInterface.h \
  ../Guest.h \
  ../JustInt.h \
  ../Question.h \
@@ -113,15 +126,14 @@ CMakeFiles/course_test.dir/Student.cpp.o: \
  ../Student.h \
  ../Teacher.h \
  ../Test.h \
- ../User.h \
- ../groups_service.h \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.h
+ ../TestInterface.h \
+ ../TestingInterface.h \
+ ../User.h
 CMakeFiles/course_test.dir/Teacher.cpp.o: \
  ../Answer.h \
- ../CRUD.h \
+ ../Authorization.h \
  ../Group.h \
+ ../GroupInterface.h \
  ../Guest.h \
  ../JustInt.h \
  ../Question.h \
@@ -131,11 +143,9 @@ CMakeFiles/course_test.dir/Teacher.cpp.o: \
  ../Teacher.cpp \
  ../Teacher.h \
  ../Test.h \
- ../User.h \
- ../groups_service.h \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.h
+ ../TestInterface.h \
+ ../TestingInterface.h \
+ ../User.h
 CMakeFiles/course_test.dir/Test.cpp.o: \
  ../Answer.h \
  ../Group.h \
@@ -145,6 +155,34 @@ CMakeFiles/course_test.dir/Test.cpp.o: \
  ../SqlGateway.h \
  ../Test.cpp \
  ../Test.h \
+ ../User.h
+CMakeFiles/course_test.dir/TestInterface.cpp.o: \
+ ../Answer.h \
+ ../Authorization.h \
+ ../Group.h \
+ ../GroupInterface.h \
+ ../Guest.h \
+ ../JustInt.h \
+ ../Question.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Student.h \
+ ../Teacher.h \
+ ../Test.h \
+ ../TestInterface.cpp \
+ ../TestInterface.h \
+ ../TestingInterface.h \
+ ../User.h
+CMakeFiles/course_test.dir/TestingInterface.cpp.o: \
+ ../Answer.h \
+ ../Group.h \
+ ../JustInt.h \
+ ../Question.h \
+ ../Service.h \
+ ../SqlGateway.h \
+ ../Test.h \
+ ../TestingInterface.cpp \
+ ../TestingInterface.h \
  ../User.h
 CMakeFiles/course_test.dir/User.cpp.o: \
  ../Answer.h \
@@ -156,28 +194,11 @@ CMakeFiles/course_test.dir/User.cpp.o: \
  ../Test.h \
  ../User.cpp \
  ../User.h
-CMakeFiles/course_test.dir/groups_service.cpp.o: \
- ../Answer.h \
- ../CRUD.h \
- ../Group.h \
- ../Guest.h \
- ../JustInt.h \
- ../Question.h \
- ../Service.h \
- ../SqlGateway.h \
- ../Student.h \
- ../Teacher.h \
- ../Test.h \
- ../User.h \
- ../groups_service.cpp \
- ../groups_service.h \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.h
 CMakeFiles/course_test.dir/main.cpp.o: \
  ../Answer.h \
- ../CRUD.h \
+ ../Authorization.h \
  ../Group.h \
+ ../GroupInterface.h \
  ../Guest.h \
  ../JustInt.h \
  ../Question.h \
@@ -186,50 +207,7 @@ CMakeFiles/course_test.dir/main.cpp.o: \
  ../Student.h \
  ../Teacher.h \
  ../Test.h \
+ ../TestInterface.h \
+ ../TestingInterface.h \
  ../User.h \
- ../groups_service.h \
- ../main.cpp \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.h
-CMakeFiles/course_test.dir/questions_service.cpp.o: \
- ../Answer.h \
- ../Group.h \
- ../JustInt.h \
- ../Question.h \
- ../Service.h \
- ../SqlGateway.h \
- ../Test.h \
- ../User.h \
- ../questions_service.cpp \
- ../questions_service.h
-CMakeFiles/course_test.dir/testing_service.cpp.o: \
- ../Answer.h \
- ../Group.h \
- ../JustInt.h \
- ../Question.h \
- ../Service.h \
- ../SqlGateway.h \
- ../Test.h \
- ../User.h \
- ../questions_service.h \
- ../testing_service.cpp \
- ../testing_service.h
-CMakeFiles/course_test.dir/tests_service.cpp.o: \
- ../Answer.h \
- ../CRUD.h \
- ../Group.h \
- ../Guest.h \
- ../JustInt.h \
- ../Question.h \
- ../Service.h \
- ../SqlGateway.h \
- ../Student.h \
- ../Teacher.h \
- ../Test.h \
- ../User.h \
- ../groups_service.h \
- ../questions_service.h \
- ../testing_service.h \
- ../tests_service.cpp \
- ../tests_service.h
+ ../main.cpp

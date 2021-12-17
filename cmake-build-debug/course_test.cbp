@@ -88,16 +88,10 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/Answer.h">
 			<Option target="course_test"/>
 		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/App.cpp">
+		<Unit filename="/home/danila/CLionProjects/course_test/Authorization.cpp">
 			<Option target="course_test"/>
 		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/App.h">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/CRUD.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/CRUD.h">
+		<Unit filename="/home/danila/CLionProjects/course_test/Authorization.h">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Group.cpp">
@@ -106,10 +100,22 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/Group.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/GroupInterface.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/GroupInterface.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Guest.cpp">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/Guest.h">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Interface.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/Interface.h">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/JustInt.cpp">
@@ -154,37 +160,25 @@
 		<Unit filename="/home/danila/CLionProjects/course_test/Test.h">
 			<Option target="course_test"/>
 		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/TestInterface.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/TestInterface.h">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/TestingInterface.cpp">
+			<Option target="course_test"/>
+		</Unit>
+		<Unit filename="/home/danila/CLionProjects/course_test/TestingInterface.h">
+			<Option target="course_test"/>
+		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/User.cpp">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/User.h">
 			<Option target="course_test"/>
 		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/groups_service.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/groups_service.h">
-			<Option target="course_test"/>
-		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/main.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/questions_service.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/questions_service.h">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/testing_service.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/testing_service.h">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/tests_service.cpp">
-			<Option target="course_test"/>
-		</Unit>
-		<Unit filename="/home/danila/CLionProjects/course_test/tests_service.h">
 			<Option target="course_test"/>
 		</Unit>
 		<Unit filename="/home/danila/CLionProjects/course_test/CMakeLists.txt">

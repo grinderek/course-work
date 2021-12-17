@@ -19,12 +19,11 @@ vector <unique_ptr<User>> Student::menu() {
         case 0:
             user.emplace_back(new Guest);
             return user;
-            break;
         case 1:
-            testing_menu(this->getID(), this->getGroupID());
+            TestingInterface::testing_menu(this->user_id, this->group_id);
             break;
         case 2:
-            show_results(this->getID());
+            TestingInterface::show_results(this->user_id);
             break;
         default:
             cout << "Что-то пошло не так" << endl;

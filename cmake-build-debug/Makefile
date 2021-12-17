@@ -153,53 +153,29 @@ Answer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Answer.cpp.s
 .PHONY : Answer.cpp.s
 
-App.o: App.cpp.o
-.PHONY : App.o
+Authorization.o: Authorization.cpp.o
+.PHONY : Authorization.o
 
 # target to build an object file
-App.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/App.cpp.o
-.PHONY : App.cpp.o
+Authorization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Authorization.cpp.o
+.PHONY : Authorization.cpp.o
 
-App.i: App.cpp.i
-.PHONY : App.i
-
-# target to preprocess a source file
-App.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/App.cpp.i
-.PHONY : App.cpp.i
-
-App.s: App.cpp.s
-.PHONY : App.s
-
-# target to generate assembly for a file
-App.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/App.cpp.s
-.PHONY : App.cpp.s
-
-CRUD.o: CRUD.cpp.o
-.PHONY : CRUD.o
-
-# target to build an object file
-CRUD.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/CRUD.cpp.o
-.PHONY : CRUD.cpp.o
-
-CRUD.i: CRUD.cpp.i
-.PHONY : CRUD.i
+Authorization.i: Authorization.cpp.i
+.PHONY : Authorization.i
 
 # target to preprocess a source file
-CRUD.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/CRUD.cpp.i
-.PHONY : CRUD.cpp.i
+Authorization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Authorization.cpp.i
+.PHONY : Authorization.cpp.i
 
-CRUD.s: CRUD.cpp.s
-.PHONY : CRUD.s
+Authorization.s: Authorization.cpp.s
+.PHONY : Authorization.s
 
 # target to generate assembly for a file
-CRUD.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/CRUD.cpp.s
-.PHONY : CRUD.cpp.s
+Authorization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Authorization.cpp.s
+.PHONY : Authorization.cpp.s
 
 Group.o: Group.cpp.o
 .PHONY : Group.o
@@ -225,6 +201,30 @@ Group.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Group.cpp.s
 .PHONY : Group.cpp.s
 
+GroupInterface.o: GroupInterface.cpp.o
+.PHONY : GroupInterface.o
+
+# target to build an object file
+GroupInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/GroupInterface.cpp.o
+.PHONY : GroupInterface.cpp.o
+
+GroupInterface.i: GroupInterface.cpp.i
+.PHONY : GroupInterface.i
+
+# target to preprocess a source file
+GroupInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/GroupInterface.cpp.i
+.PHONY : GroupInterface.cpp.i
+
+GroupInterface.s: GroupInterface.cpp.s
+.PHONY : GroupInterface.s
+
+# target to generate assembly for a file
+GroupInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/GroupInterface.cpp.s
+.PHONY : GroupInterface.cpp.s
+
 Guest.o: Guest.cpp.o
 .PHONY : Guest.o
 
@@ -248,6 +248,30 @@ Guest.s: Guest.cpp.s
 Guest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Guest.cpp.s
 .PHONY : Guest.cpp.s
+
+Interface.o: Interface.cpp.o
+.PHONY : Interface.o
+
+# target to build an object file
+Interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Interface.cpp.o
+.PHONY : Interface.cpp.o
+
+Interface.i: Interface.cpp.i
+.PHONY : Interface.i
+
+# target to preprocess a source file
+Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Interface.cpp.i
+.PHONY : Interface.cpp.i
+
+Interface.s: Interface.cpp.s
+.PHONY : Interface.s
+
+# target to generate assembly for a file
+Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Interface.cpp.s
+.PHONY : Interface.cpp.s
 
 JustInt.o: JustInt.cpp.o
 .PHONY : JustInt.o
@@ -417,6 +441,54 @@ Test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/Test.cpp.s
 .PHONY : Test.cpp.s
 
+TestInterface.o: TestInterface.cpp.o
+.PHONY : TestInterface.o
+
+# target to build an object file
+TestInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/TestInterface.cpp.o
+.PHONY : TestInterface.cpp.o
+
+TestInterface.i: TestInterface.cpp.i
+.PHONY : TestInterface.i
+
+# target to preprocess a source file
+TestInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/TestInterface.cpp.i
+.PHONY : TestInterface.cpp.i
+
+TestInterface.s: TestInterface.cpp.s
+.PHONY : TestInterface.s
+
+# target to generate assembly for a file
+TestInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/TestInterface.cpp.s
+.PHONY : TestInterface.cpp.s
+
+TestingInterface.o: TestingInterface.cpp.o
+.PHONY : TestingInterface.o
+
+# target to build an object file
+TestingInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/TestingInterface.cpp.o
+.PHONY : TestingInterface.cpp.o
+
+TestingInterface.i: TestingInterface.cpp.i
+.PHONY : TestingInterface.i
+
+# target to preprocess a source file
+TestingInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/TestingInterface.cpp.i
+.PHONY : TestingInterface.cpp.i
+
+TestingInterface.s: TestingInterface.cpp.s
+.PHONY : TestingInterface.s
+
+# target to generate assembly for a file
+TestingInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/TestingInterface.cpp.s
+.PHONY : TestingInterface.cpp.s
+
 User.o: User.cpp.o
 .PHONY : User.o
 
@@ -440,30 +512,6 @@ User.s: User.cpp.s
 User.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/User.cpp.s
 .PHONY : User.cpp.s
-
-groups_service.o: groups_service.cpp.o
-.PHONY : groups_service.o
-
-# target to build an object file
-groups_service.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/groups_service.cpp.o
-.PHONY : groups_service.cpp.o
-
-groups_service.i: groups_service.cpp.i
-.PHONY : groups_service.i
-
-# target to preprocess a source file
-groups_service.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/groups_service.cpp.i
-.PHONY : groups_service.cpp.i
-
-groups_service.s: groups_service.cpp.s
-.PHONY : groups_service.s
-
-# target to generate assembly for a file
-groups_service.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/groups_service.cpp.s
-.PHONY : groups_service.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -489,78 +537,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-questions_service.o: questions_service.cpp.o
-.PHONY : questions_service.o
-
-# target to build an object file
-questions_service.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.o
-.PHONY : questions_service.cpp.o
-
-questions_service.i: questions_service.cpp.i
-.PHONY : questions_service.i
-
-# target to preprocess a source file
-questions_service.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.i
-.PHONY : questions_service.cpp.i
-
-questions_service.s: questions_service.cpp.s
-.PHONY : questions_service.s
-
-# target to generate assembly for a file
-questions_service.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/questions_service.cpp.s
-.PHONY : questions_service.cpp.s
-
-testing_service.o: testing_service.cpp.o
-.PHONY : testing_service.o
-
-# target to build an object file
-testing_service.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/testing_service.cpp.o
-.PHONY : testing_service.cpp.o
-
-testing_service.i: testing_service.cpp.i
-.PHONY : testing_service.i
-
-# target to preprocess a source file
-testing_service.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/testing_service.cpp.i
-.PHONY : testing_service.cpp.i
-
-testing_service.s: testing_service.cpp.s
-.PHONY : testing_service.s
-
-# target to generate assembly for a file
-testing_service.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/testing_service.cpp.s
-.PHONY : testing_service.cpp.s
-
-tests_service.o: tests_service.cpp.o
-.PHONY : tests_service.o
-
-# target to build an object file
-tests_service.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tests_service.cpp.o
-.PHONY : tests_service.cpp.o
-
-tests_service.i: tests_service.cpp.i
-.PHONY : tests_service.i
-
-# target to preprocess a source file
-tests_service.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tests_service.cpp.i
-.PHONY : tests_service.cpp.i
-
-tests_service.s: tests_service.cpp.s
-.PHONY : tests_service.s
-
-# target to generate assembly for a file
-tests_service.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/course_test.dir/build.make CMakeFiles/course_test.dir/tests_service.cpp.s
-.PHONY : tests_service.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -573,18 +549,21 @@ help:
 	@echo "... Answer.o"
 	@echo "... Answer.i"
 	@echo "... Answer.s"
-	@echo "... App.o"
-	@echo "... App.i"
-	@echo "... App.s"
-	@echo "... CRUD.o"
-	@echo "... CRUD.i"
-	@echo "... CRUD.s"
+	@echo "... Authorization.o"
+	@echo "... Authorization.i"
+	@echo "... Authorization.s"
 	@echo "... Group.o"
 	@echo "... Group.i"
 	@echo "... Group.s"
+	@echo "... GroupInterface.o"
+	@echo "... GroupInterface.i"
+	@echo "... GroupInterface.s"
 	@echo "... Guest.o"
 	@echo "... Guest.i"
 	@echo "... Guest.s"
+	@echo "... Interface.o"
+	@echo "... Interface.i"
+	@echo "... Interface.s"
 	@echo "... JustInt.o"
 	@echo "... JustInt.i"
 	@echo "... JustInt.s"
@@ -606,24 +585,18 @@ help:
 	@echo "... Test.o"
 	@echo "... Test.i"
 	@echo "... Test.s"
+	@echo "... TestInterface.o"
+	@echo "... TestInterface.i"
+	@echo "... TestInterface.s"
+	@echo "... TestingInterface.o"
+	@echo "... TestingInterface.i"
+	@echo "... TestingInterface.s"
 	@echo "... User.o"
 	@echo "... User.i"
 	@echo "... User.s"
-	@echo "... groups_service.o"
-	@echo "... groups_service.i"
-	@echo "... groups_service.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... questions_service.o"
-	@echo "... questions_service.i"
-	@echo "... questions_service.s"
-	@echo "... testing_service.o"
-	@echo "... testing_service.i"
-	@echo "... testing_service.s"
-	@echo "... tests_service.o"
-	@echo "... tests_service.i"
-	@echo "... tests_service.s"
 .PHONY : help
 
 

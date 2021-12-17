@@ -68,3 +68,17 @@ User authenticate(const string& login, const string& password) {
         return {};
     }
 }
+
+template <class T>
+void show_vector(vector<T> objs) {
+    int i = 1;
+    for (auto obj : objs) {
+        cout << "№" << i++ << " ";
+        cout << obj.getName() << endl;
+    }
+}
+
+template void show_vector<Question>(vector<Question> objs);
+template void show_vector<Answer>(vector<Answer> objs);
+template void show_vector<Test>(vector<Test> objs);
+template void show_vector<Group>(vector<Group> objs);

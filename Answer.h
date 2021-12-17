@@ -17,14 +17,17 @@ private:
 public:
     int get_id();
 
-    string get_text();
+    string getName();
 
     void set_text(string ans);
-
+    void change();
     void get_data(sqlite3_stmt *stmt);
 
     Answer& operator= (const Answer& answer);
+    friend ostream& operator<< (ostream &out, const Answer &answer);
 };
+
+ostream& operator<< (ostream &out, const Answer &answer);
 
 
 #endif //COURSE_TEST_ANSWER_H

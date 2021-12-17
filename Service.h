@@ -17,5 +17,7 @@ using namespace std;
 int getInt(int begin, int end);
 string getString();
 string quotesql(const string& s);
+template <class T>
+void show_vector(vector<T> obj);
 
 #endif //COURSE_TEST_SERVICE_H

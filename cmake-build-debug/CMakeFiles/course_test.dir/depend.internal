@@ -11,14 +11,12 @@ CMakeFiles/course_test.dir/Answer.cpp.o
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
  /home/danila/CLionProjects/course_test/User.h
-CMakeFiles/course_test.dir/App.cpp.o
- /home/danila/CLionProjects/course_test/App.cpp
- /home/danila/CLionProjects/course_test/App.h
-CMakeFiles/course_test.dir/CRUD.cpp.o
+CMakeFiles/course_test.dir/Authorization.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.cpp
- /home/danila/CLionProjects/course_test/CRUD.h
+ /home/danila/CLionProjects/course_test/Authorization.cpp
+ /home/danila/CLionProjects/course_test/Authorization.h
  /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
  /home/danila/CLionProjects/course_test/Question.h
@@ -27,11 +25,9 @@ CMakeFiles/course_test.dir/CRUD.cpp.o
  /home/danila/CLionProjects/course_test/Student.h
  /home/danila/CLionProjects/course_test/Teacher.h
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.h
 CMakeFiles/course_test.dir/Group.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.cpp
@@ -42,10 +38,28 @@ CMakeFiles/course_test.dir/Group.cpp.o
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.h
  /home/danila/CLionProjects/course_test/User.h
+CMakeFiles/course_test.dir/GroupInterface.cpp.o
+ /home/danila/CLionProjects/course_test/Answer.h
+ /home/danila/CLionProjects/course_test/Authorization.h
+ /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.cpp
+ /home/danila/CLionProjects/course_test/GroupInterface.h
+ /home/danila/CLionProjects/course_test/Guest.h
+ /home/danila/CLionProjects/course_test/JustInt.h
+ /home/danila/CLionProjects/course_test/Question.h
+ /home/danila/CLionProjects/course_test/Service.h
+ /home/danila/CLionProjects/course_test/SqlGateway.h
+ /home/danila/CLionProjects/course_test/Student.h
+ /home/danila/CLionProjects/course_test/Teacher.h
+ /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
+ /home/danila/CLionProjects/course_test/User.h
 CMakeFiles/course_test.dir/Guest.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.h
+ /home/danila/CLionProjects/course_test/Authorization.h
  /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
  /home/danila/CLionProjects/course_test/Guest.cpp
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
@@ -55,11 +69,9 @@ CMakeFiles/course_test.dir/Guest.cpp.o
  /home/danila/CLionProjects/course_test/Student.h
  /home/danila/CLionProjects/course_test/Teacher.h
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.h
 CMakeFiles/course_test.dir/JustInt.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
@@ -102,8 +114,9 @@ CMakeFiles/course_test.dir/SqlGateway.cpp.o
  /home/danila/CLionProjects/course_test/User.h
 CMakeFiles/course_test.dir/Student.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.h
+ /home/danila/CLionProjects/course_test/Authorization.h
  /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
  /home/danila/CLionProjects/course_test/Question.h
@@ -113,15 +126,14 @@ CMakeFiles/course_test.dir/Student.cpp.o
  /home/danila/CLionProjects/course_test/Student.h
  /home/danila/CLionProjects/course_test/Teacher.h
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.h
 CMakeFiles/course_test.dir/Teacher.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.h
+ /home/danila/CLionProjects/course_test/Authorization.h
  /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
  /home/danila/CLionProjects/course_test/Question.h
@@ -131,11 +143,9 @@ CMakeFiles/course_test.dir/Teacher.cpp.o
  /home/danila/CLionProjects/course_test/Teacher.cpp
  /home/danila/CLionProjects/course_test/Teacher.h
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.h
 CMakeFiles/course_test.dir/Test.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
  /home/danila/CLionProjects/course_test/Group.h
@@ -145,6 +155,34 @@ CMakeFiles/course_test.dir/Test.cpp.o
  /home/danila/CLionProjects/course_test/SqlGateway.h
  /home/danila/CLionProjects/course_test/Test.cpp
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/User.h
+CMakeFiles/course_test.dir/TestInterface.cpp.o
+ /home/danila/CLionProjects/course_test/Answer.h
+ /home/danila/CLionProjects/course_test/Authorization.h
+ /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
+ /home/danila/CLionProjects/course_test/Guest.h
+ /home/danila/CLionProjects/course_test/JustInt.h
+ /home/danila/CLionProjects/course_test/Question.h
+ /home/danila/CLionProjects/course_test/Service.h
+ /home/danila/CLionProjects/course_test/SqlGateway.h
+ /home/danila/CLionProjects/course_test/Student.h
+ /home/danila/CLionProjects/course_test/Teacher.h
+ /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.cpp
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
+ /home/danila/CLionProjects/course_test/User.h
+CMakeFiles/course_test.dir/TestingInterface.cpp.o
+ /home/danila/CLionProjects/course_test/Answer.h
+ /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/JustInt.h
+ /home/danila/CLionProjects/course_test/Question.h
+ /home/danila/CLionProjects/course_test/Service.h
+ /home/danila/CLionProjects/course_test/SqlGateway.h
+ /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestingInterface.cpp
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
 CMakeFiles/course_test.dir/User.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
@@ -156,28 +194,11 @@ CMakeFiles/course_test.dir/User.cpp.o
  /home/danila/CLionProjects/course_test/Test.h
  /home/danila/CLionProjects/course_test/User.cpp
  /home/danila/CLionProjects/course_test/User.h
-CMakeFiles/course_test.dir/groups_service.cpp.o
- /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.h
- /home/danila/CLionProjects/course_test/Group.h
- /home/danila/CLionProjects/course_test/Guest.h
- /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question.h
- /home/danila/CLionProjects/course_test/Service.h
- /home/danila/CLionProjects/course_test/SqlGateway.h
- /home/danila/CLionProjects/course_test/Student.h
- /home/danila/CLionProjects/course_test/Teacher.h
- /home/danila/CLionProjects/course_test/Test.h
- /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.cpp
- /home/danila/CLionProjects/course_test/groups_service.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.h
 CMakeFiles/course_test.dir/main.cpp.o
  /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.h
+ /home/danila/CLionProjects/course_test/Authorization.h
  /home/danila/CLionProjects/course_test/Group.h
+ /home/danila/CLionProjects/course_test/GroupInterface.h
  /home/danila/CLionProjects/course_test/Guest.h
  /home/danila/CLionProjects/course_test/JustInt.h
  /home/danila/CLionProjects/course_test/Question.h
@@ -186,50 +207,7 @@ CMakeFiles/course_test.dir/main.cpp.o
  /home/danila/CLionProjects/course_test/Student.h
  /home/danila/CLionProjects/course_test/Teacher.h
  /home/danila/CLionProjects/course_test/Test.h
+ /home/danila/CLionProjects/course_test/TestInterface.h
+ /home/danila/CLionProjects/course_test/TestingInterface.h
  /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.h
  /home/danila/CLionProjects/course_test/main.cpp
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.h
-CMakeFiles/course_test.dir/questions_service.cpp.o
- /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/Group.h
- /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question.h
- /home/danila/CLionProjects/course_test/Service.h
- /home/danila/CLionProjects/course_test/SqlGateway.h
- /home/danila/CLionProjects/course_test/Test.h
- /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/questions_service.cpp
- /home/danila/CLionProjects/course_test/questions_service.h
-CMakeFiles/course_test.dir/testing_service.cpp.o
- /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/Group.h
- /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question.h
- /home/danila/CLionProjects/course_test/Service.h
- /home/danila/CLionProjects/course_test/SqlGateway.h
- /home/danila/CLionProjects/course_test/Test.h
- /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.cpp
- /home/danila/CLionProjects/course_test/testing_service.h
-CMakeFiles/course_test.dir/tests_service.cpp.o
- /home/danila/CLionProjects/course_test/Answer.h
- /home/danila/CLionProjects/course_test/CRUD.h
- /home/danila/CLionProjects/course_test/Group.h
- /home/danila/CLionProjects/course_test/Guest.h
- /home/danila/CLionProjects/course_test/JustInt.h
- /home/danila/CLionProjects/course_test/Question.h
- /home/danila/CLionProjects/course_test/Service.h
- /home/danila/CLionProjects/course_test/SqlGateway.h
- /home/danila/CLionProjects/course_test/Student.h
- /home/danila/CLionProjects/course_test/Teacher.h
- /home/danila/CLionProjects/course_test/Test.h
- /home/danila/CLionProjects/course_test/User.h
- /home/danila/CLionProjects/course_test/groups_service.h
- /home/danila/CLionProjects/course_test/questions_service.h
- /home/danila/CLionProjects/course_test/testing_service.h
- /home/danila/CLionProjects/course_test/tests_service.cpp
- /home/danila/CLionProjects/course_test/tests_service.h

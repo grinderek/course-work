@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include "Guest.h"
-#include "testing_service.h"
+#include "TestingInterface.h"
 #include <vector>
 
 using namespace std;

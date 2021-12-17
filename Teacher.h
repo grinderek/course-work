@@ -5,8 +5,8 @@
 #ifndef COURSE_TEST_TEACHER_H
 #define COURSE_TEST_TEACHER_H
 #include "User.h"
-#include "tests_service.h"
-#include "groups_service.h"
+#include "TestInterface.h"
+#include "GroupInterface.h"
 #include "Guest.h"
 #include <iostream>
 #include <string>

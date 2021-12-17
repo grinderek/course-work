@@ -14,21 +14,24 @@ using namespace std;
 
 class Group {
 private:
-    int id;
+    int group_id;
     string number_of_group;
     vector<User> users;
 public:
     Group();
     Group(const Group& group);
 
-    string getNumber();
+    string getName();
     int getID() const;
 
+    void change();
     void get_data(sqlite3_stmt *stmt);
 
     friend istream& operator>> (istream &in, Group &group);
+    friend ostream& operator<< (ostream &out, const Group &group);
 };
 
+ostream& operator<< (ostream &out, const Group &group);
 istream& operator>> (istream &in, Group &group);
 
 

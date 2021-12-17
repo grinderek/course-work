@@ -2,10 +2,10 @@
 #include "User.h"
 #include "Service.h"
 #include "SqlGateway.h"
-#include "tests_service.h"
-#include "groups_service.h"
-#include "testing_service.h"
-#include "CRUD.h"
+#include "TestInterface.h"
+#include "GroupInterface.h"
+#include "TestingInterface.h"
+#include "Authorization.h"
 #include <cstdlib>
 #include "Guest.h"
 

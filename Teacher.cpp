@@ -17,16 +17,16 @@ vector<unique_ptr<User>> Teacher::menu() {
             return user;
             break;
         case 1:
-            tests_menu(this->getID());
+            TestInterface::tests_menu(this->getID());
             break;
         case 2:
-            groups_menu();
+            GroupInterface::groups_menu();
             break;
         default:
             cout << "Что-то пошло не так" << endl;
     }
 
-    user.emplace_back(new Teacher(this->getID(), this->getName(), this->getRole(), this->getGroupID()));
+    user.emplace_back(new Teacher(this->user_id, this->name, this->role, this->group_id));
     return user;
 
 }
