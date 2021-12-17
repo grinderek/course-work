@@ -9,8 +9,53 @@
 
 using namespace std;
 
+class Authorization;
 class Interface {
 public:
+
+    static int add_correctAnswer_to_table(int answer_id, int question_id) {
+        SqlGateway DB;
+        string sql = "INSERT INTO CORRECT_ANSWERS (ANSWER_ID, QUESTION_ID) VALUES ("
+                     + to_string(answer_id) + ","
+                     + to_string(question_id) + ");";
+
+        int id = DB.SQLOperation(sql);
+
+        return id;
+    }
+
+    static int add_answers_to_table(Question question, int question_id) {
+        SqlGateway DB;
+        int num = 0;
+        for (auto answer : question.getAnswers()) {
+            string sql = "INSERT INTO ANSWERS (TEXT_OF_ANSWER, QUESTION_ID) VALUES ("
+                         + quotesql(answer.getName()) + ","
+                         + to_string(question_id) + ");";
+
+            int id = DB.SQLOperation(sql);
+
+            if (num == question.getCorrectAnswer()) {
+                add_correctAnswer_to_table(id, question_id);
+                num = -2e9;
+
+            }
+
+            num++;
+        }
+    }
+
+    static int add_questions_to_table(vector<Question> questions, int test_id) {
+        SqlGateway DB;
+        for (auto question : questions) {
+            string sql = "INSERT INTO QUESTIONS (TEXT_OF_QUESTION, TEST_ID) VALUES ("
+                         + quotesql(question.getName()) + ","
+                         + to_string(test_id) + ");";
+
+            int id = DB.SQLOperation(sql);
+            add_answers_to_table(question, id);
+        }
+    }
+
     static void groups_menu() {
         cout << "1 - Создать группу" << endl;
         cout << "2 - Просмотреть результаты группы" << endl;
@@ -56,7 +101,7 @@ public:
             int op_men = getInt(1, 2);
             switch (op_men) {
                 case 1: {
-                    int user_id = Authorization::add_user(1);
+                    int user_id = 2;
                     if (user_id != 0) {
                         string sql = "PRAGMA foreign_keys = ON;\n"
                                      "UPDATE USERS SET GROUP_ID = " + to_string(group_id) + " WHERE ID = " +
@@ -129,7 +174,7 @@ public:
         }
     }
 
-    void TestInterface::tests_menu(int user_id) {
+    static void tests_menu(int user_id) {
         cout << "1 - Добавить тест" << endl;
         cout << "2 - Показать тесты" << endl;
         cout << "3 - Редактировать тест" << endl;
@@ -156,7 +201,7 @@ public:
         }
     }
 
-    void TestInterface::add_test(int user_id) {
+    static void add_test(int user_id) {
         cout << "Введите тему теста" << endl;
         string topic = getString();
         cout << "Введите кол-во вопросов" << endl;
@@ -215,7 +260,7 @@ public:
         add_questions_to_table(questions, test_id);
     }
 
-    vector<Test> TestInterface::show_tests(int user_id) {
+    static vector<Test> show_tests(int user_id) {
         SqlGateway DB;
 
         string sql = "SELECT * FROM TESTS WHERE USER_ID = " + to_string(user_id);

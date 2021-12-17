@@ -25,9 +25,6 @@ int main() {
 
     vector<unique_ptr<User>> user;
     user.emplace_back(new Guest);
-    while (true) {
-        user = user[0]->menu();
-    }
-
+    while (!(user = user[0]->menu()).empty());
     return 0;
 }
